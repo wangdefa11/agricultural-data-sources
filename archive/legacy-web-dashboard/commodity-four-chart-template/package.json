@@ -1,0 +1,10 @@
+{
+  "name": "commodity-four-chart-template",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-dashboard.mjs config/soybean.example.json",
+    "prepare:soybean": "node scripts/prepare-soybean-example.mjs"
+  }
+}
+

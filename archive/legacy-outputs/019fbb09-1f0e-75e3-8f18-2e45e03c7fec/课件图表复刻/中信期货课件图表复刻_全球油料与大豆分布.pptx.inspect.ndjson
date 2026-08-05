@@ -1,0 +1,103 @@
+{"kind":"deck","id":"pr/hj0fxu","name":"Deck"}
+{"kind":"layout","layoutId":"4fe78348-6788-4650-b041-b8ca2753a15f","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"299907f3-9b6f-4672-9545-33a22d56863a","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/bx0afa","slide":1,"title":"全球油料分布（22/23年度）","textShapes":36}
+{"kind":"textbox","id":"sh/a1gv2xcn","slide":1,"name":"slide-title","text":"全球油料分布（22/23年度）","textPreview":"全球油料分布（22/23年度）","textChars":15,"textLines":1,"bbox":[52,35,1000,55]}
+{"kind":"shape","id":"sh/x47edsve","slide":1,"name":"title-rule","bbox":[52,98,1176,4]}
+{"kind":"textbox","id":"sh/c3yd47ut","slide":1,"name":"panel-title-0","text":"全球油料产量分布（6.45亿吨）","textPreview":"全球油料产量分布（6.45亿吨）","textChars":16,"textLines":1,"bbox":[76,128,544,34]}
+{"kind":"shape","id":"sh/z69wf2dk","slide":1,"name":"panel-rule-0","bbox":[86,167,524,2]}
+{"kind":"textbox","id":"sh/l8rehcva","slide":1,"name":"pie-label-0-0","text":"大豆\n60.5%","textPreview":"大豆 | 60.5%","textChars":8,"textLines":2,"bbox":[305,248,86,42]}
+{"kind":"textbox","id":"sh/k7id87up","slide":1,"name":"pie-label-0-6","text":"棕榈仁\n3.2%","textPreview":"棕榈仁 | 3.2%","textChars":8,"textLines":2,"bbox":[114,183,100,31]}
+{"kind":"textbox","id":"sh/7u9wjmdg","slide":1,"name":"pie-label-0-5","text":"椰肉干\n0.9%","textPreview":"椰肉干 | 0.9%","textChars":8,"textLines":2,"bbox":[114,209.4,100,31]}
+{"kind":"textbox","id":"sh/m90vahcv","slide":1,"name":"pie-label-0-4","text":"菜籽\n13.1%","textPreview":"菜籽 | 13.1%","textChars":8,"textLines":2,"bbox":[114,235.8,100,31]}
+{"kind":"textbox","id":"sh/4bq1wjyt","slide":1,"name":"pie-label-0-3","text":"葵花籽\n7.9%","textPreview":"葵花籽 | 7.9%","textChars":8,"textLines":2,"bbox":[114,262.2,100,31]}
+{"kind":"textbox","id":"sh/pcz2pofe","slide":1,"name":"pie-label-0-2","text":"棉籽\n6.6%","textPreview":"棉籽 | 6.6%","textChars":7,"textLines":2,"bbox":[114,288.6,100,31]}
+{"kind":"textbox","id":"sh/29oju9gn","slide":1,"name":"pie-label-0-1","text":"花生\n7.8%","textPreview":"花生 | 7.8%","textChars":7,"textLines":2,"bbox":[114,315,100,31]}
+{"kind":"textbox","id":"sh/3ahknex8","slide":1,"name":"panel-title-1","text":"全球油料出口分布（1.97亿吨）","textPreview":"全球油料出口分布（1.97亿吨）","textChars":16,"textLines":1,"bbox":[660,128,544,34]}
+{"kind":"shape","id":"sh/cfq10jyp","slide":1,"name":"panel-rule-1","bbox":[670,167,524,2]}
+{"kind":"textbox","id":"sh/qd8jytgz","slide":1,"name":"pie-label-1-0","text":"大豆\n85.6%","textPreview":"大豆 | 85.6%","textChars":8,"textLines":2,"bbox":[889,248,86,42]}
+{"kind":"textbox","id":"sh/rehkrex4","slide":1,"name":"pie-label-1-6","text":"棕榈仁\n0.0%","textPreview":"棕榈仁 | 0.0%","textChars":8,"textLines":2,"bbox":[698,183,100,31]}
+{"kind":"textbox","id":"sh/03al43y1","slide":1,"name":"pie-label-1-5","text":"椰肉干\n0.1%","textPreview":"椰肉干 | 0.1%","textChars":8,"textLines":2,"bbox":[698,209.4,100,31]}
+{"kind":"textbox","id":"sh/14j2x8fm","slide":1,"name":"pie-label-1-4","text":"菜籽\n9.8%","textPreview":"菜籽 | 9.8%","textChars":7,"textLines":2,"bbox":[698,235.8,100,31]}
+{"kind":"textbox","id":"sh/9ova143e","slide":1,"name":"pie-label-1-3","text":"葵花籽\n1.7%","textPreview":"葵花籽 | 1.7%","textChars":8,"textLines":2,"bbox":[698,262.2,100,31]}
+{"kind":"textbox","id":"sh/onmtszmt","slide":1,"name":"pie-label-1-2","text":"棉籽\n0.5%","textPreview":"棉籽 | 0.5%","textChars":7,"textLines":2,"bbox":[698,288.6,100,31]}
+{"kind":"textbox","id":"sh/nmdszul8","slide":1,"name":"pie-label-1-1","text":"花生\n2.3%","textPreview":"花生 | 2.3%","textChars":7,"textLines":2,"bbox":[698,315,100,31]}
+{"kind":"textbox","id":"sh/ml4bqp4n","slide":1,"name":"panel-title-2","text":"全球油料进口分布（1.93亿吨）","textPreview":"全球油料进口分布（1.93亿吨）","textChars":16,"textLines":1,"bbox":[76,393,544,34]}
+{"kind":"shape","id":"sh/xcfa543a","slide":1,"name":"panel-rule-2","bbox":[86,432,524,2]}
+{"kind":"textbox","id":"sh/bads3elk","slide":1,"name":"pie-label-2-0","text":"大豆\n86.1%","textPreview":"大豆 | 86.1%","textChars":8,"textLines":2,"bbox":[305,513,86,42]}
+{"kind":"textbox","id":"sh/a94bu94z","slide":1,"name":"pie-label-2-6","text":"棕榈仁\n0.1%","textPreview":"棕榈仁 | 0.1%","textChars":8,"textLines":2,"bbox":[114,448,100,31]}
+{"kind":"textbox","id":"sh/dgbatk36","slide":1,"name":"pie-label-2-5","text":"椰肉干\n0.0%","textPreview":"椰肉干 | 0.0%","textChars":8,"textLines":2,"bbox":[114,474.4,100,31]}
+{"kind":"textbox","id":"sh/cf2tkfml","slide":1,"name":"pie-label-2-4","text":"菜籽\n8.6%","textPreview":"菜籽 | 8.6%","textChars":7,"textLines":2,"bbox":[114,500.8,100,31]}
+{"kind":"textbox","id":"sh/2l07ulkj","slide":1,"name":"pie-label-2-3","text":"葵花籽\n2.5%","textPreview":"葵花籽 | 2.5%","textChars":8,"textLines":2,"bbox":[114,527.2,100,31]}
+{"kind":"textbox","id":"sh/3m98nq14","slide":1,"name":"pie-label-2-2","text":"棉籽\n0.5%","textPreview":"棉籽 | 0.5%","textChars":7,"textLines":2,"bbox":[114,553.6,100,31]}
+{"kind":"textbox","id":"sh/4nipwv2p","slide":1,"name":"pie-label-2-1","text":"花生\n2.2%","textPreview":"花生 | 2.2%","textChars":7,"textLines":2,"bbox":[114,580,100,31]}
+{"kind":"textbox","id":"sh/porqp0ju","slide":1,"name":"panel-title-3","text":"全球油料压榨分布（5.34亿吨）","textPreview":"全球油料压榨分布（5.34亿吨）","textChars":16,"textLines":1,"bbox":[660,393,544,34]}
+{"kind":"shape","id":"sh/qp07ylkf","slide":1,"name":"panel-rule-3","bbox":[670,432,524,2]}
+{"kind":"textbox","id":"sh/cr290v2l","slide":1,"name":"pie-label-3-0","text":"大豆\n61.6%","textPreview":"大豆 | 61.6%","textChars":8,"textLines":2,"bbox":[889,513,86,42]}
+{"kind":"textbox","id":"sh/dsbqt0j6","slide":1,"name":"pie-label-3-6","text":"棕榈仁\n3.8%","textPreview":"棕榈仁 | 3.8%","textChars":8,"textLines":2,"bbox":[698,448,100,31]}
+{"kind":"textbox","id":"sh/6tg7m1kb","slide":1,"name":"pie-label-3-5","text":"椰肉干\n1.1%","textPreview":"椰肉干 | 1.1%","textChars":8,"textLines":2,"bbox":[698,474.4,100,31]}
+{"kind":"textbox","id":"sh/7up8v61w","slide":1,"name":"pie-label-3-4","text":"菜籽\n14.5%","textPreview":"菜籽 | 14.5%","textChars":8,"textLines":2,"bbox":[698,500.8,100,31]}
+{"kind":"textbox","id":"sh/nqhoj2dk","slide":1,"name":"pie-label-3-3","text":"葵花籽\n9.0%","textPreview":"葵花籽 | 9.0%","textChars":8,"textLines":2,"bbox":[698,527.2,100,31]}
+{"kind":"textbox","id":"sh/mp8nqxcz","slide":1,"name":"pie-label-3-2","text":"棉籽\n6.3%","textPreview":"棉籽 | 6.3%","textChars":7,"textLines":2,"bbox":[698,553.6,100,31]}
+{"kind":"textbox","id":"sh/9cz6lsvq","slide":1,"name":"pie-label-3-1","text":"花生\n3.7%","textPreview":"花生 | 3.7%","textChars":7,"textLines":2,"bbox":[698,580,100,31]}
+{"kind":"textbox","id":"sh/8rq5snu5","slide":1,"name":"brand-footer","text":"◉  中信期货\n     CITIC Futures","textPreview":"◉  中信期货 |      CITIC Futures","textChars":26,"textLines":2,"bbox":[58,655,235,48]}
+{"kind":"textbox","id":"sh/vehon2tw","slide":1,"name":"source-footer","text":"资料来源：Wind  Bloomberg  USDA  粮油商务网  我的农产品  中信期货研究所","textPreview":"资料来源：Wind  Bloomberg  USDA  粮油商务网  我的农产品  中信期货研究所","textChars":49,"textLines":1,"bbox":[760,671,410,22]}
+{"kind":"shape","id":"sh/ad8nuxcb","slide":1,"name":"footer-rule","bbox":[294,690,886,2]}
+{"kind":"textbox","id":"sh/xgj6pcbm","slide":1,"name":"page-number","text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[1188,672,35,28]}
+{"kind":"chart","id":"ch/ahcn2lg3","slide":1,"name":"","chartType":"pie3D","bbox":[94,170,508,196]}
+{"kind":"chart","id":"ch/5sry1svm","slide":1,"name":"","chartType":"pie3D","bbox":[678,170,508,196]}
+{"kind":"chart","id":"ch/ofyhk7md","slide":1,"name":"","chartType":"pie3D","bbox":[94,435,508,196]}
+{"kind":"chart","id":"ch/ji14zuxc","slide":1,"name":"","chartType":"pie3D","bbox":[678,435,508,196]}
+{"kind":"notes","id":"nt/bx0afa","slide":1,"text":"[Sources]\n- /private/var/folders/8k/k8z7mw9j18v5bs_v0pmztkkw0000gn/T/codex-clipboard-e07d29cc-d6b9-4912-ad5a-387c121681b7.png (user-supplied screenshot; all displayed totals and percentages transcribed from the image)\n- The visible source footer in the screenshot cites Wind, Bloomberg, USDA, 粮油商务网, 我的农产品, and 中信期货研究所.\n[/Sources]\n\nRounding note: displayed one-decimal shares may sum to 99.9% or 100.1%."}
+{"kind":"slide","id":"sl/qvjkny","slide":2,"title":"全球大豆分布（22/23年度）","textShapes":40}
+{"kind":"textbox","id":"sh/x4vu9wfm","slide":2,"name":"slide-title","text":"全球大豆分布（22/23年度）","textPreview":"全球大豆分布（22/23年度）","textChars":15,"textLines":1,"bbox":[52,35,1000,55]}
+{"kind":"shape","id":"sh/a14behwb","slide":2,"name":"title-rule","bbox":[52,98,1176,4]}
+{"kind":"textbox","id":"sh/b2dc7mxw","slide":2,"name":"panel-title-0","text":"全球大豆产量分布（3.91亿吨）","textPreview":"全球大豆产量分布（3.91亿吨）","textChars":16,"textLines":1,"bbox":[76,128,544,34]}
+{"kind":"shape","id":"sh/krmtkbed","slide":2,"name":"panel-rule-0","bbox":[86,167,524,2]}
+{"kind":"textbox","id":"sh/y54bi1w7","slide":2,"name":"pie-label-0-2","text":"巴西\n38.9%","textPreview":"巴西 | 38.9%","textChars":8,"textLines":2,"bbox":[305,248,86,42]}
+{"kind":"textbox","id":"sh/jqdcb6xs","slide":2,"name":"pie-label-0-7","text":"其他\n10.2%","textPreview":"其他 | 10.2%","textChars":8,"textLines":2,"bbox":[114,183,100,31]}
+{"kind":"textbox","id":"sh/0v2t87e9","slide":2,"name":"pie-label-0-6","text":"巴拉圭\n2.6%","textPreview":"巴拉圭 | 2.6%","textChars":8,"textLines":2,"bbox":[114,211,100,31]}
+{"kind":"textbox","id":"sh/1wba1cfe","slide":2,"name":"pie-label-0-5","text":"欧盟27国\n0.6%","textPreview":"欧盟27国 | 0.6%","textChars":10,"textLines":2,"bbox":[114,239,100,31]}
+{"kind":"textbox","id":"sh/xonqlc3y","slide":2,"name":"pie-label-0-4","text":"墨西哥\n0.1%","textPreview":"墨西哥 | 0.1%","textChars":8,"textLines":2,"bbox":[114,267,100,31]}
+{"kind":"textbox","id":"sh/cnups7mt","slide":2,"name":"pie-label-0-3","text":"阿根廷\n12.7%","textPreview":"阿根廷 | 12.7%","textChars":9,"textLines":2,"bbox":[114,295,100,31]}
+{"kind":"textbox","id":"sh/bml8j2l8","slide":2,"name":"pie-label-0-0","text":"美国\n30.3%","textPreview":"美国 | 30.3%","textChars":8,"textLines":2,"bbox":[482,183,100,31]}
+{"kind":"textbox","id":"sh/a1c7qx4n","slide":2,"name":"pie-label-0-1","text":"中国\n4.7%","textPreview":"中国 | 4.7%","textChars":7,"textLines":2,"bbox":[482,211,100,31]}
+{"kind":"textbox","id":"sh/lsnqpc3a","slide":2,"name":"panel-title-1","text":"全球大豆出口分布（1.69亿吨）","textPreview":"全球大豆出口分布（1.69亿吨）","textChars":16,"textLines":1,"bbox":[660,128,544,34]}
+{"kind":"shape","id":"sh/krepw72p","slide":2,"name":"panel-rule-1","bbox":[670,167,524,2]}
+{"kind":"textbox","id":"sh/ypw7uhkj","slide":2,"name":"pie-label-1-2","text":"巴西\n52.9%","textPreview":"巴西 | 52.9%","textChars":8,"textLines":2,"bbox":[889,248,86,42]}
+{"kind":"textbox","id":"sh/9w7qtw36","slide":2,"name":"pie-label-1-7","text":"其他\n6.3%","textPreview":"其他 | 6.3%","textChars":7,"textLines":2,"bbox":[698,183,100,31]}
+{"kind":"textbox","id":"sh/8ve90r2l","slide":2,"name":"pie-label-1-6","text":"巴拉圭\n3.4%","textPreview":"巴拉圭 | 3.4%","textChars":8,"textLines":2,"bbox":[698,211,100,31]}
+{"kind":"textbox","id":"sh/sb61cze9","slide":2,"name":"pie-label-1-5","text":"欧盟27国\n0.1%","textPreview":"欧盟27国 | 0.1%","textChars":10,"textLines":2,"bbox":[698,239,100,31]}
+{"kind":"textbox","id":"sh/tcf2l4fu","slide":2,"name":"pie-label-1-4","text":"墨西哥\n0.0%","textPreview":"墨西哥 | 0.0%","textChars":8,"textLines":2,"bbox":[698,267,100,31]}
+{"kind":"textbox","id":"sh/69ojapw3","slide":2,"name":"pie-label-1-3","text":"阿根廷\n4.3%","textPreview":"阿根廷 | 4.3%","textChars":8,"textLines":2,"bbox":[698,295,100,31]}
+{"kind":"textbox","id":"sh/rax0juxo","slide":2,"name":"pie-label-1-0","text":"美国\n32.9%","textPreview":"美国 | 32.9%","textChars":8,"textLines":2,"bbox":[1066,183,100,31]}
+{"kind":"textbox","id":"sh/gzq1gze5","slide":2,"name":"pie-label-1-1","text":"中国\n0.1%","textPreview":"中国 | 0.1%","textChars":7,"textLines":2,"bbox":[1066,211,100,31]}
+{"kind":"textbox","id":"sh/10z2p4fq","slide":2,"name":"panel-title-2","text":"全球大豆进口分布（1.66亿吨）","textPreview":"全球大豆进口分布（1.66亿吨）","textChars":16,"textLines":1,"bbox":[76,393,544,34]}
+{"kind":"shape","id":"sh/ed8je9wf","slide":2,"name":"panel-rule-2","bbox":[86,432,524,2]}
+{"kind":"textbox","id":"sh/wjm14fe1","slide":2,"name":"pie-label-2-1","text":"中国\n58.9%","textPreview":"中国 | 58.9%","textChars":8,"textLines":2,"bbox":[305,513,86,42]}
+{"kind":"textbox","id":"sh/h4vidkfm","slide":2,"name":"pie-label-2-7","text":"其他\n24.7%","textPreview":"其他 | 24.7%","textChars":8,"textLines":2,"bbox":[114,448,100,31]}
+{"kind":"textbox","id":"sh/zyl4jih4","slide":2,"name":"pie-label-2-6","text":"巴拉圭\n0.0%","textPreview":"巴拉圭 | 0.0%","textChars":8,"textLines":2,"bbox":[114,474.4,100,31]}
+{"kind":"textbox","id":"sh/yxc3adgj","slide":2,"name":"pie-label-2-5","text":"欧盟27国\n8.9%","textPreview":"欧盟27国 | 8.9%","textChars":10,"textLines":2,"bbox":[114,500.8,100,31]}
+{"kind":"textbox","id":"sh/l03mlsza","slide":2,"name":"pie-label-2-4","text":"墨西哥\n3.8%","textPreview":"墨西哥 | 3.8%","textChars":8,"textLines":2,"bbox":[114,527.2,100,31]}
+{"kind":"textbox","id":"sh/kzu5cnyp","slide":2,"name":"pie-label-2-3","text":"阿根廷\n2.9%","textPreview":"阿根廷 | 2.9%","textChars":8,"textLines":2,"bbox":[114,553.6,100,31]}
+{"kind":"textbox","id":"sh/bu14fyhs","slide":2,"name":"pie-label-2-2","text":"巴西\n0.5%","textPreview":"巴西 | 0.5%","textChars":7,"textLines":2,"bbox":[114,580,100,31]}
+{"kind":"textbox","id":"sh/ats36tgn","slide":2,"name":"pie-label-2-0","text":"美国\n0.2%","textPreview":"美国 | 0.2%","textChars":7,"textLines":2,"bbox":[482,512,100,31]}
+{"kind":"textbox","id":"sh/xw3mh8zy","slide":2,"name":"panel-title-3","text":"全球大豆消费分布（3.8亿吨）","textPreview":"全球大豆消费分布（3.8亿吨）","textChars":15,"textLines":1,"bbox":[660,393,544,34]}
+{"kind":"shape","id":"sh/cval83yd","slide":2,"name":"panel-rule-3","bbox":[670,432,524,2]}
+{"kind":"textbox","id":"sh/25s32tgb","slide":2,"name":"pie-label-3-1","text":"中国\n30.7%","textPreview":"中国 | 30.7%","textChars":8,"textLines":2,"bbox":[889,513,86,42]}
+{"kind":"textbox","id":"sh/idc7m1cv","slide":2,"name":"pie-label-3-7","text":"其他\n18.3%","textPreview":"其他 | 18.3%","textChars":8,"textLines":2,"bbox":[698,448,100,31]}
+{"kind":"textbox","id":"sh/3el8fmdg","slide":2,"name":"pie-label-3-6","text":"巴拉圭\n1.0%","textPreview":"巴拉圭 | 1.0%","textChars":8,"textLines":2,"bbox":[698,474.4,100,31]}
+{"kind":"textbox","id":"sh/4fuporu1","slide":2,"name":"pie-label-3-5","text":"欧盟27国\n4.4%","textPreview":"欧盟27国 | 4.4%","textChars":10,"textLines":2,"bbox":[698,500.8,100,31]}
+{"kind":"textbox","id":"sh/5g3qhwvm","slide":2,"name":"pie-label-3-4","text":"墨西哥\n1.7%","textPreview":"墨西哥 | 1.7%","textChars":8,"textLines":2,"bbox":[698,527.2,100,31]}
+{"kind":"textbox","id":"sh/u9s7ihcz","slide":2,"name":"pie-label-3-3","text":"阿根廷\n12.4%","textPreview":"阿根廷 | 12.4%","textChars":9,"textLines":2,"bbox":[698,553.6,100,31]}
+{"kind":"textbox","id":"sh/va18bmdk","slide":2,"name":"pie-label-3-2","text":"巴西\n14.6%","textPreview":"巴西 | 14.6%","textChars":8,"textLines":2,"bbox":[698,580,100,31]}
+{"kind":"textbox","id":"sh/gbupkru5","slide":2,"name":"pie-label-3-0","text":"美国\n17.0%","textPreview":"美国 | 17.0%","textChars":8,"textLines":2,"bbox":[1066,512,100,31]}
+{"kind":"textbox","id":"sh/hc3qdwva","slide":2,"name":"brand-footer","text":"◉  中信期货\n     CITIC Futures","textPreview":"◉  中信期货 |      CITIC Futures","textChars":26,"textLines":2,"bbox":[58,655,235,48]}
+{"kind":"textbox","id":"sh/6ls7ehcn","slide":2,"name":"source-footer","text":"资料来源：Wind  Bloomberg  USDA  粮油商务网  我的农产品  中信期货研究所","textPreview":"资料来源：Wind  Bloomberg  USDA  粮油商务网  我的农产品  中信期货研究所","textChars":49,"textLines":1,"bbox":[760,671,410,22]}
+{"kind":"shape","id":"sh/761872d8","slide":2,"name":"footer-rule","bbox":[294,690,886,2]}
+{"kind":"textbox","id":"sh/p07adkfq","slide":2,"name":"page-number","text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[1188,672,35,28]}
+{"kind":"chart","id":"ch/dgry54bi","slide":2,"name":"","chartType":"pie3D","bbox":[94,170,508,196]}
+{"kind":"chart","id":"ch/japoj6xk","slide":2,"name":"","chartType":"pie3D","bbox":[678,170,508,196]}
+{"kind":"chart","id":"ch/zi10jy90","slide":2,"name":"","chartType":"pie3D","bbox":[94,435,508,196]}
+{"kind":"chart","id":"ch/nalk7itc","slide":2,"name":"","chartType":"pie3D","bbox":[678,435,508,196]}
+{"kind":"notes","id":"nt/qvjkny","slide":2,"text":"[Sources]\n- /private/var/folders/8k/k8z7mw9j18v5bs_v0pmztkkw0000gn/T/codex-clipboard-3858b1a1-01ec-44d7-b2e7-73e95a617ad3.png (user-supplied screenshot; all displayed totals and percentages transcribed from the image)\n- The visible source footer in the screenshot cites Wind, Bloomberg, USDA, 粮油商务网, 我的农产品, and 中信期货研究所.\n[/Sources]\n\nRounding note: displayed one-decimal shares may sum to 99.9% or 100.1%."}

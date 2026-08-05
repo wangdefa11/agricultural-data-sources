@@ -1,0 +1,3526 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/qvjkny",
+    "id": "qvjkny",
+    "slide": 2,
+    "layoutId": "299907f3-9b6f-4672-9545-33a22d56863a",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "4fe78348-6788-4650-b041-b8ca2753a15f",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FFFFFF",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "299907f3-9b6f-4672-9545-33a22d56863a",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "4fe78348-6788-4650-b041-b8ca2753a15f",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "4fe78348-6788-4650-b041-b8ca2753a15f",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/x4vu9wfm",
+      "id": "1",
+      "name": "slide-title",
+      "bbox": [
+        52,
+        35,
+        1000,
+        55
+      ],
+      "geometry": "rect",
+      "text": "全球大豆分布（22/23年度）",
+      "textPreview": "全球大豆分布（22/23年度）",
+      "resolvedFontSize": 40,
+      "resolvedTextStyle": {
+        "fontSize": 40,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "全球大豆分布（22/23年度）"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "全球大豆分布（22/23年度）",
+          "resolvedTextStyle": {
+            "fontSize": 40,
+            "color": "#111111",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "全球大豆分布（22/23年度）",
+              "fontSize": 40,
+              "color": "#111111",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/a14behwb",
+      "id": "2",
+      "name": "title-rule",
+      "bbox": [
+        52,
+        98,
+        1176,
+        4
+      ],
+      "geometry": "rect",
+      "fillColor": "#D71900",
+      "lineColor": "#D71900",
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/b2dc7mxw",
+      "id": "3",
+      "name": "panel-title-0",
+      "bbox": [
+        76,
+        128,
+        544,
+        34
+      ],
+      "geometry": "rect",
+      "text": "全球大豆产量分布（3.91亿吨）",
+      "textPreview": "全球大豆产量分布（3.91亿吨）",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "color": "#D71900",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "全球大豆产量分布（3.91亿吨）"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "全球大豆产量分布（3.91亿吨）",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "color": "#D71900",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "全球大豆产量分布（3.91亿吨）",
+              "fontSize": 24,
+              "color": "#D71900",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/krmtkbed",
+      "id": "4",
+      "name": "panel-rule-0",
+      "bbox": [
+        86,
+        167,
+        524,
+        2
+      ],
+      "geometry": "rect",
+      "fillColor": "#D71900",
+      "lineColor": "#D71900",
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "chart",
+      "scope": "slide",
+      "aid": "ch/dgry54bi",
+      "id": "5",
+      "bbox": [
+        94,
+        170,
+        508,
+        196
+      ],
+      "chartType": "pie3D"
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/y54bi1w7",
+      "id": "6",
+      "name": "pie-label-0-2",
+      "bbox": [
+        305,
+        248,
+        86,
+        42
+      ],
+      "geometry": "rect",
+      "text": "巴西\n38.9%",
+      "textPreview": "巴西 | 38.9%",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "巴西"
+          },
+          {
+            "index": 2,
+            "text": "38.9%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "巴西",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#111111",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "巴西",
+              "fontSize": 14,
+              "color": "#111111",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "38.9%",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#111111",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "38.9%",
+              "fontSize": 14,
+              "color": "#111111",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/jqdcb6xs",
+      "id": "7",
+      "name": "pie-label-0-7",
+      "bbox": [
+        114,
+        183,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "其他\n10.2%",
+      "textPreview": "其他 | 10.2%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "其他"
+          },
+          {
+            "index": 2,
+            "text": "10.2%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "其他",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "其他",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "10.2%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "10.2%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0v2t87e9",
+      "id": "8",
+      "name": "pie-label-0-6",
+      "bbox": [
+        114,
+        211,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "巴拉圭\n2.6%",
+      "textPreview": "巴拉圭 | 2.6%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "巴拉圭"
+          },
+          {
+            "index": 2,
+            "text": "2.6%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "巴拉圭",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "巴拉圭",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "2.6%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "2.6%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1wba1cfe",
+      "id": "9",
+      "name": "pie-label-0-5",
+      "bbox": [
+        114,
+        239,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "欧盟27国\n0.6%",
+      "textPreview": "欧盟27国 | 0.6%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "欧盟27国"
+          },
+          {
+            "index": 2,
+            "text": "0.6%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "欧盟27国",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "欧盟27国",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "0.6%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "0.6%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xonqlc3y",
+      "id": "10",
+      "name": "pie-label-0-4",
+      "bbox": [
+        114,
+        267,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "墨西哥\n0.1%",
+      "textPreview": "墨西哥 | 0.1%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "墨西哥"
+          },
+          {
+            "index": 2,
+            "text": "0.1%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "墨西哥",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "墨西哥",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "0.1%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "0.1%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cnups7mt",
+      "id": "11",
+      "name": "pie-label-0-3",
+      "bbox": [
+        114,
+        295,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "阿根廷\n12.7%",
+      "textPreview": "阿根廷 | 12.7%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "阿根廷"
+          },
+          {
+            "index": 2,
+            "text": "12.7%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "阿根廷",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "阿根廷",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "12.7%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "12.7%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/bml8j2l8",
+      "id": "12",
+      "name": "pie-label-0-0",
+      "bbox": [
+        482,
+        183,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "美国\n30.3%",
+      "textPreview": "美国 | 30.3%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "美国"
+          },
+          {
+            "index": 2,
+            "text": "30.3%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "美国",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "美国",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "30.3%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "30.3%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/a1c7qx4n",
+      "id": "13",
+      "name": "pie-label-0-1",
+      "bbox": [
+        482,
+        211,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "中国\n4.7%",
+      "textPreview": "中国 | 4.7%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "中国"
+          },
+          {
+            "index": 2,
+            "text": "4.7%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "中国",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "中国",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "4.7%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "4.7%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/lsnqpc3a",
+      "id": "14",
+      "name": "panel-title-1",
+      "bbox": [
+        660,
+        128,
+        544,
+        34
+      ],
+      "geometry": "rect",
+      "text": "全球大豆出口分布（1.69亿吨）",
+      "textPreview": "全球大豆出口分布（1.69亿吨）",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "color": "#D71900",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "全球大豆出口分布（1.69亿吨）"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "全球大豆出口分布（1.69亿吨）",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "color": "#D71900",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "全球大豆出口分布（1.69亿吨）",
+              "fontSize": 24,
+              "color": "#D71900",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/krepw72p",
+      "id": "15",
+      "name": "panel-rule-1",
+      "bbox": [
+        670,
+        167,
+        524,
+        2
+      ],
+      "geometry": "rect",
+      "fillColor": "#D71900",
+      "lineColor": "#D71900",
+      "lineWidth": 0
+    },
+    {
+      "order": 16,
+      "kind": "chart",
+      "scope": "slide",
+      "aid": "ch/japoj6xk",
+      "id": "16",
+      "bbox": [
+        678,
+        170,
+        508,
+        196
+      ],
+      "chartType": "pie3D"
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ypw7uhkj",
+      "id": "17",
+      "name": "pie-label-1-2",
+      "bbox": [
+        889,
+        248,
+        86,
+        42
+      ],
+      "geometry": "rect",
+      "text": "巴西\n52.9%",
+      "textPreview": "巴西 | 52.9%",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "巴西"
+          },
+          {
+            "index": 2,
+            "text": "52.9%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "巴西",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#111111",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "巴西",
+              "fontSize": 14,
+              "color": "#111111",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "52.9%",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#111111",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "52.9%",
+              "fontSize": 14,
+              "color": "#111111",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9w7qtw36",
+      "id": "18",
+      "name": "pie-label-1-7",
+      "bbox": [
+        698,
+        183,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "其他\n6.3%",
+      "textPreview": "其他 | 6.3%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "其他"
+          },
+          {
+            "index": 2,
+            "text": "6.3%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "其他",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "其他",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "6.3%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "6.3%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8ve90r2l",
+      "id": "19",
+      "name": "pie-label-1-6",
+      "bbox": [
+        698,
+        211,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "巴拉圭\n3.4%",
+      "textPreview": "巴拉圭 | 3.4%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "巴拉圭"
+          },
+          {
+            "index": 2,
+            "text": "3.4%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "巴拉圭",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "巴拉圭",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "3.4%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "3.4%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/sb61cze9",
+      "id": "20",
+      "name": "pie-label-1-5",
+      "bbox": [
+        698,
+        239,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "欧盟27国\n0.1%",
+      "textPreview": "欧盟27国 | 0.1%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "欧盟27国"
+          },
+          {
+            "index": 2,
+            "text": "0.1%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "欧盟27国",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "欧盟27国",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "0.1%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "0.1%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/tcf2l4fu",
+      "id": "21",
+      "name": "pie-label-1-4",
+      "bbox": [
+        698,
+        267,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "墨西哥\n0.0%",
+      "textPreview": "墨西哥 | 0.0%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "墨西哥"
+          },
+          {
+            "index": 2,
+            "text": "0.0%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "墨西哥",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "墨西哥",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "0.0%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "0.0%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/69ojapw3",
+      "id": "22",
+      "name": "pie-label-1-3",
+      "bbox": [
+        698,
+        295,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "阿根廷\n4.3%",
+      "textPreview": "阿根廷 | 4.3%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "阿根廷"
+          },
+          {
+            "index": 2,
+            "text": "4.3%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "阿根廷",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "阿根廷",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "4.3%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "4.3%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/rax0juxo",
+      "id": "23",
+      "name": "pie-label-1-0",
+      "bbox": [
+        1066,
+        183,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "美国\n32.9%",
+      "textPreview": "美国 | 32.9%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "美国"
+          },
+          {
+            "index": 2,
+            "text": "32.9%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "美国",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "美国",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "32.9%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "32.9%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 24,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gzq1gze5",
+      "id": "24",
+      "name": "pie-label-1-1",
+      "bbox": [
+        1066,
+        211,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "中国\n0.1%",
+      "textPreview": "中国 | 0.1%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "中国"
+          },
+          {
+            "index": 2,
+            "text": "0.1%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "中国",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "中国",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "0.1%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "0.1%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 25,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/10z2p4fq",
+      "id": "25",
+      "name": "panel-title-2",
+      "bbox": [
+        76,
+        393,
+        544,
+        34
+      ],
+      "geometry": "rect",
+      "text": "全球大豆进口分布（1.66亿吨）",
+      "textPreview": "全球大豆进口分布（1.66亿吨）",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "color": "#D71900",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "全球大豆进口分布（1.66亿吨）"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "全球大豆进口分布（1.66亿吨）",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "color": "#D71900",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "全球大豆进口分布（1.66亿吨）",
+              "fontSize": 24,
+              "color": "#D71900",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 26,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ed8je9wf",
+      "id": "26",
+      "name": "panel-rule-2",
+      "bbox": [
+        86,
+        432,
+        524,
+        2
+      ],
+      "geometry": "rect",
+      "fillColor": "#D71900",
+      "lineColor": "#D71900",
+      "lineWidth": 0
+    },
+    {
+      "order": 27,
+      "kind": "chart",
+      "scope": "slide",
+      "aid": "ch/zi10jy90",
+      "id": "27",
+      "bbox": [
+        94,
+        435,
+        508,
+        196
+      ],
+      "chartType": "pie3D"
+    },
+    {
+      "order": 28,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wjm14fe1",
+      "id": "28",
+      "name": "pie-label-2-1",
+      "bbox": [
+        305,
+        513,
+        86,
+        42
+      ],
+      "geometry": "rect",
+      "text": "中国\n58.9%",
+      "textPreview": "中国 | 58.9%",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "中国"
+          },
+          {
+            "index": 2,
+            "text": "58.9%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "中国",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#111111",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "中国",
+              "fontSize": 14,
+              "color": "#111111",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "58.9%",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#111111",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "58.9%",
+              "fontSize": 14,
+              "color": "#111111",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 29,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/h4vidkfm",
+      "id": "29",
+      "name": "pie-label-2-7",
+      "bbox": [
+        114,
+        448,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "其他\n24.7%",
+      "textPreview": "其他 | 24.7%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "其他"
+          },
+          {
+            "index": 2,
+            "text": "24.7%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "其他",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "其他",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "24.7%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "24.7%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 30,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zyl4jih4",
+      "id": "30",
+      "name": "pie-label-2-6",
+      "bbox": [
+        114,
+        474.4,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "巴拉圭\n0.0%",
+      "textPreview": "巴拉圭 | 0.0%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "巴拉圭"
+          },
+          {
+            "index": 2,
+            "text": "0.0%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "巴拉圭",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "巴拉圭",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "0.0%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "0.0%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 31,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/yxc3adgj",
+      "id": "31",
+      "name": "pie-label-2-5",
+      "bbox": [
+        114,
+        500.8,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "欧盟27国\n8.9%",
+      "textPreview": "欧盟27国 | 8.9%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "欧盟27国"
+          },
+          {
+            "index": 2,
+            "text": "8.9%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "欧盟27国",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "欧盟27国",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "8.9%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "8.9%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 32,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/l03mlsza",
+      "id": "32",
+      "name": "pie-label-2-4",
+      "bbox": [
+        114,
+        527.2,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "墨西哥\n3.8%",
+      "textPreview": "墨西哥 | 3.8%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "墨西哥"
+          },
+          {
+            "index": 2,
+            "text": "3.8%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "墨西哥",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "墨西哥",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "3.8%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "3.8%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 33,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/kzu5cnyp",
+      "id": "33",
+      "name": "pie-label-2-3",
+      "bbox": [
+        114,
+        553.6,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "阿根廷\n2.9%",
+      "textPreview": "阿根廷 | 2.9%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "阿根廷"
+          },
+          {
+            "index": 2,
+            "text": "2.9%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "阿根廷",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "阿根廷",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "2.9%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "2.9%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 34,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/bu14fyhs",
+      "id": "34",
+      "name": "pie-label-2-2",
+      "bbox": [
+        114,
+        580,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "巴西\n0.5%",
+      "textPreview": "巴西 | 0.5%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "巴西"
+          },
+          {
+            "index": 2,
+            "text": "0.5%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "巴西",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "巴西",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "0.5%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "0.5%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 35,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ats36tgn",
+      "id": "35",
+      "name": "pie-label-2-0",
+      "bbox": [
+        482,
+        512,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "美国\n0.2%",
+      "textPreview": "美国 | 0.2%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "美国"
+          },
+          {
+            "index": 2,
+            "text": "0.2%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "美国",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "美国",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "0.2%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "0.2%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 36,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xw3mh8zy",
+      "id": "36",
+      "name": "panel-title-3",
+      "bbox": [
+        660,
+        393,
+        544,
+        34
+      ],
+      "geometry": "rect",
+      "text": "全球大豆消费分布（3.8亿吨）",
+      "textPreview": "全球大豆消费分布（3.8亿吨）",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "color": "#D71900",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "全球大豆消费分布（3.8亿吨）"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "全球大豆消费分布（3.8亿吨）",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "color": "#D71900",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "全球大豆消费分布（3.8亿吨）",
+              "fontSize": 24,
+              "color": "#D71900",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 37,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cval83yd",
+      "id": "37",
+      "name": "panel-rule-3",
+      "bbox": [
+        670,
+        432,
+        524,
+        2
+      ],
+      "geometry": "rect",
+      "fillColor": "#D71900",
+      "lineColor": "#D71900",
+      "lineWidth": 0
+    },
+    {
+      "order": 38,
+      "kind": "chart",
+      "scope": "slide",
+      "aid": "ch/nalk7itc",
+      "id": "38",
+      "bbox": [
+        678,
+        435,
+        508,
+        196
+      ],
+      "chartType": "pie3D"
+    },
+    {
+      "order": 39,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/25s32tgb",
+      "id": "39",
+      "name": "pie-label-3-1",
+      "bbox": [
+        889,
+        513,
+        86,
+        42
+      ],
+      "geometry": "rect",
+      "text": "中国\n30.7%",
+      "textPreview": "中国 | 30.7%",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "中国"
+          },
+          {
+            "index": 2,
+            "text": "30.7%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "中国",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#111111",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "中国",
+              "fontSize": 14,
+              "color": "#111111",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "30.7%",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#111111",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "30.7%",
+              "fontSize": 14,
+              "color": "#111111",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 40,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/idc7m1cv",
+      "id": "40",
+      "name": "pie-label-3-7",
+      "bbox": [
+        698,
+        448,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "其他\n18.3%",
+      "textPreview": "其他 | 18.3%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "其他"
+          },
+          {
+            "index": 2,
+            "text": "18.3%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "其他",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "其他",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "18.3%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "18.3%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 41,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3el8fmdg",
+      "id": "41",
+      "name": "pie-label-3-6",
+      "bbox": [
+        698,
+        474.4,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "巴拉圭\n1.0%",
+      "textPreview": "巴拉圭 | 1.0%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "巴拉圭"
+          },
+          {
+            "index": 2,
+            "text": "1.0%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "巴拉圭",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "巴拉圭",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "1.0%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "1.0%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 42,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4fuporu1",
+      "id": "42",
+      "name": "pie-label-3-5",
+      "bbox": [
+        698,
+        500.8,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "欧盟27国\n4.4%",
+      "textPreview": "欧盟27国 | 4.4%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "欧盟27国"
+          },
+          {
+            "index": 2,
+            "text": "4.4%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "欧盟27国",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "欧盟27国",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "4.4%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "4.4%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 43,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5g3qhwvm",
+      "id": "43",
+      "name": "pie-label-3-4",
+      "bbox": [
+        698,
+        527.2,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "墨西哥\n1.7%",
+      "textPreview": "墨西哥 | 1.7%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "墨西哥"
+          },
+          {
+            "index": 2,
+            "text": "1.7%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "墨西哥",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "墨西哥",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "1.7%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "1.7%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 44,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/u9s7ihcz",
+      "id": "44",
+      "name": "pie-label-3-3",
+      "bbox": [
+        698,
+        553.6,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "阿根廷\n12.4%",
+      "textPreview": "阿根廷 | 12.4%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "阿根廷"
+          },
+          {
+            "index": 2,
+            "text": "12.4%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "阿根廷",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "阿根廷",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "12.4%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "12.4%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 45,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/va18bmdk",
+      "id": "45",
+      "name": "pie-label-3-2",
+      "bbox": [
+        698,
+        580,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "巴西\n14.6%",
+      "textPreview": "巴西 | 14.6%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "巴西"
+          },
+          {
+            "index": 2,
+            "text": "14.6%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "巴西",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "巴西",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "14.6%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "14.6%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 46,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gbupkru5",
+      "id": "46",
+      "name": "pie-label-3-0",
+      "bbox": [
+        1066,
+        512,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "美国\n17.0%",
+      "textPreview": "美国 | 17.0%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "美国"
+          },
+          {
+            "index": 2,
+            "text": "17.0%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "美国",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "美国",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "17.0%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "17.0%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 47,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hc3qdwva",
+      "id": "47",
+      "name": "brand-footer",
+      "bbox": [
+        58,
+        655,
+        235,
+        48
+      ],
+      "geometry": "rect",
+      "text": "◉  中信期货\n     CITIC Futures",
+      "textPreview": "◉  中信期货 |      CITIC Futures",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "fontSize": 17,
+        "typeface": "+mn-lt",
+        "color": "#D71900",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "◉  中信期货"
+          },
+          {
+            "index": 2,
+            "text": "     CITIC Futures"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "◉  中信期货",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "color": "#D71900",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "◉  中信期货",
+              "fontSize": 17,
+              "color": "#D71900",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "     CITIC Futures",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "color": "#D71900",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "     CITIC Futures",
+              "fontSize": 17,
+              "color": "#D71900",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 48,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6ls7ehcn",
+      "id": "48",
+      "name": "source-footer",
+      "bbox": [
+        760,
+        671,
+        410,
+        22
+      ],
+      "geometry": "rect",
+      "text": "资料来源：Wind  Bloomberg  USDA  粮油商务网  我的农产品  中信期货研究所",
+      "textPreview": "资料来源：Wind  Bloomberg  USDA  粮油商务网  我的农产品  中信期货研究所",
+      "resolvedFontSize": 9,
+      "resolvedTextStyle": {
+        "fontSize": 9,
+        "typeface": "+mn-lt",
+        "color": "#777777",
+        "alignment": "right",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "资料来源：Wind  Bloomberg  USDA  粮油商务网  我的农产品  中信期货研究所"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "资料来源：Wind  Bloomberg  USDA  粮油商务网  我的农产品  中信期货研究所",
+          "resolvedTextStyle": {
+            "fontSize": 9,
+            "color": "#777777",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "资料来源：Wind  Bloomberg  USDA  粮油商务网  我的农产品  中信期货研究所",
+              "fontSize": 9,
+              "color": "#777777",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 49,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/761872d8",
+      "id": "49",
+      "name": "footer-rule",
+      "bbox": [
+        294,
+        690,
+        886,
+        2
+      ],
+      "geometry": "rect",
+      "fillColor": "#D71900",
+      "lineColor": "#D71900",
+      "lineWidth": 0
+    },
+    {
+      "order": 50,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/p07adkfq",
+      "id": "50",
+      "name": "page-number",
+      "bbox": [
+        1188,
+        672,
+        35,
+        28
+      ],
+      "geometry": "rect",
+      "text": "4",
+      "textPreview": "4",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "4"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "4",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#111111",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "4",
+              "fontSize": 16,
+              "color": "#111111",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

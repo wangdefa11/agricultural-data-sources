@@ -1,0 +1,78 @@
+{
+  "nodes": {
+    "soybean": {
+      "slug": "soybean",
+      "name": "大豆",
+      "code": "A · B · CBOT S",
+      "ready": true,
+      "summary": "油籽原料，连接全球种植、国际贸易、压榨和养殖需求。"
+    },
+    "soymeal": {
+      "slug": "soymeal",
+      "name": "豆粕",
+      "code": "M",
+      "ready": false,
+      "summary": "大豆压榨产物，连接蛋白饲料与养殖需求。"
+    },
+    "soybean-oil": {
+      "slug": "soybean-oil",
+      "name": "豆油",
+      "code": "Y",
+      "ready": false,
+      "summary": "大豆压榨产物，与棕榈油、菜籽油形成替代。"
+    },
+    "rapeseed-meal": {
+      "slug": "rapeseed-meal",
+      "name": "菜粕",
+      "code": "RM",
+      "ready": false,
+      "summary": "豆粕的蛋白饲料替代品。"
+    },
+    "corn": {
+      "slug": "corn",
+      "name": "玉米",
+      "code": "C",
+      "ready": false,
+      "summary": "与豆粕共同构成饲料成本核心。"
+    },
+    "hog": {
+      "slug": "hog",
+      "name": "生猪",
+      "code": "LH",
+      "ready": false,
+      "summary": "豆粕和玉米的重要下游需求端。"
+    },
+    "egg": {
+      "slug": "egg",
+      "name": "鸡蛋",
+      "code": "JD",
+      "ready": false,
+      "summary": "饲料需求与养殖利润的观察节点。"
+    },
+    "palm-oil": {
+      "slug": "palm-oil",
+      "name": "棕榈油",
+      "code": "P",
+      "ready": false,
+      "summary": "豆油的重要油脂替代品。"
+    },
+    "rapeseed-oil": {
+      "slug": "rapeseed-oil",
+      "name": "菜籽油",
+      "code": "OI",
+      "ready": false,
+      "summary": "豆油的重要油脂替代品。"
+    }
+  },
+  "map": {
+    "source": "soybean",
+    "processLabel": "压榨",
+    "products": ["soymeal", "soybean-oil"],
+    "relationships": [
+      { "label": "蛋白替代", "targets": ["rapeseed-meal"] },
+      { "label": "饲料配方", "targets": ["corn"] },
+      { "label": "养殖需求", "targets": ["hog", "egg"] },
+      { "label": "油脂替代", "targets": ["palm-oil", "rapeseed-oil"] }
+    ]
+  }
+}

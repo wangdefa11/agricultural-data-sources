@@ -1,0 +1,3182 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/bx0afa",
+    "id": "bx0afa",
+    "slide": 1,
+    "layoutId": "299907f3-9b6f-4672-9545-33a22d56863a",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "4fe78348-6788-4650-b041-b8ca2753a15f",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FFFFFF",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "299907f3-9b6f-4672-9545-33a22d56863a",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "4fe78348-6788-4650-b041-b8ca2753a15f",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "4fe78348-6788-4650-b041-b8ca2753a15f",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/a1gv2xcn",
+      "id": "1",
+      "name": "slide-title",
+      "bbox": [
+        52,
+        35,
+        1000,
+        55
+      ],
+      "geometry": "rect",
+      "text": "全球油料分布（22/23年度）",
+      "textPreview": "全球油料分布（22/23年度）",
+      "resolvedFontSize": 40,
+      "resolvedTextStyle": {
+        "fontSize": 40,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "全球油料分布（22/23年度）"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "全球油料分布（22/23年度）",
+          "resolvedTextStyle": {
+            "fontSize": 40,
+            "color": "#111111",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "全球油料分布（22/23年度）",
+              "fontSize": 40,
+              "color": "#111111",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/x47edsve",
+      "id": "2",
+      "name": "title-rule",
+      "bbox": [
+        52,
+        98,
+        1176,
+        4
+      ],
+      "geometry": "rect",
+      "fillColor": "#D71900",
+      "lineColor": "#D71900",
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/c3yd47ut",
+      "id": "3",
+      "name": "panel-title-0",
+      "bbox": [
+        76,
+        128,
+        544,
+        34
+      ],
+      "geometry": "rect",
+      "text": "全球油料产量分布（6.45亿吨）",
+      "textPreview": "全球油料产量分布（6.45亿吨）",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "color": "#D71900",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "全球油料产量分布（6.45亿吨）"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "全球油料产量分布（6.45亿吨）",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "color": "#D71900",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "全球油料产量分布（6.45亿吨）",
+              "fontSize": 24,
+              "color": "#D71900",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/z69wf2dk",
+      "id": "4",
+      "name": "panel-rule-0",
+      "bbox": [
+        86,
+        167,
+        524,
+        2
+      ],
+      "geometry": "rect",
+      "fillColor": "#D71900",
+      "lineColor": "#D71900",
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "chart",
+      "scope": "slide",
+      "aid": "ch/ahcn2lg3",
+      "id": "5",
+      "bbox": [
+        94,
+        170,
+        508,
+        196
+      ],
+      "chartType": "pie3D"
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/l8rehcva",
+      "id": "6",
+      "name": "pie-label-0-0",
+      "bbox": [
+        305,
+        248,
+        86,
+        42
+      ],
+      "geometry": "rect",
+      "text": "大豆\n60.5%",
+      "textPreview": "大豆 | 60.5%",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "大豆"
+          },
+          {
+            "index": 2,
+            "text": "60.5%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "大豆",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#111111",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "大豆",
+              "fontSize": 14,
+              "color": "#111111",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "60.5%",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#111111",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "60.5%",
+              "fontSize": 14,
+              "color": "#111111",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/k7id87up",
+      "id": "7",
+      "name": "pie-label-0-6",
+      "bbox": [
+        114,
+        183,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "棕榈仁\n3.2%",
+      "textPreview": "棕榈仁 | 3.2%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "棕榈仁"
+          },
+          {
+            "index": 2,
+            "text": "3.2%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "棕榈仁",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "棕榈仁",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "3.2%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "3.2%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7u9wjmdg",
+      "id": "8",
+      "name": "pie-label-0-5",
+      "bbox": [
+        114,
+        209.4,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "椰肉干\n0.9%",
+      "textPreview": "椰肉干 | 0.9%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "椰肉干"
+          },
+          {
+            "index": 2,
+            "text": "0.9%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "椰肉干",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "椰肉干",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "0.9%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "0.9%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/m90vahcv",
+      "id": "9",
+      "name": "pie-label-0-4",
+      "bbox": [
+        114,
+        235.8,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "菜籽\n13.1%",
+      "textPreview": "菜籽 | 13.1%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "菜籽"
+          },
+          {
+            "index": 2,
+            "text": "13.1%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "菜籽",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "菜籽",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "13.1%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "13.1%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4bq1wjyt",
+      "id": "10",
+      "name": "pie-label-0-3",
+      "bbox": [
+        114,
+        262.2,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "葵花籽\n7.9%",
+      "textPreview": "葵花籽 | 7.9%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "葵花籽"
+          },
+          {
+            "index": 2,
+            "text": "7.9%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "葵花籽",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "葵花籽",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "7.9%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "7.9%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/pcz2pofe",
+      "id": "11",
+      "name": "pie-label-0-2",
+      "bbox": [
+        114,
+        288.6,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "棉籽\n6.6%",
+      "textPreview": "棉籽 | 6.6%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "棉籽"
+          },
+          {
+            "index": 2,
+            "text": "6.6%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "棉籽",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "棉籽",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "6.6%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "6.6%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/29oju9gn",
+      "id": "12",
+      "name": "pie-label-0-1",
+      "bbox": [
+        114,
+        315,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "花生\n7.8%",
+      "textPreview": "花生 | 7.8%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "花生"
+          },
+          {
+            "index": 2,
+            "text": "7.8%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "花生",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "花生",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "7.8%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "7.8%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3ahknex8",
+      "id": "13",
+      "name": "panel-title-1",
+      "bbox": [
+        660,
+        128,
+        544,
+        34
+      ],
+      "geometry": "rect",
+      "text": "全球油料出口分布（1.97亿吨）",
+      "textPreview": "全球油料出口分布（1.97亿吨）",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "color": "#D71900",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "全球油料出口分布（1.97亿吨）"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "全球油料出口分布（1.97亿吨）",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "color": "#D71900",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "全球油料出口分布（1.97亿吨）",
+              "fontSize": 24,
+              "color": "#D71900",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cfq10jyp",
+      "id": "14",
+      "name": "panel-rule-1",
+      "bbox": [
+        670,
+        167,
+        524,
+        2
+      ],
+      "geometry": "rect",
+      "fillColor": "#D71900",
+      "lineColor": "#D71900",
+      "lineWidth": 0
+    },
+    {
+      "order": 15,
+      "kind": "chart",
+      "scope": "slide",
+      "aid": "ch/5sry1svm",
+      "id": "15",
+      "bbox": [
+        678,
+        170,
+        508,
+        196
+      ],
+      "chartType": "pie3D"
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qd8jytgz",
+      "id": "16",
+      "name": "pie-label-1-0",
+      "bbox": [
+        889,
+        248,
+        86,
+        42
+      ],
+      "geometry": "rect",
+      "text": "大豆\n85.6%",
+      "textPreview": "大豆 | 85.6%",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "大豆"
+          },
+          {
+            "index": 2,
+            "text": "85.6%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "大豆",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#111111",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "大豆",
+              "fontSize": 14,
+              "color": "#111111",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "85.6%",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#111111",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "85.6%",
+              "fontSize": 14,
+              "color": "#111111",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/rehkrex4",
+      "id": "17",
+      "name": "pie-label-1-6",
+      "bbox": [
+        698,
+        183,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "棕榈仁\n0.0%",
+      "textPreview": "棕榈仁 | 0.0%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "棕榈仁"
+          },
+          {
+            "index": 2,
+            "text": "0.0%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "棕榈仁",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "棕榈仁",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "0.0%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "0.0%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/03al43y1",
+      "id": "18",
+      "name": "pie-label-1-5",
+      "bbox": [
+        698,
+        209.4,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "椰肉干\n0.1%",
+      "textPreview": "椰肉干 | 0.1%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "椰肉干"
+          },
+          {
+            "index": 2,
+            "text": "0.1%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "椰肉干",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "椰肉干",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "0.1%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "0.1%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/14j2x8fm",
+      "id": "19",
+      "name": "pie-label-1-4",
+      "bbox": [
+        698,
+        235.8,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "菜籽\n9.8%",
+      "textPreview": "菜籽 | 9.8%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "菜籽"
+          },
+          {
+            "index": 2,
+            "text": "9.8%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "菜籽",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "菜籽",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "9.8%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "9.8%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9ova143e",
+      "id": "20",
+      "name": "pie-label-1-3",
+      "bbox": [
+        698,
+        262.2,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "葵花籽\n1.7%",
+      "textPreview": "葵花籽 | 1.7%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "葵花籽"
+          },
+          {
+            "index": 2,
+            "text": "1.7%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "葵花籽",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "葵花籽",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "1.7%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "1.7%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/onmtszmt",
+      "id": "21",
+      "name": "pie-label-1-2",
+      "bbox": [
+        698,
+        288.6,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "棉籽\n0.5%",
+      "textPreview": "棉籽 | 0.5%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "棉籽"
+          },
+          {
+            "index": 2,
+            "text": "0.5%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "棉籽",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "棉籽",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "0.5%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "0.5%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nmdszul8",
+      "id": "22",
+      "name": "pie-label-1-1",
+      "bbox": [
+        698,
+        315,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "花生\n2.3%",
+      "textPreview": "花生 | 2.3%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "花生"
+          },
+          {
+            "index": 2,
+            "text": "2.3%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "花生",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "花生",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "2.3%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "2.3%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ml4bqp4n",
+      "id": "23",
+      "name": "panel-title-2",
+      "bbox": [
+        76,
+        393,
+        544,
+        34
+      ],
+      "geometry": "rect",
+      "text": "全球油料进口分布（1.93亿吨）",
+      "textPreview": "全球油料进口分布（1.93亿吨）",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "color": "#D71900",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "全球油料进口分布（1.93亿吨）"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "全球油料进口分布（1.93亿吨）",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "color": "#D71900",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "全球油料进口分布（1.93亿吨）",
+              "fontSize": 24,
+              "color": "#D71900",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 24,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xcfa543a",
+      "id": "24",
+      "name": "panel-rule-2",
+      "bbox": [
+        86,
+        432,
+        524,
+        2
+      ],
+      "geometry": "rect",
+      "fillColor": "#D71900",
+      "lineColor": "#D71900",
+      "lineWidth": 0
+    },
+    {
+      "order": 25,
+      "kind": "chart",
+      "scope": "slide",
+      "aid": "ch/ofyhk7md",
+      "id": "25",
+      "bbox": [
+        94,
+        435,
+        508,
+        196
+      ],
+      "chartType": "pie3D"
+    },
+    {
+      "order": 26,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/bads3elk",
+      "id": "26",
+      "name": "pie-label-2-0",
+      "bbox": [
+        305,
+        513,
+        86,
+        42
+      ],
+      "geometry": "rect",
+      "text": "大豆\n86.1%",
+      "textPreview": "大豆 | 86.1%",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "大豆"
+          },
+          {
+            "index": 2,
+            "text": "86.1%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "大豆",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#111111",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "大豆",
+              "fontSize": 14,
+              "color": "#111111",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "86.1%",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#111111",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "86.1%",
+              "fontSize": 14,
+              "color": "#111111",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 27,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/a94bu94z",
+      "id": "27",
+      "name": "pie-label-2-6",
+      "bbox": [
+        114,
+        448,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "棕榈仁\n0.1%",
+      "textPreview": "棕榈仁 | 0.1%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "棕榈仁"
+          },
+          {
+            "index": 2,
+            "text": "0.1%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "棕榈仁",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "棕榈仁",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "0.1%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "0.1%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 28,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/dgbatk36",
+      "id": "28",
+      "name": "pie-label-2-5",
+      "bbox": [
+        114,
+        474.4,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "椰肉干\n0.0%",
+      "textPreview": "椰肉干 | 0.0%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "椰肉干"
+          },
+          {
+            "index": 2,
+            "text": "0.0%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "椰肉干",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "椰肉干",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "0.0%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "0.0%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 29,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cf2tkfml",
+      "id": "29",
+      "name": "pie-label-2-4",
+      "bbox": [
+        114,
+        500.8,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "菜籽\n8.6%",
+      "textPreview": "菜籽 | 8.6%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "菜籽"
+          },
+          {
+            "index": 2,
+            "text": "8.6%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "菜籽",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "菜籽",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "8.6%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "8.6%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 30,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2l07ulkj",
+      "id": "30",
+      "name": "pie-label-2-3",
+      "bbox": [
+        114,
+        527.2,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "葵花籽\n2.5%",
+      "textPreview": "葵花籽 | 2.5%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "葵花籽"
+          },
+          {
+            "index": 2,
+            "text": "2.5%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "葵花籽",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "葵花籽",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "2.5%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "2.5%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 31,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3m98nq14",
+      "id": "31",
+      "name": "pie-label-2-2",
+      "bbox": [
+        114,
+        553.6,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "棉籽\n0.5%",
+      "textPreview": "棉籽 | 0.5%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "棉籽"
+          },
+          {
+            "index": 2,
+            "text": "0.5%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "棉籽",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "棉籽",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "0.5%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "0.5%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 32,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4nipwv2p",
+      "id": "32",
+      "name": "pie-label-2-1",
+      "bbox": [
+        114,
+        580,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "花生\n2.2%",
+      "textPreview": "花生 | 2.2%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "花生"
+          },
+          {
+            "index": 2,
+            "text": "2.2%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "花生",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "花生",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "2.2%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "2.2%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 33,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/porqp0ju",
+      "id": "33",
+      "name": "panel-title-3",
+      "bbox": [
+        660,
+        393,
+        544,
+        34
+      ],
+      "geometry": "rect",
+      "text": "全球油料压榨分布（5.34亿吨）",
+      "textPreview": "全球油料压榨分布（5.34亿吨）",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "color": "#D71900",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "全球油料压榨分布（5.34亿吨）"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "全球油料压榨分布（5.34亿吨）",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "color": "#D71900",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "全球油料压榨分布（5.34亿吨）",
+              "fontSize": 24,
+              "color": "#D71900",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 34,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qp07ylkf",
+      "id": "34",
+      "name": "panel-rule-3",
+      "bbox": [
+        670,
+        432,
+        524,
+        2
+      ],
+      "geometry": "rect",
+      "fillColor": "#D71900",
+      "lineColor": "#D71900",
+      "lineWidth": 0
+    },
+    {
+      "order": 35,
+      "kind": "chart",
+      "scope": "slide",
+      "aid": "ch/ji14zuxc",
+      "id": "35",
+      "bbox": [
+        678,
+        435,
+        508,
+        196
+      ],
+      "chartType": "pie3D"
+    },
+    {
+      "order": 36,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cr290v2l",
+      "id": "36",
+      "name": "pie-label-3-0",
+      "bbox": [
+        889,
+        513,
+        86,
+        42
+      ],
+      "geometry": "rect",
+      "text": "大豆\n61.6%",
+      "textPreview": "大豆 | 61.6%",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "大豆"
+          },
+          {
+            "index": 2,
+            "text": "61.6%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "大豆",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#111111",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "大豆",
+              "fontSize": 14,
+              "color": "#111111",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "61.6%",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#111111",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "61.6%",
+              "fontSize": 14,
+              "color": "#111111",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 37,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/dsbqt0j6",
+      "id": "37",
+      "name": "pie-label-3-6",
+      "bbox": [
+        698,
+        448,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "棕榈仁\n3.8%",
+      "textPreview": "棕榈仁 | 3.8%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "棕榈仁"
+          },
+          {
+            "index": 2,
+            "text": "3.8%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "棕榈仁",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "棕榈仁",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "3.8%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "3.8%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 38,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6tg7m1kb",
+      "id": "38",
+      "name": "pie-label-3-5",
+      "bbox": [
+        698,
+        474.4,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "椰肉干\n1.1%",
+      "textPreview": "椰肉干 | 1.1%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "椰肉干"
+          },
+          {
+            "index": 2,
+            "text": "1.1%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "椰肉干",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "椰肉干",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "1.1%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "1.1%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 39,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7up8v61w",
+      "id": "39",
+      "name": "pie-label-3-4",
+      "bbox": [
+        698,
+        500.8,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "菜籽\n14.5%",
+      "textPreview": "菜籽 | 14.5%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "菜籽"
+          },
+          {
+            "index": 2,
+            "text": "14.5%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "菜籽",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "菜籽",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "14.5%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "14.5%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 40,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nqhoj2dk",
+      "id": "40",
+      "name": "pie-label-3-3",
+      "bbox": [
+        698,
+        527.2,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "葵花籽\n9.0%",
+      "textPreview": "葵花籽 | 9.0%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "葵花籽"
+          },
+          {
+            "index": 2,
+            "text": "9.0%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "葵花籽",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "葵花籽",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "9.0%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "9.0%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 41,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/mp8nqxcz",
+      "id": "41",
+      "name": "pie-label-3-2",
+      "bbox": [
+        698,
+        553.6,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "棉籽\n6.3%",
+      "textPreview": "棉籽 | 6.3%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "棉籽"
+          },
+          {
+            "index": 2,
+            "text": "6.3%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "棉籽",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "棉籽",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "6.3%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "6.3%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 42,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9cz6lsvq",
+      "id": "42",
+      "name": "pie-label-3-1",
+      "bbox": [
+        698,
+        580,
+        100,
+        31
+      ],
+      "geometry": "rect",
+      "text": "花生\n3.7%",
+      "textPreview": "花生 | 3.7%",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 10,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "花生"
+          },
+          {
+            "index": 2,
+            "text": "3.7%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "花生",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "花生",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "3.7%",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "color": "#111111",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "3.7%",
+              "fontSize": 10,
+              "color": "#111111",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 43,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8rq5snu5",
+      "id": "43",
+      "name": "brand-footer",
+      "bbox": [
+        58,
+        655,
+        235,
+        48
+      ],
+      "geometry": "rect",
+      "text": "◉  中信期货\n     CITIC Futures",
+      "textPreview": "◉  中信期货 |      CITIC Futures",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "fontSize": 17,
+        "typeface": "+mn-lt",
+        "color": "#D71900",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "◉  中信期货"
+          },
+          {
+            "index": 2,
+            "text": "     CITIC Futures"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "◉  中信期货",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "color": "#D71900",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "◉  中信期货",
+              "fontSize": 17,
+              "color": "#D71900",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "     CITIC Futures",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "color": "#D71900",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "     CITIC Futures",
+              "fontSize": 17,
+              "color": "#D71900",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 44,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vehon2tw",
+      "id": "44",
+      "name": "source-footer",
+      "bbox": [
+        760,
+        671,
+        410,
+        22
+      ],
+      "geometry": "rect",
+      "text": "资料来源：Wind  Bloomberg  USDA  粮油商务网  我的农产品  中信期货研究所",
+      "textPreview": "资料来源：Wind  Bloomberg  USDA  粮油商务网  我的农产品  中信期货研究所",
+      "resolvedFontSize": 9,
+      "resolvedTextStyle": {
+        "fontSize": 9,
+        "typeface": "+mn-lt",
+        "color": "#777777",
+        "alignment": "right",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "资料来源：Wind  Bloomberg  USDA  粮油商务网  我的农产品  中信期货研究所"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "资料来源：Wind  Bloomberg  USDA  粮油商务网  我的农产品  中信期货研究所",
+          "resolvedTextStyle": {
+            "fontSize": 9,
+            "color": "#777777",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "资料来源：Wind  Bloomberg  USDA  粮油商务网  我的农产品  中信期货研究所",
+              "fontSize": 9,
+              "color": "#777777",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 45,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ad8nuxcb",
+      "id": "45",
+      "name": "footer-rule",
+      "bbox": [
+        294,
+        690,
+        886,
+        2
+      ],
+      "geometry": "rect",
+      "fillColor": "#D71900",
+      "lineColor": "#D71900",
+      "lineWidth": 0
+    },
+    {
+      "order": 46,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xgj6pcbm",
+      "id": "46",
+      "name": "page-number",
+      "bbox": [
+        1188,
+        672,
+        35,
+        28
+      ],
+      "geometry": "rect",
+      "text": "3",
+      "textPreview": "3",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "color": "#111111",
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "3"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "3",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#111111",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "3",
+              "fontSize": 16,
+              "color": "#111111",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}
