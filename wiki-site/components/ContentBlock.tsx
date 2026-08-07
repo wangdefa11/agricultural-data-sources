@@ -113,6 +113,14 @@ export function ContentBlock({ block }: { block: ContentBlockData }) {
     );
   }
 
+  if (block.kind === "source") {
+    return (
+      <p className={`block-source content-block ${span}`}>
+        <InlineMarkdown text={block.text} />
+      </p>
+    );
+  }
+
   // 外部或独立 HTML 图表。
   if (block.kind === "embed") {
     return (

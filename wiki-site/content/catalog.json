@@ -7,6 +7,20 @@
       "ready": true,
       "summary": "油籽原料，连接全球种植、国际贸易、压榨和养殖需求。"
     },
+    "soybean-no1": {
+      "slug": "soybean-no1",
+      "name": "豆1",
+      "code": "A",
+      "ready": true,
+      "summary": "大连商品交易所黄大豆1号期货，核心研究对象是国产非转基因食用大豆。"
+    },
+    "soybean-no2": {
+      "slug": "soybean-no2",
+      "name": "豆2",
+      "code": "B",
+      "ready": true,
+      "summary": "大连商品交易所黄大豆2号期货，核心研究对象是进口压榨大豆及其到岸、加工和库存链条。"
+    },
     "soymeal": {
       "slug": "soymeal",
       "name": "豆粕",
@@ -69,6 +83,7 @@
     "processLabel": "压榨",
     "products": ["soymeal", "soybean-oil"],
     "relationships": [
+      { "label": "大豆品种", "targets": ["soybean-no1", "soybean-no2"] },
       { "label": "蛋白替代", "targets": ["rapeseed-meal"] },
       { "label": "饲料配方", "targets": ["corn"] },
       { "label": "养殖需求", "targets": ["hog", "egg"] },

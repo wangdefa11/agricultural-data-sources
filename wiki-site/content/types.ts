@@ -106,13 +106,20 @@ export type ChecklistBlock = {
   }>;
 };
 
+export type SourceBlock = {
+  kind: "source";
+  span?: "full" | "wide" | "narrow";
+  text: string;
+};
+
 export type ContentBlock =
   | ChartBlock
   | TextBlock
   | ImageBlock
   | EmbedBlock
   | TableBlock
-  | ChecklistBlock;
+  | ChecklistBlock
+  | SourceBlock;
 
 // 一个 Wiki 章节和完整品种页面。
 export type WikiSection = {

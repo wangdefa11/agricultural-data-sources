@@ -6,6 +6,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import math
 import re
@@ -34,7 +35,7 @@ BLOCK_HEADING = re.compile(
     r"^(?P<title>.*?)"
     r"(?:\s+\{(?P<attrs>[^{}]+)\})?$"
 )
-BLOCK_KINDS = {"chart", "checklist", "embed", "relations", "stats"}
+BLOCK_KINDS = {"chart", "checklist", "embed", "relations", "source", "stats"}
 BLOCK_SPANS = {"full", "narrow", "wide"}
 
 
@@ -225,10 +226,12 @@ def public_chart_src(slug: str, source: str) -> str:
         raise ValueError(
             f"commodities/{slug} 嵌入图表必须指向 charts/ 下的文件：{source}"
         )
-    if not (COMMODITIES / slug / relative).is_file():
+    chart_path = COMMODITIES / slug / relative
+    if not chart_path.is_file():
         raise ValueError(f"commodities/{slug} 找不到图表：{source}")
     public_relative = relative.relative_to("charts")
-    return f"/commodities/{slug}/{public_relative.as_posix()}"
+    version = hashlib.sha256(chart_path.read_bytes()).hexdigest()[:10]
+    return f"/commodities/{slug}/{public_relative.as_posix()}?v={version}"
 
 
 def parse_metadata(lines: list[str], location: str) -> dict[str, str]:
@@ -413,6 +416,13 @@ def resolve_block(
             "items": [
                 {"title": row[0], "description": row[1]} for row in rows
             ],
+        }
+
+    if kind == "source":
+        return "block", {
+            "kind": "source",
+            "span": span,
+            "text": normalise_markdown(lines),
         }
 
     if kind == "relations":

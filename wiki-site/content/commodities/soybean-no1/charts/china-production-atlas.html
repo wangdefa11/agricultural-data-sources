@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>中国大豆产区、产量与生长历</title>
+<style>
+:root{--ink:#17324d;--muted:#68788a;--line:#dce5eb;--blue:#176b87;--teal:#27a19a;--gold:#e0a33a;--green:#68a85e;--pale:#f4f8f9}
+*{box-sizing:border-box}body{margin:0;background:#fff;color:var(--ink);font:14px/1.55 system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif}
+main{padding:22px;display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{border:1px solid var(--line);border-radius:14px;padding:18px;background:#fff;min-width:0}.wide{grid-column:1/-1}
+h2{font-size:18px;margin:0 0 4px}p{margin:0}.sub,.source{color:var(--muted);font-size:12px}.source{margin-top:12px;border-top:1px solid var(--line);padding-top:9px}.source a{color:var(--blue)}
+svg{display:block;width:100%;height:auto}.grid{stroke:#e8eef2;stroke-width:1}.axis{fill:var(--muted);font-size:11px}.label{fill:var(--ink);font-size:12px;font-weight:650}.value{fill:var(--blue);font-size:11px;font-weight:700}
+.legend{display:flex;gap:14px;flex-wrap:wrap;margin:10px 0 0;color:var(--muted);font-size:12px}.legend i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px}
+.map-note{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(220px,.7fr);gap:16px;align-items:center}.official-map{position:relative;max-width:560px;margin:10px auto 0}.official-map>img{display:block;width:100%;height:auto}.map-pin{position:absolute;transform:translate(-50%,-50%);width:14px;height:14px;border:3px solid #fff;border-radius:50%;background:var(--gold);box-shadow:0 1px 5px #17324d88}.map-pin.core{width:28px;height:28px;background:var(--blue)}.map-pin.second{width:21px;height:21px;background:var(--teal)}.map-pin span{position:absolute;left:16px;top:-4px;white-space:nowrap;background:#fffdf2e8;color:var(--ink);font-size:11px;font-weight:700;padding:1px 4px;border-radius:3px}.map-pin.left span{left:auto;right:16px}.rank{display:grid;gap:8px}.rank div{background:var(--pale);border-radius:9px;padding:8px 10px}.rank b{display:block}.rank span{font-size:12px;color:var(--muted)}
+.pie-wrap{display:grid;grid-template-columns:minmax(180px,280px) 1fr;align-items:center;gap:14px}.pie{aspect-ratio:1;border-radius:50%;background:conic-gradient(#176b87 0 43.4%,#27a19a 43.4% 55.3%,#e0a33a 55.3% 80.1%,#c6d7dd 80.1% 100%);position:relative}.pie:after{content:"2023\\A全国 2084 万吨";white-space:pre;position:absolute;inset:26%;border-radius:50%;background:#fff;display:grid;place-items:center;text-align:center;font-weight:700;font-size:13px}.pie-legend{display:grid;gap:9px}.pie-legend div{display:grid;grid-template-columns:10px 1fr auto;gap:8px;align-items:center}.pie-legend i{width:10px;height:10px;border-radius:3px}.pie-legend small{color:var(--muted)}
+.calendar{margin-top:14px;overflow-x:auto}.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(9,1fr);gap:3px}.cal>*{min-height:34px;display:flex;align-items:center;justify-content:center;border-radius:6px;font-size:11px}.cal .head{color:var(--muted);font-weight:700}.cal .region{justify-content:flex-start;font-weight:700;padding-left:8px}.stage{color:#fff;font-weight:650}.sow{background:#658cb0}.veg{background:#57a66a}.flower{background:#e4a83d}.fill{background:#cf744d}.harvest{background:#7a668d}.blank{background:#f3f6f7}
+.tip{margin-top:10px;padding:10px 12px;background:#f4f8f9;border-left:3px solid var(--teal);font-size:12px}
+@media(max-width:760px){main{grid-template-columns:1fr;padding:12px}.wide{grid-column:auto}.map-note,.pie-wrap{grid-template-columns:1fr}.pie{max-width:240px;margin:auto}}
+</style>
+</head>
+<body>
+<main>
+  <section class="card wide">
+    <h2>实际生产重心：东北是豆1供给核心</h2>
+    <p class="sub">示意图按实际主产省定位；圆点表示重点程度，不表示行政区精确边界。2024年黑龙江、内蒙古大豆产量分别为905.0和248.1万吨。</p>
+    <div class="map-note">
+      <div class="official-map" role="img" aria-label="自然资源部标准中国地图上的大豆重点生产省区">
+        <img src="china-standard-map-gs2016-2893.jpg" alt="中国标准地图，审图号GS（2016）2893号">
+        <i class="map-pin core left" style="left:84%;top:16%"><span>黑龙江 905.0万吨</span></i>
+        <i class="map-pin second left" style="left:68%;top:22%"><span>内蒙古 248.1万吨</span></i>
+        <i class="map-pin" style="left:82%;top:26%"><span>吉林</span></i>
+        <i class="map-pin" style="left:76%;top:38%"><span>山东</span></i>
+        <i class="map-pin" style="left:69%;top:42%"><span>河南</span></i>
+        <i class="map-pin" style="left:72%;top:48%"><span>安徽</span></i>
+        <i class="map-pin left" style="left:65%;top:55%"><span>湖北</span></i>
+        <i class="map-pin left" style="left:55%;top:61%"><span>四川</span></i>
+      </div>
+      <div class="rank">
+        <div><b>东北春大豆区</b><span>黑龙江、内蒙古东部、吉林：规模最大，天气与新粮上市对豆1影响最直接。</span></div>
+        <div><b>黄淮海夏大豆区</b><span>安徽、河南、山东：麦后夏播，生育期短，7—8月高温干旱和渍涝关键。</span></div>
+        <div><b>长江流域与西南区</b><span>湖北、湖南、四川等：种植制度更复杂，春、夏、秋播并存。</span></div>
+      </div>
+    </div>
+    <p class="source">数据来源：<a href="https://www.hlj.gov.cn/hlj/c108419/202504/c00_31866784.shtml" target="_blank">黑龙江省统计局《2024年国民经济和社会发展统计公报》</a>；<a href="https://www.nmg.gov.cn/tjsj/sjfb/tjsj/tjgb/202504/t20250402_2692478.html" target="_blank">内蒙古自治区统计局《2024年国民经济和社会发展统计公报》</a>。地图来源：自然资源部标准地图服务，审图号 GS（2016）2893号，自然资源部监制；本站仅在网页层叠加数据标记，未修改标准地图边界。</p>
+  </section>
+
+  <section class="card">
+    <h2>全国大豆产量走势</h2>
+    <p class="sub">2022年扩种后，产量回到2000万吨以上；2025年为2091万吨。</p>
+    <svg viewBox="0 0 540 300" role="img" aria-label="2020至2025年中国大豆产量折线图">
+      <g class="grid"><path d="M55 40H520M55 100H520M55 160H520M55 220H520"/></g>
+      <g class="axis"><text x="14" y="44">2200</text><text x="14" y="104">2000</text><text x="14" y="164">1800</text><text x="14" y="224">1600</text></g>
+      <path d="M65 201 L154 213 L243 92 L332 75 L421 81 L510 73" fill="none" stroke="#176b87" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M65 201 L154 213 L243 92 L332 75 L421 81 L510 73 L510 240 L65 240Z" fill="#176b87" opacity=".08"/>
+      <g fill="#fff" stroke="#176b87" stroke-width="3"><circle cx="65" cy="201" r="5"/><circle cx="154" cy="213" r="5"/><circle cx="243" cy="92" r="5"/><circle cx="332" cy="75" r="5"/><circle cx="421" cy="81" r="5"/><circle cx="510" cy="73" r="5"/></g>
+      <g class="value" text-anchor="middle"><text x="65" y="190">1960</text><text x="154" y="202">1640</text><text x="243" y="80">2028</text><text x="332" y="63">2084</text><text x="421" y="69">2065</text><text x="510" y="61">2091</text></g>
+      <g class="axis" text-anchor="middle"><text x="65" y="260">2020</text><text x="154" y="260">2021</text><text x="243" y="260">2022</text><text x="332" y="260">2023</text><text x="421" y="260">2024</text><text x="510" y="260">2025</text></g>
+    </svg>
+    <p class="source">来源：国家统计局历年国民经济和社会发展统计公报、年度经济运行发布；单位：万吨，自然年。2025年数据见<a href="https://www.stats.gov.cn/sj/xwfbh/fbhwd/202601/t20260119_1962330.html" target="_blank">国家统计局</a>。</p>
+  </section>
+
+  <section class="card">
+    <h2>主产省集中度</h2>
+    <p class="sub">2023年省级产量结构。前十省合计约占全国84.5%以上。</p>
+    <div class="pie-wrap">
+      <div class="pie" role="img" aria-label="2023年大豆主产省产量占比饼图"></div>
+      <div class="pie-legend">
+        <div><i style="background:#176b87"></i><span>黑龙江</span><b>约43.4%</b></div>
+        <div><i style="background:#27a19a"></i><span>内蒙古</span><b>约11.9%</b></div>
+        <div><i style="background:#e0a33a"></i><span>其余前十主产省<small>四川、安徽、河南、吉林、山东、江苏、湖北、湖南</small></span><b>约24.8%</b></div>
+        <div><i style="background:#c6d7dd"></i><span>其他省区</span><b>约19.9%</b></div>
+      </div>
+    </div>
+    <p class="source">来源：国家统计局分省年度数据；集中度与主产省排序据国家统计局数据整理。黑龙江占比采用“稳定在43%以上”、黑龙江与内蒙古合计“54%以上”、前十省“84.5%以上”的公开统计特征作近似展示，饼图用于呈现集中度，不替代精确省级平衡表。</p>
+  </section>
+
+  <section class="card wide">
+    <h2>分产区生长季与上市窗口</h2>
+    <p class="sub">同一月份，不同产区可能处于完全不同阶段；天气交易先定位产区，再定位生育阶段。</p>
+    <div class="calendar"><div class="cal">
+      <div></div><div class="head">3月</div><div class="head">4月</div><div class="head">5月</div><div class="head">6月</div><div class="head">7月</div><div class="head">8月</div><div class="head">9月</div><div class="head">10月</div><div class="head">11月</div>
+      <div class="region">东北春大豆</div><div class="blank"></div><div class="sow stage">整地</div><div class="sow stage">播种出苗</div><div class="veg stage">苗期</div><div class="flower stage">开花</div><div class="fill stage">结荚鼓粒</div><div class="harvest stage">成熟</div><div class="harvest stage">收获上市</div><div class="blank"></div>
+      <div class="region">黄淮海夏大豆</div><div class="blank"></div><div class="blank"></div><div class="blank"></div><div class="sow stage">麦后播种</div><div class="veg stage">苗期</div><div class="flower stage">开花结荚</div><div class="fill stage">鼓粒成熟</div><div class="harvest stage">收获上市</div><div class="blank"></div>
+      <div class="region">西南夏大豆/套作</div><div class="blank"></div><div class="blank"></div><div class="blank"></div><div class="sow stage">播种</div><div class="veg stage">苗期</div><div class="flower stage">开花结荚</div><div class="fill stage">鼓粒</div><div class="harvest stage">成熟</div><div class="harvest stage">收获</div>
+    </div></div>
+    <div class="legend"><span><i style="background:#658cb0"></i>播种/整地</span><span><i style="background:#57a66a"></i>营养生长</span><span><i style="background:#e4a83d"></i>开花结荚</span><span><i style="background:#cf744d"></i>鼓粒</span><span><i style="background:#7a668d"></i>成熟收获</span></div>
+    <p class="tip">交易提示：东北7—8月重点看开花、结荚和鼓粒期水热；黄淮海6月看麦后抢墒播种，7—8月看高温、干旱与渍涝；9—10月共同关注早霜、连雨、倒伏和收获损失。</p>
+    <p class="source">来源：农业农村部《大豆机械化生产技术指导意见》、农业农村部种植业管理司/全国农技推广中心《全国大豆玉米带状复合种植技术模式图》。窗口为典型区间，具体日期随纬度、品种熟期、前茬和当年天气变化。</p>
+  </section>
+</main>
+<script>
+/*
+ * 嵌入 Wiki 时，让 iframe 跟随四张图的实际总高度。
+ * 图谱单独打开时 window.frameElement 为空，不会改变页面行为。
+ */
+(() => {
+  const parentFrame = window.frameElement;
+  if (!parentFrame) return;
+
+  document.documentElement.style.overflow = "hidden";
+  document.body.style.overflow = "hidden";
+  parentFrame.setAttribute("scrolling", "no");
+
+  let resizeFrameRequest = 0;
+  const resizeParentFrame = () => {
+    cancelAnimationFrame(resizeFrameRequest);
+    resizeFrameRequest = requestAnimationFrame(() => {
+      const contentHeight = Math.ceil(document.documentElement.scrollHeight);
+      const currentHeight = Math.ceil(
+        parentFrame.getBoundingClientRect().height,
+      );
+      if (Math.abs(contentHeight - currentHeight) > 1) {
+        parentFrame.style.height = `${contentHeight}px`;
+      }
+    });
+  };
+
+  new ResizeObserver(resizeParentFrame).observe(document.body);
+  window.addEventListener("load", resizeParentFrame);
+  window.addEventListener("resize", resizeParentFrame);
+  resizeParentFrame();
+})();
+</script>
+</body>
+</html>
