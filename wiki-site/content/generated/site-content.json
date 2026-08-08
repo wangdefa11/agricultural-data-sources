@@ -26,57 +26,78 @@
         "slug": "soymeal",
         "name": "豆粕",
         "code": "M",
-        "ready": false,
+        "ready": true,
         "summary": "大豆压榨产物，连接蛋白饲料与养殖需求。"
       },
       "soybean-oil": {
         "slug": "soybean-oil",
         "name": "豆油",
         "code": "Y",
-        "ready": false,
+        "ready": true,
         "summary": "大豆压榨产物，与棕榈油、菜籽油形成替代。"
       },
       "rapeseed-meal": {
         "slug": "rapeseed-meal",
         "name": "菜粕",
         "code": "RM",
-        "ready": false,
+        "ready": true,
         "summary": "豆粕的蛋白饲料替代品。"
       },
       "corn": {
         "slug": "corn",
         "name": "玉米",
         "code": "C",
-        "ready": false,
+        "ready": true,
         "summary": "与豆粕共同构成饲料成本核心。"
       },
       "hog": {
         "slug": "hog",
         "name": "生猪",
         "code": "LH",
-        "ready": false,
+        "ready": true,
         "summary": "豆粕和玉米的重要下游需求端。"
       },
       "egg": {
         "slug": "egg",
         "name": "鸡蛋",
         "code": "JD",
-        "ready": false,
+        "ready": true,
         "summary": "饲料需求与养殖利润的观察节点。"
       },
       "palm-oil": {
         "slug": "palm-oil",
         "name": "棕榈油",
         "code": "P",
-        "ready": false,
+        "ready": true,
         "summary": "豆油的重要油脂替代品。"
       },
       "rapeseed-oil": {
         "slug": "rapeseed-oil",
         "name": "菜籽油",
         "code": "OI",
-        "ready": false,
+        "ready": true,
         "summary": "豆油的重要油脂替代品。"
+      },
+      "peanut": {
+        "slug": "peanut",
+        "name": "花生",
+        "code": "PK",
+        "ready": true,
+        "summary": "兼具食用与压榨用途的国内油料品种。"
+      },
+      "rapeseed": {
+        "slug": "rapeseed",
+        "name": "菜籽",
+        "code": "RS",
+        "ready": true,
+        "summary": "连接国内油菜籽、进口菜籽与油粕加工的原料节点。"
+      },
+      "corn-starch": {
+        "slug": "corn-starch",
+        "name": "玉米淀粉",
+        "code": "CS",
+        "ready": true,
+        "summary": "玉米深加工产品，定价围绕原料成本、加工利润与下游需求。"
       }
     },
     "map": {
@@ -119,11 +140,1069 @@
             "palm-oil",
             "rapeseed-oil"
           ]
+        },
+        {
+          "label": "其他油料",
+          "targets": [
+            "peanut",
+            "rapeseed"
+          ]
+        },
+        {
+          "label": "深加工",
+          "targets": [
+            "corn-starch"
+          ]
         }
       ]
     }
   },
   "pages": {
+    "corn": {
+      "slug": "corn",
+      "name": "玉米",
+      "codes": "C",
+      "updatedAt": "2026-08-08",
+      "summary": "玉米是国内生产为主、进口调节的饲料与深加工原料。价格主线是“种植收益 → 面积与天气 → 产量和粮质 → 农户售粮与贸易库存 → 饲料、深加工和进口替代 → 港口现货与期货”。",
+      "pageText": {
+        "siteName": "农产品研究 Wiki",
+        "mapNavLabel": "品种关系",
+        "breadcrumbRootLabel": "品种关系",
+        "updatedPrefix": "数据框架更新于",
+        "relations": {
+          "index": "99",
+          "title": "关联品种",
+          "description": "",
+          "fullMapLink": "查看完整品种关系图 →"
+        },
+        "sources": {
+          "title": "数据来源与口径"
+        }
+      },
+      "sections": [
+        {
+          "id": "production",
+          "index": "01",
+          "title": "生产与生育期",
+          "description": "| 阶段 | 关键风险 | 供应影响 | |---|---|---| | 播种出苗 | 低温、干旱、渍水 | 面积落地与有效株数 | | 拔节大喇叭口 | 干旱、风灾、病虫害 | 植株和穗数基础 | | 吐丝授粉 | 高温干旱或阴雨 | 结实率和穗粒数 | | 灌浆收获 | 早霜、连雨、倒伏 | 粒重、水分、霉变与收获损失 |",
+          "blocks": [
+            {
+              "kind": "source",
+              "span": "full",
+              "text": "全国及分省面积、单产和产量优先使用[国家统计局](https://www.stats.gov.cn/)数据；供需平衡与市场年度口径使用[农业农村部市场预警专家委员会](https://scs.moa.gov.cn/jcyj/)。"
+            }
+          ]
+        },
+        {
+          "id": "balance",
+          "index": "02",
+          "title": "流通、库存与需求",
+          "description": "| 环节 | 跟踪 | |---|---| | 上市 | 农户售粮、烘干塔、收购进度与水分扣量 | | 流通 | 产区库存、北方港集港、南方港到货与运费 | | 饲料 | 生猪、禽类存栏、饲料产量与小麦等能量替代 | | 深加工 | 开机、加工利润、成品库存与玉米采购 | | 进口 | 准入、配额、到岸成本、到港和定向流向 |",
+          "blocks": [
+            {
+              "kind": "source",
+              "span": "full",
+              "text": "进出口使用[海关总署](https://www.customs.gov.cn/)数据；合约、交割质量、地区升贴水和仓单以[大连商品交易所](https://www.dce.com.cn/)现行规则为准。"
+            }
+          ]
+        },
+        {
+          "id": "pricing",
+          "index": "03",
+          "title": "价格验证",
+          "description": "",
+          "blocks": [
+            {
+              "kind": "checklist",
+              "span": "full",
+              "title": "每日跟踪",
+              "items": [
+                {
+                  "title": "1",
+                  "description": "产区天气、新作进度、粮质和农户售粮"
+                },
+                {
+                  "title": "2",
+                  "description": "产区收购、港口集散、运费和库存位置"
+                },
+                {
+                  "title": "3",
+                  "description": "饲料产量、深加工开机与利润、进口替代"
+                },
+                {
+                  "title": "4",
+                  "description": "现货、基差、月差、仓单和持仓"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "relationFlow": [
+        {
+          "kind": "node",
+          "slug": "corn"
+        },
+        {
+          "kind": "label",
+          "text": "深加工"
+        },
+        {
+          "kind": "node",
+          "slug": "corn-starch"
+        },
+        {
+          "kind": "label",
+          "text": "饲料配方"
+        },
+        {
+          "kind": "node",
+          "slug": "soymeal"
+        },
+        {
+          "kind": "label",
+          "text": "养殖需求"
+        },
+        {
+          "kind": "node",
+          "slug": "hog"
+        },
+        {
+          "kind": "node",
+          "slug": "egg"
+        }
+      ],
+      "sourceDescription": ""
+    },
+    "corn-starch": {
+      "slug": "corn-starch",
+      "name": "玉米淀粉",
+      "codes": "CS",
+      "updatedAt": "2026-08-08",
+      "summary": "玉米淀粉是湿磨深加工产品。研究不能只用玉米价格加固定加工费，还要计入胚芽、纤维、蛋白粉等副产品价值，并用开机、产量、库存和提货验证加工利润的传导。",
+      "pageText": {
+        "siteName": "农产品研究 Wiki",
+        "mapNavLabel": "品种关系",
+        "breadcrumbRootLabel": "品种关系",
+        "updatedPrefix": "数据框架更新于",
+        "relations": {
+          "index": "99",
+          "title": "关联品种",
+          "description": "",
+          "fullMapLink": "查看完整品种关系图 →"
+        },
+        "sources": {
+          "title": "数据来源与口径"
+        }
+      },
+      "sections": [
+        {
+          "id": "processing",
+          "index": "01",
+          "title": "原料与加工",
+          "description": "**玉米到厂成本 → 主副产品综合价值 → 理论与现金加工利润 → 开机率 → 淀粉产量 → 工厂库存、签单和提货 → 现货与基差**\n\n| 环节 | 关键口径 | |---|---| | 原料 | 同一工厂、同一日期的玉米到厂价与品质 | | 产出 | 淀粉及副产品收率、能源和包装成本 | | 利润 | 主副产品实际销售价值，不用盘面简单替代 |",
+          "blocks": [
+            {
+              "kind": "source",
+              "span": "full",
+              "text": "玉米淀粉合约、交割质量、指定库和仓单以[大连商品交易所](https://www.dce.com.cn/)现行规则为准。"
+            }
+          ]
+        },
+        {
+          "id": "demand",
+          "index": "02",
+          "title": "需求、库存与替代",
+          "description": "| 下游 | 验证指标 | |---|---| | 淀粉糖 | 开机、产品价差、成品库存和饮料需求 | | 食品 | 烘焙、方便食品、调味品订单和季节备货 | | 造纸纺织 | 工业订单、开机和替代淀粉价差 | | 发酵与其他 | 配方、产能利用率和成品利润 |",
+          "blocks": [
+            {
+              "kind": "source",
+              "span": "full",
+              "text": "玉米淀粉及相关工业产量优先对照[国家统计局](https://www.stats.gov.cn/)工业统计；商业开机、库存和利润须标明样本、收率和能源假设。"
+            }
+          ]
+        },
+        {
+          "id": "pricing",
+          "index": "03",
+          "title": "价格验证",
+          "description": "",
+          "blocks": [
+            {
+              "kind": "checklist",
+              "span": "full",
+              "title": "每日跟踪",
+              "items": [
+                {
+                  "title": "1",
+                  "description": "玉米到厂价、库存与采购量"
+                },
+                {
+                  "title": "2",
+                  "description": "主副产品价格、能源成本和加工利润"
+                },
+                {
+                  "title": "3",
+                  "description": "开机、产量、工厂库存、签单和提货"
+                },
+                {
+                  "title": "4",
+                  "description": "区域现货、淀粉—玉米价差、基差和月差"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "relationFlow": [
+        {
+          "kind": "node",
+          "slug": "corn"
+        },
+        {
+          "kind": "label",
+          "text": "深加工"
+        },
+        {
+          "kind": "node",
+          "slug": "corn-starch"
+        }
+      ],
+      "sourceDescription": ""
+    },
+    "egg": {
+      "slug": "egg",
+      "name": "鸡蛋",
+      "codes": "JD",
+      "updatedAt": "2026-08-08",
+      "summary": "鸡蛋是鲜活交割品，供应由在产蛋鸡存栏、产蛋率、蛋重和淘汰节奏共同决定，需求受学校、餐饮、家庭、食品加工和节日备货影响。合约必须与对应月份的存栏时间轴和鲜蛋质量匹配。",
+      "pageText": {
+        "siteName": "农产品研究 Wiki",
+        "mapNavLabel": "品种关系",
+        "breadcrumbRootLabel": "品种关系",
+        "updatedPrefix": "数据框架更新于",
+        "relations": {
+          "index": "99",
+          "title": "关联品种",
+          "description": "",
+          "fullMapLink": "查看完整品种关系图 →"
+        },
+        "sources": {
+          "title": "数据来源与口径"
+        }
+      },
+      "sections": [
+        {
+          "id": "supply",
+          "index": "01",
+          "title": "产能、产量与季节性",
+          "description": "| 环节 | 领先指标 | 当期验证 | |---|---|---| | 补栏 | 商品代鸡苗销量、苗价和养殖利润 | 青年鸡与新开产量 | | 在产 | 鸡龄结构、新开产与延淘 | 产蛋率、蛋重和商品率 | | 淘汰 | 淘鸡价、饲料成本和老鸡比例 | 实际淘汰量与屠宰承接 | | 天气 | 高温、寒潮与疫病 | 采食、产蛋率、蛋重和运输损耗 |",
+          "blocks": [
+            {
+              "kind": "source",
+              "span": "full",
+              "text": "禽蛋产量和畜牧业年度数据优先使用[国家统计局](https://www.stats.gov.cn/)和[农业农村部](https://www.moa.gov.cn/)资料。商业存栏、鸡苗与淘汰样本必须标明覆盖地区和样本量。"
+            }
+          ]
+        },
+        {
+          "id": "demand",
+          "index": "02",
+          "title": "流通、需求与成本",
+          "description": "| 环节 | 跟踪 | |---|---| | 成本 | 玉米、豆粕、鸡苗、折旧、防疫和死淘 | | 流通 | 产区走货、销区到货、冷库与包装运输 | | 需求 | 开学、餐饮、家庭、食品厂与节日备货 | | 品质 | 蛋重、新鲜度、破损、大小码和交割合规 |",
+          "blocks": [
+            {
+              "kind": "source",
+              "span": "full",
+              "text": "鸡蛋合约、质量标准、交割区域、升贴水和仓单以[大连商品交易所](https://www.dce.com.cn/)现行规则为准；历史规则不替代当前合约。"
+            }
+          ]
+        },
+        {
+          "id": "pricing",
+          "index": "03",
+          "title": "价格验证",
+          "description": "",
+          "blocks": [
+            {
+              "kind": "checklist",
+              "span": "full",
+              "title": "每日跟踪",
+              "items": [
+                {
+                  "title": "1",
+                  "description": "主产区现货、销区到货、走货和质量价差"
+                },
+                {
+                  "title": "2",
+                  "description": "在产存栏、鸡龄、产蛋率、蛋重与淘汰"
+                },
+                {
+                  "title": "3",
+                  "description": "饲料成本、单斤蛋利润、补栏和延淘意愿"
+                },
+                {
+                  "title": "4",
+                  "description": "合约季节、基差、月差、仓单与持仓"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "relationFlow": [
+        {
+          "kind": "node",
+          "slug": "corn"
+        },
+        {
+          "kind": "label",
+          "text": "能量饲料"
+        },
+        {
+          "kind": "node",
+          "slug": "soymeal"
+        },
+        {
+          "kind": "label",
+          "text": "蛋白饲料"
+        },
+        {
+          "kind": "node",
+          "slug": "egg"
+        }
+      ],
+      "sourceDescription": ""
+    },
+    "hog": {
+      "slug": "hog",
+      "name": "生猪",
+      "codes": "LH",
+      "updatedAt": "2026-08-08",
+      "summary": "生猪是具有繁殖与育肥滞后的生物资产。期货合约对应未来特定时间、重量和品质的标准猪，不能用当日全国均价直接代替。研究应沿“能繁母猪 → 仔猪 → 育肥存栏 → 出栏体重 → 屠宰和鲜销 → 库存与消费”的时间轴验证。",
+      "pageText": {
+        "siteName": "农产品研究 Wiki",
+        "mapNavLabel": "品种关系",
+        "breadcrumbRootLabel": "品种关系",
+        "updatedPrefix": "数据框架更新于",
+        "relations": {
+          "index": "99",
+          "title": "关联品种",
+          "description": "",
+          "fullMapLink": "查看完整品种关系图 →"
+        },
+        "sources": {
+          "title": "数据来源与口径"
+        }
+      },
+      "sections": [
+        {
+          "id": "supply",
+          "index": "01",
+          "title": "产能周期与供应",
+          "description": "| 环节 | 指标 | 不能直接等同于 | |---|---|---| | 繁殖 | 能繁母猪、配种、窝均健仔 | 当月商品猪供应 | | 补栏 | 仔猪价格、成活率和养殖利润 | 必然按期出栏 | | 育肥 | 存栏结构、饲料消费、疫病 | 可交割标准猪 | | 出栏 | 出栏量、体重、压栏和二次育肥 | 屠宰企业已实际屠宰 |",
+          "blocks": [
+            {
+              "kind": "source",
+              "span": "full",
+              "text": "生猪存栏、出栏和猪肉产量优先使用[国家统计局](https://www.stats.gov.cn/)；能繁母猪和生猪产能监测及调控信息使用[农业农村部](https://www.moa.gov.cn/)发布，不混用不同样本。"
+            }
+          ]
+        },
+        {
+          "id": "demand",
+          "index": "02",
+          "title": "成本、屠宰与消费",
+          "description": "| 环节 | 跟踪 | |---|---| | 成本 | 仔猪或自繁成本、玉米豆粕饲料、疫苗、折旧和死淘 | | 屠宰 | 收猪价、屠宰量、开工、白条销售和屠宰利润 | | 消费 | 家庭、餐饮、腰腌、节假日与替代肉类 | | 库存 | 冻品入库、出库、库龄、进口肉和储备调节 |",
+          "blocks": [
+            {
+              "kind": "source",
+              "span": "full",
+              "text": "猪肉进出口使用[海关总署](https://www.customs.gov.cn/)数据；生猪合约、交割品质、指定交割库与地区升贴水以[大连商品交易所](https://www.dce.com.cn/)现行规则为准。"
+            }
+          ]
+        },
+        {
+          "id": "pricing",
+          "index": "03",
+          "title": "价格验证",
+          "description": "",
+          "blocks": [
+            {
+              "kind": "checklist",
+              "span": "full",
+              "title": "每日跟踪",
+              "items": [
+                {
+                  "title": "1",
+                  "description": "现货分地区、标猪/肥猪价差和出栏体重"
+                },
+                {
+                  "title": "2",
+                  "description": "屠宰量、白条价、屠宰利润与冻品库存"
+                },
+                {
+                  "title": "3",
+                  "description": "仔猪、母猪淘汰、养殖利润和饲料成本"
+                },
+                {
+                  "title": "4",
+                  "description": "合约对应出栏窗口、基差、月差、仓单和持仓"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "relationFlow": [
+        {
+          "kind": "node",
+          "slug": "corn"
+        },
+        {
+          "kind": "label",
+          "text": "能量饲料"
+        },
+        {
+          "kind": "node",
+          "slug": "soymeal"
+        },
+        {
+          "kind": "label",
+          "text": "蛋白饲料"
+        },
+        {
+          "kind": "node",
+          "slug": "hog"
+        }
+      ],
+      "sourceDescription": ""
+    },
+    "palm-oil": {
+      "slug": "palm-oil",
+      "name": "棕榈油",
+      "codes": "P",
+      "updatedAt": "2026-08-08",
+      "summary": "棕榈油是高度依赖进口的油脂。边际定价来自印尼、马来西亚的产量、出口和生物柴油政策，经过产地报价、海运、汇率和进口利润传入国内港口现货。",
+      "pageText": {
+        "siteName": "农产品研究 Wiki",
+        "mapNavLabel": "品种关系",
+        "breadcrumbRootLabel": "品种关系",
+        "updatedPrefix": "数据框架更新于",
+        "relations": {
+          "index": "99",
+          "title": "关联品种",
+          "description": "",
+          "fullMapLink": "查看完整品种关系图 →"
+        },
+        "sources": {
+          "title": "数据来源与口径"
+        }
+      },
+      "sections": [
+        {
+          "id": "overview",
+          "index": "01",
+          "title": "品种与定价",
+          "description": "",
+          "blocks": [
+            {
+              "kind": "text",
+              "span": "wide",
+              "title": "全链条",
+              "paragraphs": [
+                "**产区树龄与天气 → 鲜果串单产 → 压榨与库存 → 出口税费和生物柴油投料 → FOB报价与海运 → 中国到港、库存和基差**"
+              ]
+            },
+            {
+              "kind": "source",
+              "span": "full",
+              "text": "国内棕榈油期货合约、交割品质和指定库以[大连商品交易所](https://www.dce.com.cn/)现行规则为准；马盘合约规则以[Bursa Malaysia Derivatives](https://www.bursamalaysia.com/)为准。"
+            }
+          ]
+        },
+        {
+          "id": "production",
+          "index": "02",
+          "title": "产区、物候与供应",
+          "description": "| 环节 | 关注点 | |---|---| | 树龄 | 成熟面积、老龄树比例和重植进度 | | 天气 | 降雨对授粉、果串形成和收割运输的滞后影响 | | 劳动力 | 收果频率、工资和跨境用工 | | 压榨 | 鲜果串处理、出油率和工厂库存 |",
+          "blocks": [
+            {
+              "kind": "source",
+              "span": "full",
+              "text": "马来西亚产量、库存和出口优先使用[马来西亚棕榈油局 MPOB](https://bepi.mpob.gov.my/)；印尼供应和政策使用印尼官方部门及行业机构原始发布，并标明修订。"
+            }
+          ]
+        },
+        {
+          "id": "trade",
+          "index": "03",
+          "title": "贸易、库存与需求",
+          "description": "",
+          "blocks": [
+            {
+              "kind": "checklist",
+              "span": "wide",
+              "title": "货物状态",
+              "items": [
+                {
+                  "title": "出口估算",
+                  "description": "海关实际离港"
+                },
+                {
+                  "title": "已装船",
+                  "description": "中国已到港"
+                },
+                {
+                  "title": "已到港",
+                  "description": "已通关并进入可售库存"
+                },
+                {
+                  "title": "港口库存下降",
+                  "description": "终端消费一定增加"
+                }
+              ]
+            },
+            {
+              "kind": "source",
+              "span": "full",
+              "text": "中国分来源进口量使用[海关总署](https://www.customs.gov.cn/)统计。产地高频出口调查与月度官方数据必须分开标注。"
+            }
+          ]
+        },
+        {
+          "id": "pricing",
+          "index": "04",
+          "title": "价格验证",
+          "description": "",
+          "blocks": [
+            {
+              "kind": "checklist",
+              "span": "full",
+              "title": "每日跟踪",
+              "items": [
+                {
+                  "title": "1",
+                  "description": "产地产量、库存、出口和政策"
+                },
+                {
+                  "title": "2",
+                  "description": "马盘、产地FOB、海运和汇率"
+                },
+                {
+                  "title": "3",
+                  "description": "进口利润、船期、到港和港口库存"
+                },
+                {
+                  "title": "4",
+                  "description": "豆棕价差、现货基差、月差和仓单"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "relationFlow": [
+        {
+          "kind": "node",
+          "slug": "palm-oil"
+        },
+        {
+          "kind": "label",
+          "text": "油脂替代"
+        },
+        {
+          "kind": "node",
+          "slug": "soybean-oil"
+        },
+        {
+          "kind": "node",
+          "slug": "rapeseed-oil"
+        }
+      ],
+      "sourceDescription": ""
+    },
+    "peanut": {
+      "slug": "peanut",
+      "name": "花生",
+      "codes": "PK",
+      "updatedAt": "2026-08-08",
+      "summary": "花生是国内生产型油料，同一批货可在食用米、油料米、种用与出口之间分流。期货有效供应不等于统计产量，必须经过品种、粒型、水分、酸价、黄曲霉毒素和交割地点筛选。",
+      "pageText": {
+        "siteName": "农产品研究 Wiki",
+        "mapNavLabel": "品种关系",
+        "breadcrumbRootLabel": "品种关系",
+        "updatedPrefix": "数据框架更新于",
+        "relations": {
+          "index": "99",
+          "title": "关联品种",
+          "description": "",
+          "fullMapLink": "查看完整品种关系图 →"
+        },
+        "sources": {
+          "title": "数据来源与口径"
+        }
+      },
+      "sections": [
+        {
+          "id": "overview",
+          "index": "01",
+          "title": "品种、产区与交割",
+          "description": "| 环节 | 核心变量 | |---|---| | 种植 | 花生与玉米等作物收益、面积与地租 | | 生长 | 播种墒情、开花下针、结荚饱果和收获天气 | | 质量 | 含油、水分、酸价、损伤粒与食品安全 | | 流通 | 农户售粮、筛选厂、油厂收购和进口花生米 |",
+          "blocks": [
+            {
+              "kind": "source",
+              "span": "full",
+              "text": "面积和产量优先使用[国家统计局](https://www.stats.gov.cn/)与[农业农村部](https://www.moa.gov.cn/)资料；花生期货合约、品质、升贴水和交割库以[郑州商品交易所](https://www.czce.com.cn/)现行规则为准。"
+            }
+          ]
+        },
+        {
+          "id": "calendar",
+          "index": "02",
+          "title": "生育期与上市",
+          "description": "| 阶段 | 风险 | |---|---| | 播种出苗 | 低温、干旱、渍水导致缺苗 | | 开花下针 | 干旱、高温或连阴雨影响有效果针 | | 结荚饱果 | 水分与病害影响饱果率、含油和等级 | | 收获晾晒 | 连雨导致发芽、霉变和酸价风险 |",
+          "blocks": []
+        },
+        {
+          "id": "pricing",
+          "index": "03",
+          "title": "需求、库存与价格",
+          "description": "",
+          "blocks": [
+            {
+              "kind": "checklist",
+              "span": "wide",
+              "title": "每日跟踪",
+              "items": [
+                {
+                  "title": "1",
+                  "description": "产区天气、新作进度、品质和农户售粮"
+                },
+                {
+                  "title": "2",
+                  "description": "筛选厂和油厂收购、开机、利润与库存"
+                },
+                {
+                  "title": "3",
+                  "description": "花生油、花生粕与其他油粕比价"
+                },
+                {
+                  "title": "4",
+                  "description": "现货等级价差、基差、月差、仓单和持仓"
+                }
+              ]
+            },
+            {
+              "kind": "source",
+              "span": "full",
+              "text": "花生及花生油进出口使用[海关总署](https://www.customs.gov.cn/)数据；商业收购和开机数据应标明覆盖产区与样本。"
+            }
+          ]
+        }
+      ],
+      "relationFlow": [
+        {
+          "kind": "node",
+          "slug": "peanut"
+        },
+        {
+          "kind": "label",
+          "text": "种植竞争"
+        },
+        {
+          "kind": "node",
+          "slug": "corn"
+        },
+        {
+          "kind": "label",
+          "text": "油脂比价"
+        },
+        {
+          "kind": "node",
+          "slug": "soybean-oil"
+        }
+      ],
+      "sourceDescription": ""
+    },
+    "rapeseed": {
+      "slug": "rapeseed",
+      "name": "菜籽",
+      "codes": "RS",
+      "updatedAt": "2026-08-08",
+      "summary": "菜籽是菜油和菜粕的共同原料。国内供应受冬油菜面积、生育期天气、含油与收获品质影响；边际加工供应还受进口来源、准入和到岸成本影响。",
+      "pageText": {
+        "siteName": "农产品研究 Wiki",
+        "mapNavLabel": "品种关系",
+        "breadcrumbRootLabel": "品种关系",
+        "updatedPrefix": "数据框架更新于",
+        "relations": {
+          "index": "99",
+          "title": "关联品种",
+          "description": "",
+          "fullMapLink": "查看完整品种关系图 →"
+        },
+        "sources": {
+          "title": "数据来源与口径"
+        }
+      },
+      "sections": [
+        {
+          "id": "production",
+          "index": "01",
+          "title": "生产、物候与有效供应",
+          "description": "| 阶段 | 关键条件 | 市场影响 | |---|---|---| | 播种越冬 | 墒情、出苗和冻害 | 有效株数与返青基础 | | 抽薹开花 | 低温、连阴雨和病害 | 角果数和授粉质量 | | 鼓粒成熟 | 温度、光照和水分 | 粒重、含油和成熟度 | | 收获 | 连雨、倒伏和机收 | 损失、水分与品质 |",
+          "blocks": [
+            {
+              "kind": "source",
+              "span": "full",
+              "text": "面积、产量及分地区口径优先使用[国家统计局](https://www.stats.gov.cn/)和[农业农村部](https://www.moa.gov.cn/)资料。统计产量不等于商品量或可交割量。"
+            }
+          ]
+        },
+        {
+          "id": "trade",
+          "index": "02",
+          "title": "进口、压榨与流通",
+          "description": "",
+          "blocks": [
+            {
+              "kind": "checklist",
+              "span": "wide",
+              "title": "状态检查",
+              "items": [
+                {
+                  "title": "海外增产",
+                  "description": "可出口量、准入与对华报价"
+                },
+                {
+                  "title": "采购增加",
+                  "description": "装船、船期、到港与通关"
+                },
+                {
+                  "title": "原料到厂",
+                  "description": "压榨利润、开机与油粕库存"
+                },
+                {
+                  "title": "压榨增加",
+                  "description": "菜油和菜粕成交、提货与终端消化"
+                }
+              ]
+            },
+            {
+              "kind": "source",
+              "span": "full",
+              "text": "进口量与来源使用[海关总署](https://www.customs.gov.cn/)数据；合约、交割质量与交割库以[郑州商品交易所](https://www.czce.com.cn/)现行资料为准。"
+            }
+          ]
+        },
+        {
+          "id": "pricing",
+          "index": "03",
+          "title": "价格验证",
+          "description": "",
+          "blocks": [
+            {
+              "kind": "checklist",
+              "span": "full",
+              "title": "跟踪顺序",
+              "items": [
+                {
+                  "title": "1",
+                  "description": "国内面积、生育期天气、单产和含油"
+                },
+                {
+                  "title": "2",
+                  "description": "海外产量、准入、报价、汇率和到港"
+                },
+                {
+                  "title": "3",
+                  "description": "压榨利润、开机、菜油与菜粕库存"
+                },
+                {
+                  "title": "4",
+                  "description": "产区现货、基差、月差、仓单和交割成本"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "relationFlow": [
+        {
+          "kind": "node",
+          "slug": "rapeseed"
+        },
+        {
+          "kind": "label",
+          "text": "压榨产出"
+        },
+        {
+          "kind": "node",
+          "slug": "rapeseed-oil"
+        },
+        {
+          "kind": "node",
+          "slug": "rapeseed-meal"
+        }
+      ],
+      "sourceDescription": ""
+    },
+    "rapeseed-meal": {
+      "slug": "rapeseed-meal",
+      "name": "菜粕",
+      "codes": "RM",
+      "updatedAt": "2026-08-08",
+      "summary": "菜粕是菜籽压榨的蛋白饲料产品，与豆粕构成替代，水产饲料令其需求季节性更明显。价格必须同时解释菜籽原料、菜油价值、开机、库存和配方替代。",
+      "pageText": {
+        "siteName": "农产品研究 Wiki",
+        "mapNavLabel": "品种关系",
+        "breadcrumbRootLabel": "品种关系",
+        "updatedPrefix": "数据框架更新于",
+        "relations": {
+          "index": "99",
+          "title": "关联品种",
+          "description": "",
+          "fullMapLink": "查看完整品种关系图 →"
+        },
+        "sources": {
+          "title": "数据来源与口径"
+        }
+      },
+      "sections": [
+        {
+          "id": "supply",
+          "index": "01",
+          "title": "加工与供应",
+          "description": "| 环节 | 核心指标 | |---|---| | 原料 | 国产收购、进口菜籽到港与工厂覆盖 | | 加工 | 油粕综合压榨利润、开机和停机原因 | | 供应 | 产出、工厂库存、成交、提货和区域流向 |",
+          "blocks": [
+            {
+              "kind": "source",
+              "span": "full",
+              "text": "菜籽进口使用[海关总署](https://www.customs.gov.cn/)数据；合约、交割品质、指定库和仓单以[郑州商品交易所](https://www.czce.com.cn/)现行规则为准。"
+            }
+          ]
+        },
+        {
+          "id": "demand",
+          "index": "02",
+          "title": "需求、替代与季节性",
+          "description": "| 需求端 | 需验证 | 替代边界 | |---|---|---| | 水产 | 投苗、水温、存塘、饲料产量 | 不同品种对抗营养因子容忍不同 | | 禽类 | 存栏、补栏、利润和配方 | 比较可消化氨基酸，不只比吨价 | | 生猪 | 存栏结构、体重与饲料产量 | 幼龄和育肥阶段配方上限不同 |",
+          "blocks": [
+            {
+              "kind": "source",
+              "span": "full",
+              "text": "饲料产量和蛋白原料使用结构优先使用[中国饲料工业协会](https://www.chinafeed.org.cn/)发布；养殖数据使用国家统计局和农业农村部资料。"
+            }
+          ]
+        },
+        {
+          "id": "pricing",
+          "index": "03",
+          "title": "价格验证",
+          "description": "",
+          "blocks": [
+            {
+              "kind": "checklist",
+              "span": "full",
+              "title": "每日顺序",
+              "items": [
+                {
+                  "title": "1",
+                  "description": "菜籽报价、到港、工厂原料和压榨利润"
+                },
+                {
+                  "title": "2",
+                  "description": "开机、菜粕产出、库存、成交与提货"
+                },
+                {
+                  "title": "3",
+                  "description": "豆菜粕价差、饲料配方、水产季节和养殖利润"
+                },
+                {
+                  "title": "4",
+                  "description": "区域现货、基差、月差、仓单和持仓"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "relationFlow": [
+        {
+          "kind": "node",
+          "slug": "rapeseed"
+        },
+        {
+          "kind": "label",
+          "text": "压榨"
+        },
+        {
+          "kind": "node",
+          "slug": "rapeseed-meal"
+        },
+        {
+          "kind": "label",
+          "text": "蛋白替代"
+        },
+        {
+          "kind": "node",
+          "slug": "soymeal"
+        },
+        {
+          "kind": "label",
+          "text": "养殖需求"
+        },
+        {
+          "kind": "node",
+          "slug": "hog"
+        },
+        {
+          "kind": "node",
+          "slug": "egg"
+        }
+      ],
+      "sourceDescription": ""
+    },
+    "rapeseed-oil": {
+      "slug": "rapeseed-oil",
+      "name": "菜籽油",
+      "codes": "OI",
+      "updatedAt": "2026-08-08",
+      "summary": "菜籽油的供应同时来自国产菜籽压榨、进口菜籽压榨和菜油直接进口。边际变化要同时检查进口准入、油厂开机、菜粕价值、库存位置及与豆油、棕榈油的价差。",
+      "pageText": {
+        "siteName": "农产品研究 Wiki",
+        "mapNavLabel": "品种关系",
+        "breadcrumbRootLabel": "品种关系",
+        "updatedPrefix": "数据框架更新于",
+        "relations": {
+          "index": "99",
+          "title": "关联品种",
+          "description": "",
+          "fullMapLink": "查看完整品种关系图 →"
+        },
+        "sources": {
+          "title": "数据来源与口径"
+        }
+      },
+      "sections": [
+        {
+          "id": "overview",
+          "index": "01",
+          "title": "品种与供应入口",
+          "description": "| 入口 | 传导链 | |---|---| | 国产菜籽 | 面积、单产、品质 → 收购 → 压榨 | | 进口菜籽 | 海外产量、准入、报价 → 到港 → 压榨 | | 进口菜油 | 国际油脂价格 → 进口利润 → 渠道库存 |",
+          "blocks": [
+            {
+              "kind": "source",
+              "span": "full",
+              "text": "合约、交割质量、交割库与仓单以[郑州商品交易所](https://www.czce.com.cn/)现行规则为准；菜籽和菜油进口使用[海关总署](https://www.customs.gov.cn/)分品种、分来源统计。"
+            }
+          ]
+        },
+        {
+          "id": "processing",
+          "index": "02",
+          "title": "加工、库存与消费",
+          "description": "",
+          "blocks": [
+            {
+              "kind": "checklist",
+              "span": "wide",
+              "title": "油厂检查",
+              "items": [
+                {
+                  "title": "原料",
+                  "description": "到港与工厂覆盖天数是否充足？"
+                },
+                {
+                  "title": "利润",
+                  "description": "菜油和菜粕综合价值是否支持开机？"
+                },
+                {
+                  "title": "库存",
+                  "description": "货在油厂、中转库、贸易商还是终端？"
+                },
+                {
+                  "title": "需求",
+                  "description": "小包装、餐饮和食品工业提货能否验证？"
+                }
+              ]
+            },
+            {
+              "kind": "source",
+              "span": "full",
+              "text": "国内油料生产与食用植物油工业统计优先使用[国家统计局](https://www.stats.gov.cn/)、[农业农村部](https://www.moa.gov.cn/)及其供需形势分析。"
+            }
+          ]
+        },
+        {
+          "id": "pricing",
+          "index": "03",
+          "title": "价格验证与跟踪",
+          "description": "",
+          "blocks": [
+            {
+              "kind": "checklist",
+              "span": "full",
+              "title": "每日顺序",
+              "items": [
+                {
+                  "title": "1",
+                  "description": "加拿大等产区天气、产量、报价和准入"
+                },
+                {
+                  "title": "2",
+                  "description": "菜籽到港、开机、菜油产出和菜粕库存"
+                },
+                {
+                  "title": "3",
+                  "description": "直接进口、油厂库存、提货和区域流向"
+                },
+                {
+                  "title": "4",
+                  "description": "菜豆、菜棕价差、基差、月差和仓单"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "relationFlow": [
+        {
+          "kind": "node",
+          "slug": "rapeseed"
+        },
+        {
+          "kind": "label",
+          "text": "压榨"
+        },
+        {
+          "kind": "node",
+          "slug": "rapeseed-oil"
+        },
+        {
+          "kind": "label",
+          "text": "联产品"
+        },
+        {
+          "kind": "node",
+          "slug": "rapeseed-meal"
+        },
+        {
+          "kind": "label",
+          "text": "油脂替代"
+        },
+        {
+          "kind": "node",
+          "slug": "soybean-oil"
+        },
+        {
+          "kind": "node",
+          "slug": "palm-oil"
+        }
+      ],
+      "sourceDescription": ""
+    },
     "soybean": {
       "slug": "soybean",
       "name": "大豆",
@@ -1913,6 +2992,1105 @@
         {
           "kind": "node",
           "slug": "soybean-oil"
+        }
+      ],
+      "sourceDescription": ""
+    },
+    "soybean-oil": {
+      "slug": "soybean-oil",
+      "name": "豆油",
+      "codes": "Y",
+      "updatedAt": "2026-08-08",
+      "summary": "豆油是大豆压榨的联产品。研究主线是“进口大豆到厂成本 → 压榨利润与开机 → 豆油产出和库存 → 食用与生物柴油需求 → 基差、月差和盘面”，并与棕榈油、菜籽油比价验证。",
+      "pageText": {
+        "siteName": "农产品研究 Wiki",
+        "mapNavLabel": "品种关系",
+        "breadcrumbRootLabel": "品种关系",
+        "updatedPrefix": "数据框架更新于",
+        "relations": {
+          "index": "99",
+          "title": "关联品种",
+          "description": "",
+          "fullMapLink": "查看完整品种关系图 →"
+        },
+        "sources": {
+          "title": "数据来源与口径"
+        }
+      },
+      "sections": [
+        {
+          "id": "overview",
+          "index": "01",
+          "title": "品种与产业链",
+          "description": "",
+          "blocks": [
+            {
+              "kind": "table",
+              "span": "wide",
+              "title": "研究主线",
+              "columns": [
+                "环节",
+                "核心问题"
+              ],
+              "rows": [
+                [
+                  "原料",
+                  "CBOT、产地升贴水、海运和汇率如何改变大豆到厂成本？"
+                ],
+                [
+                  "加工",
+                  "油粕价值能否覆盖原料与加工成本？"
+                ],
+                [
+                  "供应",
+                  "开机增加后，产出是被提货还是转为库存？"
+                ],
+                [
+                  "需求",
+                  "包装油、餐饮、食品加工和工业用量如何变化？"
+                ]
+              ]
+            },
+            {
+              "kind": "source",
+              "span": "full",
+              "text": "豆油期货代码、交易单位、质量标准、指定交割库和仓单以[大连商品交易所](https://www.dce.com.cn/)现行规则为准。"
+            }
+          ]
+        },
+        {
+          "id": "supply",
+          "index": "02",
+          "title": "加工、供应与库存",
+          "description": "",
+          "blocks": [
+            {
+              "kind": "checklist",
+              "span": "wide",
+              "title": "压榨链验证",
+              "items": [
+                {
+                  "title": "1",
+                  "description": "大豆采购、装船、到港和油厂原料覆盖"
+                },
+                {
+                  "title": "2",
+                  "description": "盘面与现货压榨利润、检修与胀库"
+                },
+                {
+                  "title": "3",
+                  "description": "开机、豆油产出、工厂库存与提货"
+                },
+                {
+                  "title": "4",
+                  "description": "渠道库存、基差和近远月结构"
+                }
+              ]
+            },
+            {
+              "kind": "source",
+              "span": "full",
+              "text": "大豆进口按[海关总署](https://www.customs.gov.cn/)月度统计；年度压榨与供需表对照[农业农村部市场预警专家委员会](https://scs.moa.gov.cn/jcyj/)。商业开机和库存数据应标明样本范围。"
+            }
+          ]
+        },
+        {
+          "id": "demand",
+          "index": "03",
+          "title": "消费、替代与季节性",
+          "description": "| 需求 | 跟踪 | 替代条件 | |---|---|---| | 小包装 | 节前备货、渠道库存 | 终端价差与品牌偏好 | | 餐饮 | 开店、客流与团膳 | 棕榈油掺兑性价比 | | 食品工业 | 订单、开机与成品库存 | 菜油、棕榈油的工艺适配 |",
+          "blocks": [
+            {
+              "kind": "source",
+              "span": "full",
+              "text": "食用植物油产量与相关工业统计优先使用[国家统计局](https://www.stats.gov.cn/)；进出口使用海关总署，不将表观消费直接等同终端消费。"
+            }
+          ]
+        },
+        {
+          "id": "pricing",
+          "index": "04",
+          "title": "价格验证与跟踪",
+          "description": "",
+          "blocks": [
+            {
+              "kind": "checklist",
+              "span": "full",
+              "title": "每日检查",
+              "items": [
+                {
+                  "title": "外盘",
+                  "description": "CBOT大豆、豆油及产地升贴水"
+                },
+                {
+                  "title": "国内",
+                  "description": "到港、压榨利润、开机、库存和提货"
+                },
+                {
+                  "title": "比价",
+                  "description": "豆棕、菜豆价差与进口利润"
+                },
+                {
+                  "title": "盘面",
+                  "description": "现货、基差、月差、仓单与持仓"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "relationFlow": [
+        {
+          "kind": "node",
+          "slug": "soybean-no2"
+        },
+        {
+          "kind": "label",
+          "text": "压榨"
+        },
+        {
+          "kind": "node",
+          "slug": "soybean-oil"
+        },
+        {
+          "kind": "label",
+          "text": "联产品"
+        },
+        {
+          "kind": "node",
+          "slug": "soymeal"
+        },
+        {
+          "kind": "label",
+          "text": "油脂替代"
+        },
+        {
+          "kind": "node",
+          "slug": "palm-oil"
+        },
+        {
+          "kind": "node",
+          "slug": "rapeseed-oil"
+        }
+      ],
+      "sourceDescription": ""
+    },
+    "soymeal": {
+      "slug": "soymeal",
+      "name": "豆粕",
+      "codes": "M",
+      "updatedAt": "2026-08-08",
+      "summary": "豆粕是大豆压榨后形成的高蛋白饲料原料，大连商品交易所豆粕期货代码为 M。国内豆粕的边际供应首先取决于进口大豆到港和油厂原料衔接，随后由压榨利润、停机安排和开机率决定产出节奏；需求则主要来自生猪、肉禽、蛋禽和水产饲料。\n\n研究豆粕不能只看养殖存栏，也不能把大豆到港或油厂开机上升直接写成需求改善。更可靠的验证链是“进口大豆到厂成本 → 压榨利润 → 开机与豆粕产出 → 油厂库存 → 成交和提货 → 饲料配方与养殖消费 → 现货基差、月差和期货价格”。豆油是同一压榨过程的联产品，豆油价格走强可能改善压榨利润并增加豆粕供应，因此油粕关系是豆粕定价的重要组成部分。",
+      "pageText": {
+        "siteName": "农产品研究 Wiki",
+        "mapNavLabel": "品种关系",
+        "breadcrumbRootLabel": "品种关系",
+        "updatedPrefix": "数据框架更新于",
+        "relations": {
+          "index": "99",
+          "title": "关联品种",
+          "description": "豆粕位于大豆压榨链和养殖链的连接处。上游应同时观察进口压榨大豆和豆油，下游应观察玉米、菜粕、生猪、鸡蛋等品种；其中豆油影响压榨收益，菜粕影响蛋白替代，玉米与豆粕共同构成配合饲料的主要成本框架。",
+          "fullMapLink": "查看完整品种关系图 →"
+        },
+        "sources": {
+          "title": "数据来源与口径"
+        }
+      },
+      "sections": [
+        {
+          "id": "overview",
+          "index": "01",
+          "title": "品种、合约与定价主线",
+          "description": "",
+          "blocks": [
+            {
+              "kind": "source",
+              "span": "full",
+              "text": "豆粕期货代码、交易单位、报价单位、涨跌停板、合约月份和交割安排以[大连商品交易所](https://www.dce.com.cn/)发布的现行豆粕期货合约、业务细则和公告为准。2025年工业饲料产量及豆粕在配合饲料和浓缩饲料中的占比来自中国饲料工业协会《[2025年全国饲料工业发展概况](https://www.chinafeed.org.cn/hyfx/202602/t20260209_469703.htm)》；占比是协会调查口径，不等同于豆粕实物消费量。"
+            },
+            {
+              "kind": "text",
+              "span": "wide",
+              "title": "豆粕的价格传导主线",
+              "paragraphs": [
+                "**CBOT大豆与产地升贴水 → 海运、汇率和税费 → 进口大豆到厂成本 → 豆粕与豆油综合压榨价值 → 油厂采购、开机和压榨量 → 豆粕产出与油厂库存 → 成交、提货和下游库存 → 现货基差、月差与期货价格**",
+                "这条链上存在两种不同方向的冲击。大豆成本上涨会抬高油厂成本，但能否完整传导给豆粕，还取决于豆油价格和下游承接；豆油上涨则可能在豆粕需求不变时改善压榨利润、提高开机，反而增加豆粕供应。因而分析豆粕必须同时观察大豆、豆油和豆粕，而不是只做单一原料成本加成。"
+              ]
+            },
+            {
+              "kind": "checklist",
+              "span": "narrow",
+              "title": "豆粕研究主线",
+              "items": [
+                {
+                  "title": "原料",
+                  "description": "大豆采购、到港和油厂覆盖天数是否充足？"
+                },
+                {
+                  "title": "成本",
+                  "description": "CBOT、升贴水、海运和汇率怎样改变到厂成本？"
+                },
+                {
+                  "title": "加工",
+                  "description": "盘面与现货压榨利润是否支持开机？"
+                },
+                {
+                  "title": "供应",
+                  "description": "压榨量增加后，豆粕库存是否同步累积？"
+                },
+                {
+                  "title": "需求",
+                  "description": "成交与提货能否被饲料产量、配方和养殖利润确认？"
+                },
+                {
+                  "title": "价格",
+                  "description": "现货、基差、月差、仓单和持仓是否相互验证？"
+                }
+              ]
+            },
+            {
+              "kind": "text",
+              "span": "full",
+              "title": "豆粕不是大豆成本的固定比例",
+              "paragraphs": [
+                "大豆压榨同时产出豆粕和豆油。油厂购买一吨大豆的价值回收来自两种产品，因此不能用固定出粕率把大豆价格机械换算成豆粕价格。实际测算至少要统一大豆产地和船期，纳入升贴水、海运、汇率、税费、加工费，并使用同一时点的豆油和豆粕价格。"
+              ]
+            }
+          ],
+          "stats": [
+            {
+              "label": "交易代码",
+              "value": "M",
+              "context": "大连商品交易所豆粕期货"
+            },
+            {
+              "label": "交易单位",
+              "value": "10",
+              "context": "吨/手；以交易所现行合约为准"
+            },
+            {
+              "label": "核心属性",
+              "value": "蛋白饲料",
+              "context": "大豆压榨的主要粕类产品"
+            },
+            {
+              "label": "2025年饲料豆粕占比",
+              "value": "13.4",
+              "context": "%；配合饲料和浓缩饲料中的占比",
+              "seriesId": "cn_feed_soymeal_share_y_caaa"
+            },
+            {
+              "label": "2025年工业饲料产量",
+              "value": "34225.3",
+              "context": "万吨",
+              "seriesId": "cn_industrial_feed_output_y_caaa"
+            }
+          ]
+        },
+        {
+          "id": "supply",
+          "index": "02",
+          "title": "原料供应与压榨",
+          "description": "国内豆粕供应入口主要是进口大豆。采购、装船、在途、到港、通关、进入油厂原料库存和完成压榨是不同状态；只有原料实际进入可用库存并开机加工，才形成当期豆粕供应。",
+          "blocks": [
+            {
+              "kind": "table",
+              "span": "wide",
+              "title": "从进口大豆到豆粕供应",
+              "columns": [
+                "状态",
+                "重点指标",
+                "不能直接等同于"
+              ],
+              "rows": [
+                [
+                  "采购",
+                  "产地成交、升贴水和采购进度",
+                  "已经装船"
+                ],
+                [
+                  "装船",
+                  "检验量、排船和实际装运",
+                  "已经到港"
+                ],
+                [
+                  "在途",
+                  "船期、航程和预计到港",
+                  "油厂可用原料"
+                ],
+                [
+                  "到港",
+                  "卸货、通关和检验检疫",
+                  "已经压榨"
+                ],
+                [
+                  "原料库存",
+                  "油厂大豆库存和覆盖天数",
+                  "豆粕供应已经释放"
+                ],
+                [
+                  "压榨",
+                  "开机率、压榨量和停机计划",
+                  "豆粕已经被消费"
+                ]
+              ]
+            },
+            {
+              "kind": "checklist",
+              "span": "narrow",
+              "title": "原料与开机检查清单",
+              "items": [
+                {
+                  "title": "船期",
+                  "description": "近月到港是否集中、延误或后移？"
+                },
+                {
+                  "title": "原料",
+                  "description": "分区域油厂库存和覆盖天数是否分化？"
+                },
+                {
+                  "title": "利润",
+                  "description": "盘面榨利和现货榨利是否同向？"
+                },
+                {
+                  "title": "开机",
+                  "description": "停机是缺豆、检修、胀库还是利润原因？"
+                },
+                {
+                  "title": "产出",
+                  "description": "压榨增量对应多少豆粕和豆油产出？"
+                },
+                {
+                  "title": "库存",
+                  "description": "增产被提货吸收，还是留在油厂形成压力？"
+                }
+              ]
+            },
+            {
+              "kind": "table",
+              "span": "full",
+              "title": "压榨利润怎样影响豆粕",
+              "columns": [
+                "场景",
+                "供应端含义",
+                "需要继续验证"
+              ],
+              "rows": [
+                [
+                  "大豆成本下降、产品价格稳定",
+                  "压榨利润改善，开机意愿可能上升",
+                  "原料是否到厂、油厂是否胀库"
+                ],
+                [
+                  "豆油价格明显上涨",
+                  "油厂可承受更低的豆粕销售价格",
+                  "开机和豆粕库存是否增加"
+                ],
+                [
+                  "豆粕价格上涨、豆油偏弱",
+                  "粕端贡献更多压榨价值",
+                  "高价是否抑制成交和配方用量"
+                ],
+                [
+                  "压榨亏损扩大",
+                  "远期采购与开机意愿可能下降",
+                  "是否已有合同需要执行、是否主动停机"
+                ],
+                [
+                  "油厂豆粕胀库",
+                  "现货销售压力增加并可能限制开机",
+                  "提货、区域流向和库存持续时间"
+                ]
+              ]
+            },
+            {
+              "kind": "source",
+              "span": "full",
+              "text": "中国分来源进口量和实际到港使用[海关总署](https://www.customs.gov.cn/)统计；进口大豆年度压榨口径可对照农业农村部市场预警专家委员会发布的[中国农产品供需形势分析](https://scs.moa.gov.cn/jcyj/)及 USDA [Production, Supply and Distribution](https://apps.fas.usda.gov/psdonline/)数据库。商业机构发布的周度到港、油厂开机、压榨量和库存必须标注样本范围、发布日期及是否为估算值，不能与海关月度数据或官方年度平衡表混用。"
+            }
+          ]
+        },
+        {
+          "id": "calendar",
+          "index": "03",
+          "title": "供应季节性与区域结构",
+          "description": "豆粕没有独立的种植季，但供应仍有明显季节性：美国和南美大豆轮流收获，改变中国进口来源、到港成本和船期；国内油厂的节假日停机、检修、原料短缺和胀库又会改变压榨节奏。研究日历应把海外作物、进口船期和国内开机放在同一条时间轴上。",
+          "blocks": [
+            {
+              "kind": "table",
+              "span": "wide",
+              "title": "原料与供应日历",
+              "columns": [
+                "时段",
+                "海外原料线索",
+                "国内豆粕供应线索"
+              ],
+              "rows": [
+                [
+                  "1—3月",
+                  "巴西收获加速，美国大豆出口窗口后移",
+                  "春节前后备货、停机和提货节奏变化"
+                ],
+                [
+                  "4—6月",
+                  "巴西出口旺季，美国开始播种",
+                  "南美大豆集中到港，开机与库存压力易上升"
+                ],
+                [
+                  "7—9月",
+                  "美国大豆进入开花、结荚和灌浆关键期",
+                  "天气升水影响远月成本，水产饲料处于季节性旺季"
+                ],
+                [
+                  "10—12月",
+                  "美国收获和出口，中国采购来源切换",
+                  "国庆停机、四季度养殖和节前备货共同影响提货"
+                ]
+              ]
+            },
+            {
+              "kind": "checklist",
+              "span": "narrow",
+              "title": "季节性检查清单",
+              "items": [
+                {
+                  "title": "海外天气",
+                  "description": "影响哪个产区、哪个生育阶段和哪条船期？"
+                },
+                {
+                  "title": "到港高峰",
+                  "description": "原料增加能否转化为实际开机？"
+                },
+                {
+                  "title": "节前备货",
+                  "description": "是终端主动补库还是贸易商投机成交？"
+                },
+                {
+                  "title": "停机检修",
+                  "description": "停机持续多久，区域豆粕库存是否已经偏低？"
+                },
+                {
+                  "title": "水产旺季",
+                  "description": "投苗、天气、存塘和利润是否支持饲料需求？"
+                }
+              ]
+            },
+            {
+              "kind": "source",
+              "span": "full",
+              "text": "海外大豆产区、作物日历和产量使用 USDA FAS [Soybean Explorer](https://ipad.fas.usda.gov/cropexplorer/cropview/commodityView.aspx?cropid=2222000&rankby=ProductionCDP&sel_year=2025)及美国、巴西、阿根廷官方进度资料；中国进口使用海关总署月度统计。表中月份用于建立一般研究日历，实际船期、节假日停机和养殖节奏须用当年数据校正。"
+            }
+          ]
+        },
+        {
+          "id": "demand",
+          "index": "04",
+          "title": "饲料需求与养殖传导",
+          "description": "豆粕提供的核心不是抽象的“蛋白”，而是饲料配方中的可消化氨基酸。需求量同时取决于工业饲料产量、不同动物品种的饲料消费、配方中的豆粕添加比例以及养殖场自配料变化。存栏增加只有转化为实际饲料消耗，才会形成豆粕需求。",
+          "blocks": [
+            {
+              "kind": "chart",
+              "span": "full",
+              "title": "2025年全国工业饲料结构",
+              "description": "配合饲料是豆粕最主要的工业消费载体；浓缩饲料豆粕含量通常较高，但总量明显较小。各分项不能简单相加推算豆粕消费，仍需结合配方中的豆粕占比。",
+              "ariaLabel": "2025年全国工业饲料结构图表",
+              "series": [
+                {
+                  "name": "2025年产量"
+                }
+              ],
+              "ceiling": 36000,
+              "points": [
+                {
+                  "label": "工业饲料总产量",
+                  "values": [
+                    34225.3
+                  ]
+                },
+                {
+                  "label": "配合饲料",
+                  "values": [
+                    31946.0
+                  ]
+                },
+                {
+                  "label": "浓缩饲料",
+                  "values": [
+                    1338.1
+                  ]
+                },
+                {
+                  "label": "添加剂预混合饲料",
+                  "values": [
+                    752.7
+                  ]
+                }
+              ],
+              "sourceNote": "来源：中国饲料工业协会《[2025年全国饲料工业发展概况](https://www.chinafeed.org.cn/hyfx/202602/t20260209_469703.htm)》；单位：万吨，协会统计口径。"
+            },
+            {
+              "kind": "table",
+              "span": "wide",
+              "title": "不同养殖板块的需求线索",
+              "columns": [
+                "板块",
+                "需求形成方式",
+                "重点指标",
+                "常见误判"
+              ],
+              "rows": [
+                [
+                  "生猪",
+                  "存栏、体重和育肥周期形成持续饲料消费",
+                  "能繁母猪、仔猪、存栏结构、出栏体重、利润",
+                  "只看生猪价格，不看存栏和体重"
+                ],
+                [
+                  "肉禽",
+                  "补栏到出栏周期短，饲料需求调整较快",
+                  "苗价、补栏、出栏、养殖利润",
+                  "用单周补栏代表整个季度需求"
+                ],
+                [
+                  "蛋禽",
+                  "存栏持续消耗饲料，淘汰节奏影响需求",
+                  "在产蛋鸡存栏、淘汰、蛋价和利润",
+                  "只看鸡蛋产量，不看存栏结构"
+                ],
+                [
+                  "水产",
+                  "投苗、气温、降雨和存塘决定季节性消费",
+                  "水温、投苗、存塘、价格和水产饲料产量",
+                  "到旺季就假定需求一定增加"
+                ],
+                [
+                  "反刍",
+                  "豆粕与其他蛋白原料按性价比替换",
+                  "奶牛和肉牛存栏、粗饲料与蛋白价差",
+                  "忽略区域配方差异"
+                ]
+              ]
+            },
+            {
+              "kind": "checklist",
+              "span": "narrow",
+              "title": "需求验证清单",
+              "items": [
+                {
+                  "title": "饲料产量",
+                  "description": "增长来自哪个动物品种和哪个地区？"
+                },
+                {
+                  "title": "配方",
+                  "description": "豆粕添加比例是提高还是降低？"
+                },
+                {
+                  "title": "成交",
+                  "description": "是远期基差成交还是当期现货补库？"
+                },
+                {
+                  "title": "提货",
+                  "description": "成交是否转化为油厂实际出库？"
+                },
+                {
+                  "title": "下游库存",
+                  "description": "饲料厂和养殖端是在补库还是去库？"
+                },
+                {
+                  "title": "养殖利润",
+                  "description": "需求能否持续，是否出现降体重或延迟补栏？"
+                }
+              ]
+            },
+            {
+              "kind": "table",
+              "span": "full",
+              "title": "饲料产量增长之后怎么验证",
+              "columns": [
+                "环节",
+                "偏强表现",
+                "需要警惕的表现"
+              ],
+              "rows": [
+                [
+                  "配方",
+                  "豆粕性价比改善、添加比例稳定或提高",
+                  "杂粕替代增加、低蛋白日粮继续推进"
+                ],
+                [
+                  "成交",
+                  "多日持续成交，近月与远月均有承接",
+                  "单日放量后迅速转淡"
+                ],
+                [
+                  "提货",
+                  "油厂提货持续增加",
+                  "成交放量但提货没有跟上"
+                ],
+                [
+                  "库存",
+                  "油厂库存下降且下游库存合理",
+                  "油厂和下游同时累库"
+                ],
+                [
+                  "基差",
+                  "现货紧张地区基差走强",
+                  "盘面上涨但基差持续走弱"
+                ]
+              ]
+            },
+            {
+              "kind": "source",
+              "span": "full",
+              "text": "全国和分品种工业饲料产量优先采用[中国饲料工业协会](https://www.chinafeed.org.cn/)年度及月度统计；生猪、家禽和畜产品数据优先采用[国家统计局](https://www.stats.gov.cn/)与[农业农村部](https://www.moa.gov.cn/)公开资料。商业调查中的饲料企业库存、豆粕用量和添加比例须注明样本范围，不能用少数企业样本直接外推全国消费。"
+            }
+          ]
+        },
+        {
+          "id": "substitution",
+          "index": "05",
+          "title": "替代、减量与配方边界",
+          "description": "豆粕需求不是固定的“存栏乘以单耗”。菜籽粕、棉籽粕、花生粕、葵花籽粕、DDGS和其他蛋白原料可以在营养、价格、供应和监管条件允许时部分替代豆粕；合成氨基酸和酶制剂也能降低日粮粗蛋白水平。不同动物和生长阶段的替代空间不同，不能只比较每吨原料价格。",
+          "blocks": [
+            {
+              "kind": "table",
+              "span": "wide",
+              "title": "替代决策框架",
+              "columns": [
+                "约束",
+                "需要比较的内容"
+              ],
+              "rows": [
+                [
+                  "营养",
+                  "粗蛋白、氨基酸组成、消化率和抗营养因子"
+                ],
+                [
+                  "价格",
+                  "按可消化氨基酸价值比较，而非只比每吨报价"
+                ],
+                [
+                  "供应",
+                  "可获得数量、质量稳定性和区域运输成本"
+                ],
+                [
+                  "动物",
+                  "猪、禽、水产和反刍动物的配方上限不同"
+                ],
+                [
+                  "阶段",
+                  "幼龄、生长、育肥、产蛋和泌乳阶段要求不同"
+                ],
+                [
+                  "工艺",
+                  "粉碎、发酵、酶制剂和合成氨基酸的使用条件"
+                ]
+              ]
+            },
+            {
+              "kind": "checklist",
+              "span": "narrow",
+              "title": "豆粕减量不能怎样解读",
+              "items": [
+                {
+                  "title": "饲料总产量增长",
+                  "description": "豆粕消费一定同比增长"
+                },
+                {
+                  "title": "豆粕价格下跌",
+                  "description": "添加比例一定立即提高"
+                },
+                {
+                  "title": "菜粕价格便宜",
+                  "description": "所有动物配方都会改用菜粕"
+                },
+                {
+                  "title": "存栏下降",
+                  "description": "当期豆粕提货一定同步下降"
+                },
+                {
+                  "title": "政策提出减量目标",
+                  "description": "每家企业在同一时间同比例执行"
+                }
+              ]
+            },
+            {
+              "kind": "source",
+              "span": "full",
+              "text": "农业农村部畜牧兽医局在《[饲用豆粕减量替代会不会增加养殖成本？农业农村部回应](https://xmsyj.moa.gov.cn/zcjd/202305/t20230519_6428018.htm)》中说明，低蛋白日粮、合成氨基酸以及菜粕、棉籽粕等非常规蛋白资源是减量替代的主要路径。实际研究应继续用中国饲料工业协会发布的豆粕占比和分品种饲料产量验证政策兑现，不能把政策目标直接当作实际消费量。"
+            }
+          ]
+        },
+        {
+          "id": "stocks",
+          "index": "06",
+          "title": "库存、现货与区域基差",
+          "description": "豆粕保质期、仓储条件和区域运输决定其库存不能被视为全国统一的一个数字。同样数量的豆粕，位于沿海油厂、内陆油厂、贸易商仓库或饲料厂，其对近月价格和区域基差的影响不同。",
+          "blocks": [
+            {
+              "kind": "table",
+              "span": "wide",
+              "title": "库存必须分位置和持有人",
+              "columns": [
+                "库存位置",
+                "市场含义",
+                "重点观察"
+              ],
+              "rows": [
+                [
+                  "沿海油厂",
+                  "进口大豆压榨后的主要显性供应",
+                  "胀库、催提、停机和区域基差"
+                ],
+                [
+                  "内陆油厂",
+                  "受原料运输和区域需求共同影响",
+                  "原料衔接、开机与运输半径"
+                ],
+                [
+                  "贸易商",
+                  "连接远期基差合同与现货分销",
+                  "头寸、资金、合同执行和销售压力"
+                ],
+                [
+                  "饲料企业",
+                  "下游安全库存",
+                  "可用天数、采购节奏和配方变化"
+                ],
+                [
+                  "交割仓库/厂库",
+                  "可进入期货交割的显性供应",
+                  "仓单注册、注销、有效期和升贴水"
+                ]
+              ]
+            },
+            {
+              "kind": "checklist",
+              "span": "narrow",
+              "title": "库存变化检查清单",
+              "items": [
+                {
+                  "title": "油厂库存上升",
+                  "description": "开机增加、提货下降还是统计样本扩大？"
+                },
+                {
+                  "title": "油厂库存下降",
+                  "description": "提货改善、停机减产还是库存转移？"
+                },
+                {
+                  "title": "基差走强",
+                  "description": "区域缺货、运输受阻还是盘面下跌更快？"
+                },
+                {
+                  "title": "成交放量",
+                  "description": "现货成交还是远期基差合同？"
+                },
+                {
+                  "title": "提货增加",
+                  "description": "终端消耗、节前补库还是库存转移？"
+                }
+              ]
+            },
+            {
+              "kind": "chart",
+              "span": "full",
+              "title": "豆粕现货价格",
+              "description": "全国现货均价只能表示样本报价的总体方向，不能替代山东、华东、华南、东北等区域基差。观察价格时应同时匹配日期、地区、蛋白标准、交货方式和对应期货合约。",
+              "ariaLabel": "豆粕现货价格图表",
+              "series": [
+                {
+                  "name": "豆粕现货均价"
+                }
+              ],
+              "ceiling": 3150,
+              "points": [
+                {
+                  "label": "04-23",
+                  "values": [
+                    3015.43
+                  ]
+                },
+                {
+                  "label": "05-11",
+                  "values": [
+                    3000.86
+                  ]
+                },
+                {
+                  "label": "05-25",
+                  "values": [
+                    2952.89
+                  ]
+                },
+                {
+                  "label": "06-08",
+                  "values": [
+                    2856.05
+                  ]
+                },
+                {
+                  "label": "06-23",
+                  "values": [
+                    2863.95
+                  ]
+                },
+                {
+                  "label": "07-07",
+                  "values": [
+                    2962.89
+                  ]
+                },
+                {
+                  "label": "07-21",
+                  "values": [
+                    3042.89
+                  ]
+                },
+                {
+                  "label": "07-31",
+                  "values": [
+                    3072.89
+                  ]
+                }
+              ],
+              "sourceNote": "来源：Wind原始序列“中国:现货价:豆粕”；图中为2026年4月23日至7月31日的抽样观测，单位：元/吨。该序列属于商业数据，不作为官方统计。",
+              "baseline": 2800,
+              "latestValue": "3072.89 元/吨"
+            },
+            {
+              "kind": "source",
+              "span": "full",
+              "text": "豆粕库存、成交、提货和区域现货报价主要来自行业商业调查。引用时必须写明提供方、样本油厂数量或覆盖区域、统计日期、单位以及库存是物理库存还是可售库存。期货仓单及交割信息使用[大连商品交易所](https://www.dce.com.cn/)数据；商业库存不能与交易所仓单相加作为“全国总库存”。"
+            }
+          ]
+        },
+        {
+          "id": "delivery",
+          "index": "07",
+          "title": "交割、政策与风险",
+          "description": "期货价格对应的是满足质量、地点和时间要求的可交割豆粕，而不是全国全部豆粕。现货紧张能否传导到期货，取决于紧张地区是否靠近交割库、货物是否符合标准、入库是否经济以及仓单是否能覆盖相应合约月份。",
+          "blocks": [
+            {
+              "kind": "table",
+              "span": "wide",
+              "title": "交割检查清单",
+              "columns": [
+                "项目",
+                "检查内容"
+              ],
+              "rows": [
+                [
+                  "品质",
+                  "标准品的粗蛋白、粗纤维、水分和质量要求"
+                ],
+                [
+                  "地点",
+                  "指定仓库、厂库及地区升贴水"
+                ],
+                [
+                  "数量",
+                  "仓单注册、注销、预报和有效期"
+                ],
+                [
+                  "成本",
+                  "检验、入库、仓储、资金、交割和出库成本"
+                ],
+                [
+                  "时间",
+                  "最后交易日、交割期及仓单到期安排"
+                ],
+                [
+                  "合约",
+                  "近月持仓、交割意愿和非标现货价差"
+                ]
+              ]
+            },
+            {
+              "kind": "table",
+              "span": "full",
+              "title": "政策和事件怎样传导",
+              "columns": [
+                "政策或事件",
+                "首先影响",
+                "后续验证"
+              ],
+              "rows": [
+                [
+                  "大豆进口关税或准入变化",
+                  "不同产地到岸成本与采购来源",
+                  "升贴水、船期和实际到港"
+                ],
+                [
+                  "检验检疫变化",
+                  "通关速度和油厂原料衔接",
+                  "卸港、压港、开机和豆粕库存"
+                ],
+                [
+                  "豆粕减量替代",
+                  "饲料配方中的添加比例",
+                  "协会调查、成交、提货和库存"
+                ],
+                [
+                  "养殖调控",
+                  "补栏、出栏和存栏预期",
+                  "饲料产量和实际豆粕消耗"
+                ],
+                [
+                  "交割规则调整",
+                  "可交割货物和区域成本",
+                  "仓单、近月基差和交割量"
+                ]
+              ]
+            },
+            {
+              "kind": "source",
+              "span": "full",
+              "text": "豆粕合约、质量标准、指定交割仓库和厂库、升贴水、仓单及交割流程均以[大连商品交易所](https://www.dce.com.cn/)最新规则和公告为准。进口准入与检验检疫使用[海关总署](https://www.customs.gov.cn/)公告，饲料和养殖政策使用[农业农村部](https://www.moa.gov.cn/)文件。历史规则只能用于解释历史行情，不能替代现行交割条件。"
+            }
+          ]
+        },
+        {
+          "id": "pricing",
+          "index": "08",
+          "title": "价格结构与每日跟踪",
+          "description": "豆粕行情最终需要落到现货能否验证盘面。基差反映特定地区和交货条件下现货相对期货的强弱，月差反映供需在不同时间段的松紧，油粕比反映压榨产出价值在豆油和豆粕之间的分配。三者都必须与原料、开机、库存和提货一起解释。",
+          "blocks": [
+            {
+              "kind": "text",
+              "span": "wide",
+              "title": "价格验证链",
+              "paragraphs": [
+                "**海外天气或政策变化 → 大豆到厂成本与船期变化 → 压榨利润和开机变化 → 豆粕产出变化 → 油厂库存与提货变化 → 区域现货和基差变化 → 月差、仓单与期货价格反应**",
+                "如果盘面上涨而现货基差持续走弱、油厂库存累积，行情可能更多由成本预期或资金推动；如果盘面偏弱但基差走强、近月月差转强且油厂库存下降，则现货紧张可能尚未被盘面充分反映。"
+              ]
+            },
+            {
+              "kind": "table",
+              "span": "full",
+              "title": "指标按频率分层",
+              "columns": [
+                "频率",
+                "指标",
+                "用途"
+              ],
+              "rows": [
+                [
+                  "慢变量",
+                  "压榨产能、养殖结构、低蛋白日粮和替代政策",
+                  "确定长期供需方向"
+                ],
+                [
+                  "月度",
+                  "大豆进口、饲料产量、存栏、出栏和畜产品产量",
+                  "验证需求与原料兑现"
+                ],
+                [
+                  "周度",
+                  "到港、压榨、库存、成交、提货和仓单",
+                  "判断现货松紧节奏"
+                ],
+                [
+                  "日度",
+                  "CBOT、升贴水、汇率、现货、基差、月差和持仓",
+                  "识别预期差与交易驱动"
+                ]
+              ]
+            },
+            {
+              "kind": "checklist",
+              "span": "full",
+              "title": "每日跟踪顺序",
+              "items": [
+                {
+                  "title": "1 外盘",
+                  "description": "CBOT变化来自天气、出口、宏观还是资金？"
+                },
+                {
+                  "title": "2 产地",
+                  "description": "巴西和美国升贴水是否抵消期货变化？"
+                },
+                {
+                  "title": "3 成本",
+                  "description": "海运、汇率和税费后的大豆到厂成本怎样变化？"
+                },
+                {
+                  "title": "4 原料",
+                  "description": "近月到港与油厂大豆库存能否支持开机？"
+                },
+                {
+                  "title": "5 压榨",
+                  "description": "豆粕、豆油价格怎样改变压榨利润和开机？"
+                },
+                {
+                  "title": "6 供需",
+                  "description": "豆粕库存、成交与提货是否相互确认？"
+                },
+                {
+                  "title": "7 下游",
+                  "description": "饲料产量、配方和养殖利润是否支持消费？"
+                },
+                {
+                  "title": "8 盘面",
+                  "description": "基差、月差、仓单和持仓是否与现货一致？"
+                }
+              ]
+            },
+            {
+              "kind": "source",
+              "span": "full",
+              "text": "外盘合约和持仓使用[CME Group](https://www.cmegroup.com/markets/agriculture/oilseeds/soybean.html)及美国商品期货交易委员会公开资料；国内期货、仓单和交割数据使用大连商品交易所资料。所有高频商业数据都应保留历史快照并注明发布时间，避免用后来修订值解释当时行情。"
+            }
+          ]
+        }
+      ],
+      "relationFlow": [
+        {
+          "kind": "node",
+          "slug": "soybean-no2"
+        },
+        {
+          "kind": "label",
+          "text": "压榨原料"
+        },
+        {
+          "kind": "node",
+          "slug": "soymeal"
+        },
+        {
+          "kind": "label",
+          "text": "联产品"
+        },
+        {
+          "kind": "node",
+          "slug": "soybean-oil"
+        },
+        {
+          "kind": "label",
+          "text": "蛋白替代"
+        },
+        {
+          "kind": "node",
+          "slug": "rapeseed-meal"
+        },
+        {
+          "kind": "label",
+          "text": "饲料配方"
+        },
+        {
+          "kind": "node",
+          "slug": "corn"
+        },
+        {
+          "kind": "label",
+          "text": "养殖需求"
+        },
+        {
+          "kind": "node",
+          "slug": "hog"
+        },
+        {
+          "kind": "node",
+          "slug": "egg"
         }
       ],
       "sourceDescription": ""

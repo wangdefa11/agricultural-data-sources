@@ -25,57 +25,78 @@
       "slug": "soymeal",
       "name": "豆粕",
       "code": "M",
-      "ready": false,
+      "ready": true,
       "summary": "大豆压榨产物，连接蛋白饲料与养殖需求。"
     },
     "soybean-oil": {
       "slug": "soybean-oil",
       "name": "豆油",
       "code": "Y",
-      "ready": false,
+      "ready": true,
       "summary": "大豆压榨产物，与棕榈油、菜籽油形成替代。"
     },
     "rapeseed-meal": {
       "slug": "rapeseed-meal",
       "name": "菜粕",
       "code": "RM",
-      "ready": false,
+      "ready": true,
       "summary": "豆粕的蛋白饲料替代品。"
     },
     "corn": {
       "slug": "corn",
       "name": "玉米",
       "code": "C",
-      "ready": false,
+      "ready": true,
       "summary": "与豆粕共同构成饲料成本核心。"
     },
     "hog": {
       "slug": "hog",
       "name": "生猪",
       "code": "LH",
-      "ready": false,
+      "ready": true,
       "summary": "豆粕和玉米的重要下游需求端。"
     },
     "egg": {
       "slug": "egg",
       "name": "鸡蛋",
       "code": "JD",
-      "ready": false,
+      "ready": true,
       "summary": "饲料需求与养殖利润的观察节点。"
     },
     "palm-oil": {
       "slug": "palm-oil",
       "name": "棕榈油",
       "code": "P",
-      "ready": false,
+      "ready": true,
       "summary": "豆油的重要油脂替代品。"
     },
     "rapeseed-oil": {
       "slug": "rapeseed-oil",
       "name": "菜籽油",
       "code": "OI",
-      "ready": false,
+      "ready": true,
       "summary": "豆油的重要油脂替代品。"
+    },
+    "peanut": {
+      "slug": "peanut",
+      "name": "花生",
+      "code": "PK",
+      "ready": true,
+      "summary": "兼具食用与压榨用途的国内油料品种。"
+    },
+    "rapeseed": {
+      "slug": "rapeseed",
+      "name": "菜籽",
+      "code": "RS",
+      "ready": true,
+      "summary": "连接国内油菜籽、进口菜籽与油粕加工的原料节点。"
+    },
+    "corn-starch": {
+      "slug": "corn-starch",
+      "name": "玉米淀粉",
+      "code": "CS",
+      "ready": true,
+      "summary": "玉米深加工产品，定价围绕原料成本、加工利润与下游需求。"
     }
   },
   "map": {
@@ -87,7 +108,9 @@
       { "label": "蛋白替代", "targets": ["rapeseed-meal"] },
       { "label": "饲料配方", "targets": ["corn"] },
       { "label": "养殖需求", "targets": ["hog", "egg"] },
-      { "label": "油脂替代", "targets": ["palm-oil", "rapeseed-oil"] }
+      { "label": "油脂替代", "targets": ["palm-oil", "rapeseed-oil"] },
+      { "label": "其他油料", "targets": ["peanut", "rapeseed"] },
+      { "label": "深加工", "targets": ["corn-starch"] }
     ]
   }
 }
