@@ -6,11 +6,14 @@
 from __future__ import annotations
 
 import argparse
+from contextlib import contextmanager
 import hashlib
 import json
 import math
+import os
 import re
 import shutil
+import tempfile
 from pathlib import Path
 from typing import Any
 
@@ -20,6 +23,10 @@ CONTENT = ROOT / "content"
 COMMODITIES = CONTENT / "commodities"
 OUTPUT = CONTENT / "generated" / "site-content.json"
 PUBLIC_COMMODITIES = ROOT / "public" / "commodities"
+BUILD_LOCK = Path(tempfile.gettempdir()) / (
+    "commodity-wiki-"
+    f"{hashlib.sha256(str(ROOT).encode()).hexdigest()[:12]}.lock"
+)
 
 REQUIRED_META = ("slug", "name")
 SUMMARY_HEADING = "摘要"
@@ -37,6 +44,21 @@ BLOCK_HEADING = re.compile(
 )
 BLOCK_KINDS = {"chart", "checklist", "embed", "relations", "source", "stats"}
 BLOCK_SPANS = {"full", "narrow", "wide"}
+
+
+@contextmanager
+def content_build_lock():
+    """防止多个本地开发服务同时重建公共资源目录。"""
+    with BUILD_LOCK.open("a+") as handle:
+        if os.name == "posix":
+            import fcntl
+
+            fcntl.flock(handle.fileno(), fcntl.LOCK_EX)
+        try:
+            yield
+        finally:
+            if os.name == "posix":
+                fcntl.flock(handle.fileno(), fcntl.LOCK_UN)
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -133,7 +155,7 @@ def split_h3_blocks(
     section_title: str,
     lines: list[str],
 ) -> tuple[str, list[tuple[str, str | None, str, list[str]]]]:
-    """把一个页面章节拆成章节说明和 ### 内容块。"""
+    """把一个页面章节拆成章节说明、隐式内容块和 ### 内容块。"""
     preamble: list[str] = []
     blocks: list[tuple[str, str | None, str, list[str]]] = []
     current_title: str | None = None
@@ -171,7 +193,47 @@ def split_h3_blocks(
 
     if current_title is not None:
         blocks.append((current_title, current_kind, current_span, current_lines))
-    return normalise_markdown(preamble), blocks
+
+    # 二级标题后允许直接写“说明文字 + 表格 + 补充文字”，无需为了让
+    # 表格生效而人为增加空的三级标题。第一段普通文字仍用作章节说明；
+    # 表格及其后的文字按原顺序转换成无标题内容块。
+    segments: list[tuple[str, list[str]]] = []
+    text_lines: list[str] = []
+    index = 0
+    while index < len(preamble):
+        if preamble[index].strip().startswith("|"):
+            table_lines: list[str] = []
+            while (
+                index < len(preamble)
+                and preamble[index].strip().startswith("|")
+            ):
+                table_lines.append(preamble[index])
+                index += 1
+            if markdown_table(
+                table_lines,
+                f"{path} 的“{section_title}”",
+            ) is not None:
+                if any(line.strip() for line in text_lines):
+                    segments.append(("text", text_lines))
+                text_lines = []
+                segments.append(("table", table_lines))
+                continue
+            text_lines.extend(table_lines)
+            continue
+        text_lines.append(preamble[index])
+        index += 1
+
+    if any(line.strip() for line in text_lines):
+        segments.append(("text", text_lines))
+
+    description = ""
+    implicit_blocks: list[tuple[str, str | None, str, list[str]]] = []
+    for segment_kind, segment_lines in segments:
+        if not description and not implicit_blocks and segment_kind == "text":
+            description = normalise_markdown(segment_lines)
+        else:
+            implicit_blocks.append(("", None, "full", segment_lines))
+    return description, implicit_blocks + blocks
 
 
 def markdown_table(
@@ -570,11 +632,10 @@ def parse_wiki(path: Path) -> dict[str, Any]:
     if not summary:
         raise ValueError(f"Markdown 缺少“## {SUMMARY_HEADING}”：{path}")
 
-    return {
+    page = {
         "slug": slug,
         "name": meta["name"],
         "codes": meta.get("codes", ""),
-        "updatedAt": meta.get("updated_at", ""),
         "summary": summary,
         "pageText": {
             "siteName": meta.get("site_name", "农产品研究 Wiki"),
@@ -582,7 +643,6 @@ def parse_wiki(path: Path) -> dict[str, Any]:
             "breadcrumbRootLabel": meta.get(
                 "breadcrumb_root_label", "品种关系"
             ),
-            "updatedPrefix": meta.get("updated_prefix", "数据框架更新于"),
             "relations": relations_meta,
             "sources": {"title": SOURCE_HEADING},
         },
@@ -590,6 +650,16 @@ def parse_wiki(path: Path) -> dict[str, Any]:
         "relationFlow": relation_flow,
         "sourceDescription": source_description,
     }
+    if hero_image := meta.get("hero_image"):
+        page["heroImage"] = public_image_src(slug, hero_image)
+    for source_key, output_key in (
+        ("hero_alt", "heroAlt"),
+        ("hero_credit", "heroCredit"),
+        ("hero_source", "heroSource"),
+    ):
+        if value := meta.get(source_key):
+            page[output_key] = value
+    return page
 
 
 def validate_catalog(catalog: dict[str, Any]) -> None:
@@ -713,20 +783,26 @@ def main() -> int:
     )
     args = parser.parse_args()
 
-    rendered = json.dumps(
-        build_content(), ensure_ascii=False, indent=2
-    ) + "\n"
-    if args.check:
-        if not OUTPUT.exists() or OUTPUT.read_text(encoding="utf-8") != rendered:
-            raise SystemExit("生成内容不是最新，请运行 scripts/build_site_content.py")
-        sync_commodity_assets(check=True)
-        print("内容配置有效，生成文件为最新")
-        return 0
+    with content_build_lock():
+        rendered = json.dumps(
+            build_content(), ensure_ascii=False, indent=2
+        ) + "\n"
+        if args.check:
+            if (
+                not OUTPUT.exists()
+                or OUTPUT.read_text(encoding="utf-8") != rendered
+            ):
+                raise SystemExit(
+                    "生成内容不是最新，请运行 scripts/build_site_content.py"
+                )
+            sync_commodity_assets(check=True)
+            print("内容配置有效，生成文件为最新")
+            return 0
 
-    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT.write_text(rendered, encoding="utf-8")
-    sync_commodity_assets(check=False)
-    print(f"已生成：{OUTPUT.relative_to(ROOT)}")
+        OUTPUT.parent.mkdir(parents=True, exist_ok=True)
+        OUTPUT.write_text(rendered, encoding="utf-8")
+        sync_commodity_assets(check=False)
+        print(f"已生成：{OUTPUT.relative_to(ROOT)}")
     return 0
 
 

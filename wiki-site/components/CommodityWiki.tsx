@@ -24,18 +24,39 @@ export function CommodityWiki({ page }: { page: CommodityPage }) {
             <p className="breadcrumb">
               <a href="/">{page.pageText.breadcrumbRootLabel}</a> / {page.name}
             </p>
-            <div className="title-line">
-              <div>
-                <h1>{page.name}</h1>
-                {page.codes && <p>{page.codes}</p>}
+            <div className="wiki-hero">
+              <div className="wiki-hero-copy">
+                <div className="title-line">
+                  <div>
+                    <h1>{page.name}</h1>
+                    {page.codes && <p>{page.codes}</p>}
+                  </div>
+                </div>
+                <p className="wiki-summary">
+                  <InlineMarkdown text={page.summary} />
+                </p>
               </div>
-              {page.updatedAt && (
-                <span>{page.pageText.updatedPrefix} {page.updatedAt}</span>
+              {page.heroImage && (
+                <figure className="wiki-hero-media">
+                  <img
+                    className="wiki-hero-image"
+                    src={page.heroImage}
+                    alt={page.heroAlt ?? ""}
+                  />
+                  {(page.heroCredit || page.heroSource) && (
+                    <figcaption>
+                      {page.heroSource ? (
+                        <a href={page.heroSource} rel="noreferrer" target="_blank">
+                          {page.heroCredit ? `图源：${page.heroCredit} ↗` : "图片来源 ↗"}
+                        </a>
+                      ) : (
+                        `图源：${page.heroCredit}`
+                      )}
+                    </figcaption>
+                  )}
+                </figure>
               )}
             </div>
-            <p className="wiki-summary">
-              <InlineMarkdown text={page.summary} />
-            </p>
           </header>
 
           {/* 由 wiki.md 的二级标题顺序生成宏观、日报等章节。 */}

@@ -18,17 +18,17 @@ export default function CommodityMapPage() {
           <p className="breadcrumb">研究入口 / 品种关系</p>
           <h1>从品种关系进入 Wiki</h1>
           <p>
-            每个节点是一份独立的品种研究页，连线表示压榨、饲料需求或替代关系。
-            先从大豆开始，后续品种复用同一套底层指标，不重复维护数据。
+            按国内上市品种的产业链组织研究入口：从原料、加工品到饲料和养殖需求，
+            同时标出油脂替代、蛋白替代与深加工关系，只展示国内上市品种。
           </p>
         </div>
 
         <CommodityRelationshipMap />
 
         <div className="map-legend">
-          <span><i className="legend-ready" />已有完整 Wiki</span>
-          <span><i />已建立关系，内容待完善</span>
-          <span>点击任一节点进入对应品种页</span>
+          <span><i className="legend-ready" />国内上市品种</span>
+          <span><i />虚线框表示产业链分组</span>
+          <span>点击已有内容的节点进入对应品种页</span>
         </div>
       </main>
     </div>

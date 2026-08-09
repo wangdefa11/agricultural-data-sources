@@ -20,7 +20,6 @@ codes: A · B · CBOT S
 site_name: 农产品研究 Wiki
 map_nav_label: 品种关系
 breadcrumb_root_label: 品种关系
-updated_prefix: 数据框架更新于
 relations_link_label: 查看完整品种关系图 →
 ---
 ```

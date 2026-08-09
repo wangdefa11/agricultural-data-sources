@@ -275,7 +275,6 @@ codes: A · B · CBOT S
 site_name: 农产品研究 Wiki
 map_nav_label: 品种关系
 breadcrumb_root_label: 品种关系
-updated_prefix: 数据框架更新于
 relations_link_label: 查看完整品种关系图 →
 ---
 ```
@@ -284,12 +283,6 @@ relations_link_label: 查看完整品种关系图 →
 - `name`：页面主标题；
 - `codes`：标题旁的合约代码，可以删除；
 - 其余字段是页面公共文字，一般不用修改。
-
-需要显示更新时间时，增加：
-
-```markdown
-updated_at: 2026-08-01
-```
 
 ## 2. 摘要和页面章节
 

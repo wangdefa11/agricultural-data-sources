@@ -8,6 +8,8 @@
   "scripts": {
     "content:build": "python3 scripts/build_site_content.py",
     "content:check": "python3 scripts/build_site_content.py --check",
+    "charts:china": "node scripts/build_china_production_charts.mjs",
+    "charts:usda": "node scripts/build_usda_four_charts.mjs",
     "predev": "npm run content:build",
     "dev": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext dev",
     "prebuild": "npm run content:build",

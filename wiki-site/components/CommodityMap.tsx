@@ -1,71 +1,87 @@
 /**
- * 首页的品种关系图。
- *
- * 节点名称和关系数据来自 content/catalog.json，本文件只决定它们如何排列：
- * 原料 → 加工品 → 下游/替代关系。
- * 改节点样式和各列宽度，请到 app/globals.css 的“品种关系图”部分。
+ * 首页的国内上市农产品产业链图。
+ * 节点内容来自 content/catalog.json；此处只维护参考图式的空间布局。
  */
-import {
-  commodityMap,
-  commodityNodes,
-} from "../content";
+import { commodityNodes } from "../content";
 import type { CommodityNode as CommodityNodeData } from "../content/types";
 
 function CommodityNode({
   node,
-  className = "",
+  className,
 }: {
   node: CommodityNodeData;
-  className?: string;
+  className: string;
 }) {
   return (
     <a
-      className={`commodity-node ${node.ready ? "is-ready" : ""} ${className}`}
+      className={`commodity-node chain-node ${className}`}
       href={`/${node.slug}`}
+      title={node.summary}
     >
       <span>{node.name}</span>
       <small>{node.code}</small>
-      {!node.ready && <em>待完善</em>}
     </a>
   );
 }
 
+function Node({ slug, at }: { slug: string; at: string }) {
+  return <CommodityNode node={commodityNodes[slug]} className={`node-${at}`} />;
+}
+
 export function CommodityRelationshipMap() {
   return (
-    <section className="relationship-map" aria-label="农产品品种关系图">
-      {/* 第一列：核心原料，例如大豆。 */}
-      <div className="graph-column graph-source">
-        <p className="graph-label">原料</p>
-        <CommodityNode
-          node={commodityNodes[commodityMap.source]}
-          className="main-node"
-        />
+    <section className="relationship-map" aria-label="国内上市农产品产业链关系图">
+      <div className="chain-titlebar">
+        <h2>农产品产业链</h2>
+        <span>点击品种进入对应 Wiki</span>
       </div>
 
-      {/* 中间箭头：processLabel 在 catalog.json 中维护。 */}
-      <div className="graph-connector">
-        <span>{commodityMap.processLabel}</span>
-        <i>→</i>
-      </div>
+      <div className="chain-scroll">
+        <div className="chain-canvas">
+          <div className="chain-market-tab">国内上市品种</div>
 
-      {/* 第三列：原料加工后的直接产品，例如豆粕、豆油。 */}
-      <div className="graph-column graph-products">
-        <p className="graph-label">加工品</p>
-        {commodityMap.products.map((slug) => (
-          <CommodityNode key={slug} node={commodityNodes[slug]} />
-        ))}
-      </div>
+          <div className="chain-group oils-group"><b>油脂</b></div>
+          <div className="chain-group feed-group"><b>饲料</b></div>
 
-      {/* 最后一列：替代、饲料配方、养殖需求等关联组。 */}
-      <div className="graph-relations">
-        {commodityMap.relationships.map((relationship) => (
-          <div key={relationship.label}>
-            <span>{relationship.label}</span>
-            {relationship.targets.map((slug) => (
-              <CommodityNode key={slug} node={commodityNodes[slug]} />
-            ))}
-          </div>
-        ))}
+          <div className="chain-route route-bean-pair" />
+          <div className="chain-route route-bean-oil" />
+          <div className="chain-route route-bean-meal" />
+          <div className="chain-route route-rapeseed-oil" />
+          <div className="chain-route route-rapeseed-meal" />
+          <div className="chain-route route-peanut" />
+          <div className="chain-route route-palm" />
+          <div className="chain-route route-corn-feed" />
+          <div className="chain-route route-corn-starch" />
+          <div className="chain-route route-hog" />
+          <div className="chain-route route-egg" />
+
+          <span className="route-label label-crush">压榨</span>
+          <span className="route-label label-oil-sub">油脂替代</span>
+          <span className="route-label label-protein">蛋白替代</span>
+          <span className="route-label label-feed">饲料配方</span>
+          <span className="route-label label-farming">养殖需求</span>
+          <span className="route-label label-deep">深加工</span>
+          <span className="route-label label-food">国产食用大豆</span>
+          <Node slug="sugar" at="sugar" />
+          <Node slug="red-date" at="red-date" />
+          <Node slug="apple" at="apple" />
+
+          <Node slug="soybean-no1" at="soybean-one" />
+          <Node slug="soybean-no2" at="soybean-two" />
+          <Node slug="peanut" at="peanut" />
+          <Node slug="palm-oil" at="palm" />
+          <Node slug="soybean-oil" at="soy-oil" />
+          <Node slug="rapeseed-oil" at="rapeseed-oil" />
+          <Node slug="rapeseed" at="rapeseed" />
+          <Node slug="soymeal" at="soymeal" />
+          <Node slug="rapeseed-meal" at="rapeseed-meal" />
+          <Node slug="corn" at="corn-feed" />
+          <div className="process-node node-feed">饲料</div>
+          <Node slug="corn-starch" at="corn-starch" />
+          <Node slug="hog" at="hog" />
+          <Node slug="egg" at="egg" />
+
+        </div>
       </div>
     </section>
   );

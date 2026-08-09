@@ -19,6 +19,10 @@ const metricLabels = {
   consumption: "消费量",
 };
 const metricKeys = Object.keys(metricLabels);
+const mapWidth = 960;
+const mapHeight = 360;
+const mapNorth = 84;
+const mapSouth = -60;
 
 function parseCsvLine(line) {
   const fields = [];
@@ -54,6 +58,56 @@ function escapeHtml(value) {
 
 function safeJson(value) {
   return JSON.stringify(value).replaceAll("<", "\\u003c");
+}
+
+function projectCoordinate([longitude, latitude]) {
+  return [
+    ((longitude + 180) / 360) * mapWidth,
+    ((mapNorth - latitude) / (mapNorth - mapSouth)) * mapHeight,
+  ];
+}
+
+function ringPath(ring) {
+  return ring.map((coordinate, index) => {
+    const [x, y] = projectCoordinate(coordinate);
+    return `${index ? "L" : "M"}${x.toFixed(2)},${y.toFixed(2)}`;
+  }).join("") + "Z";
+}
+
+function geometryPath(geometry) {
+  if (geometry.type === "Polygon") {
+    return geometry.coordinates.map(ringPath).join("");
+  }
+  if (geometry.type === "MultiPolygon") {
+    return geometry.coordinates.flatMap(polygon => polygon.map(ringPath)).join("");
+  }
+  return "";
+}
+
+let mapFeatures = [];
+if (config.mapFile) {
+  const mapPath = path.resolve(configDir, config.mapFile);
+  const geojson = JSON.parse(await fs.readFile(mapPath, "utf8"));
+  mapFeatures = geojson.features.filter(feature =>
+    feature.properties.ADM0_A3 !== "ATA"
+  ).map(feature => {
+    const sourceId = feature.properties.ADM0_A3;
+    const displayId = feature.properties.ADM0_A3_CN || sourceId;
+    const [labelX, labelY] = projectCoordinate([
+      feature.properties.LABEL_X,
+      feature.properties.LABEL_Y,
+    ]);
+    return {
+      id: displayId,
+      name: sourceId === "TWN"
+        ? "中国台湾"
+        : feature.properties.NAME_ZH || feature.properties.NAME_EN,
+      marker: sourceId === displayId,
+      path: geometryPath(feature.geometry),
+      labelX: Number(labelX.toFixed(2)),
+      labelY: Number(labelY.toFixed(2)),
+    };
+  }).filter(feature => feature.path);
 }
 
 const csvText = await fs.readFile(dataPath, "utf8");
@@ -115,6 +169,34 @@ const yearOptions = years
 const metricOptions = metricKeys
   .map(metric => `<option value="${metric}">${metricLabels[metric]}</option>`)
   .join("");
+
+const calendar = config.cropCalendar?.rows?.length ? {
+  ...config.cropCalendar,
+  rows: config.cropCalendar.rows.slice(0, 3),
+} : null;
+const calendarMonths = Array.from({ length: 12 }, (_, index) =>
+  `<span>${index + 1}月</span>`
+).join("");
+const calendarRows = calendar?.rows.map(row => {
+  const grid = Array.from({ length: 12 }, () => "<i></i>").join("");
+  const phases = row.phases.map(phase => {
+    const start = Math.max(1, Math.min(12, Number(phase.start)));
+    const end = Math.max(start, Math.min(12, Number(phase.end)));
+    return `<span class="season-phase ${escapeHtml(phase.kind)}" style="grid-column:${start} / span ${end - start + 1}" title="${escapeHtml(phase.label)}">${escapeHtml(phase.label)}</span>`;
+  }).join("");
+  return `<div class="season-row">
+      <div class="season-country"><strong>${escapeHtml(row.country)}</strong>${row.note ? `<small>${escapeHtml(row.note)}</small>` : ""}</div>
+      <div class="season-track">${grid}${phases}</div>
+    </div>`;
+}).join("") || "";
+const calendarSources = calendar?.sources?.map(source =>
+  `<a href="${escapeHtml(source.url)}" target="_blank" rel="noreferrer">${escapeHtml(source.label)}</a>`
+).join("、") || "";
+const chinaConsumption = config.chinaConsumption || {};
+const hasChinaConsumption = Object.values(chinaConsumption).some(yearsByProduct =>
+  Object.keys(yearsByProduct).length
+);
+const industryNote = config.industryNote?.text ? config.industryNote : null;
 
 const html = `<!doctype html>
 <html lang="zh-CN">
@@ -193,6 +275,95 @@ const html = `<!doctype html>
     .legend-value { white-space: nowrap; font-variant-numeric: tabular-nums; }
     .center-total { fill: var(--fg); font-weight: 600; font-size: 15px; }
     .center-unit, .axis-label { fill: var(--muted); font-size: 11px; }
+    .map-section { margin: 8px 0 24px; }
+    .world-map {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid var(--border);
+      background: color-mix(in oklab, var(--s1) 4%, var(--bg));
+    }
+    .map-country {
+      fill: color-mix(in oklab, var(--fg) 9%, var(--bg));
+      stroke: var(--bg);
+      stroke-width: 0.7;
+      vector-effect: non-scaling-stroke;
+    }
+    .map-country.is-producer { stroke: var(--fg); stroke-width: 0.9; }
+    .map-marker { stroke: var(--bg); stroke-width: 2; vector-effect: non-scaling-stroke; }
+    .map-legend {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 14px;
+      padding: 0;
+      margin: 8px 0 0;
+    }
+    .map-legend li {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .map-legend .swatch { flex: 0 0 auto; }
+    .map-source { margin: 8px 0 0; color: var(--muted); font-size: 12px; }
+    .season-section { margin: 8px 0 26px; }
+    .season-subtitle { margin: -2px 0 12px; color: var(--muted); font-size: 12px; }
+    .season-scroll { overflow-x: auto; padding-bottom: 5px; }
+    .season-calendar { min-width: 780px; }
+    .season-months,
+    .season-row { display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: 10px; }
+    .season-months > div,
+    .season-track { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); }
+    .season-months span { color: var(--muted); font-size: 11px; text-align: center; }
+    .season-row { align-items: stretch; margin-top: 7px; }
+    .season-country { display: flex; flex-direction: column; justify-content: center; min-height: 38px; }
+    .season-country strong { font-size: 13px; }
+    .season-country small { color: var(--muted); font-size: 10px; line-height: 1.35; }
+    .season-track { min-height: 38px; position: relative; }
+    .season-track i { grid-row: 1; border-left: 1px solid var(--border); background: color-mix(in oklab, var(--fg) 2%, var(--bg)); }
+    .season-track i:last-of-type { border-right: 1px solid var(--border); }
+    .season-phase {
+      align-items: center;
+      border-radius: 6px;
+      color: light-dark(rgb(22 27 31), rgb(245 245 245));
+      display: flex;
+      font-size: 10px;
+      font-weight: 600;
+      grid-row: 1;
+      justify-content: center;
+      margin: 3px 2px;
+      overflow: hidden;
+      padding: 0 4px;
+      position: relative;
+      text-align: center;
+      white-space: nowrap;
+      z-index: 1;
+    }
+    .season-phase.sow { background: color-mix(in oklab, var(--s1) 72%, var(--bg)); }
+    .season-phase.grow { background: color-mix(in oklab, var(--s3) 72%, var(--bg)); }
+    .season-phase.critical { background: color-mix(in oklab, var(--s2) 78%, var(--bg)); }
+    .season-phase.fill { background: color-mix(in oklab, var(--s4) 72%, var(--bg)); }
+    .season-phase.harvest { background: color-mix(in oklab, var(--s5) 70%, var(--bg)); }
+    .season-phase.dormant { background: color-mix(in oklab, var(--muted) 35%, var(--bg)); }
+    .season-phase.year-round { background: color-mix(in oklab, var(--s6) 68%, var(--bg)); }
+    .season-legend { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 10px; color: var(--muted); font-size: 11px; }
+    .season-legend span::before { content: ""; display: inline-block; width: 8px; height: 8px; margin-right: 5px; border-radius: 2px; background: var(--legend-color); }
+    .season-source { margin: 8px 0 0; color: var(--muted); font-size: 11px; line-height: 1.6; }
+    .season-source a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+    .demand-section { margin: 8px 0 28px; }
+    .demand-subtitle { margin: -2px 0 12px; color: var(--muted); font-size: 12px; }
+    .demand-grid { display: grid; grid-template-columns: minmax(280px, .8fr) minmax(380px, 1.2fr); gap: 20px; align-items: center; }
+    .demand-total { font-size: 15px; font-weight: 600; margin-bottom: 9px; }
+    .demand-bar { display: flex; min-height: 38px; overflow: hidden; border: 1px solid var(--border); border-radius: 8px; }
+    .demand-segment { align-items: center; display: flex; justify-content: center; min-width: 2px; overflow: hidden; padding: 0 5px; color: light-dark(rgb(22 27 31), rgb(245 245 245)); font-size: 10px; font-weight: 600; white-space: nowrap; }
+    .demand-legend { display: flex; flex-wrap: wrap; gap: 6px 12px; list-style: none; margin: 9px 0 0; padding: 0; color: var(--muted); font-size: 11px; }
+    .demand-legend li { align-items: center; display: inline-flex; gap: 5px; }
+    .demand-legend i { width: 8px; height: 8px; border-radius: 2px; }
+    .demand-trend { display: block; height: auto; overflow: visible; width: 100%; }
+    .demand-note { margin: 9px 0 0; color: var(--muted); font-size: 11px; line-height: 1.6; }
+    .industry-note { margin: 8px 0 28px; padding: 14px 16px; border: 1px solid var(--border); border-left: 4px solid var(--s1); border-radius: 10px; background: color-mix(in oklab, var(--s1) 6%, var(--bg)); }
+    .industry-note h2 { margin: 0 0 6px; font-size: 16px; }
+    .industry-note p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.75; }
     .trend-section { margin-top: 24px; position: relative; }
     .trend-head {
       display: flex;
@@ -221,6 +392,7 @@ const html = `<!doctype html>
     .note { margin-top: 8px; color: var(--muted); font-size: 12px; }
     @media (max-width: 760px) {
       .pie-grid { grid-template-columns: 1fr; }
+      .demand-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 520px) {
       main { padding: 10px; }
@@ -242,8 +414,53 @@ const html = `<!doctype html>
     </label>
   </div>
 
+${mapFeatures.length ? `
+  <section class="map-section" aria-labelledby="world-map-title">
+    <h2 id="world-map-title">主产国地图</h2>
+    <svg id="world-map" class="world-map" viewBox="0 0 ${mapWidth} ${mapHeight}" role="img"></svg>
+    <ul id="map-legend" class="map-legend"></ul>
+    <p class="map-source">底图：Natural Earth 1:110m；产量：USDA PSD。</p>
+  </section>` : ""}
+
+${calendar ? `
+  <section class="season-section" aria-labelledby="crop-calendar-title">
+    <h2 id="crop-calendar-title">${escapeHtml(calendar.title)}</h2>
+    <p class="season-subtitle">${escapeHtml(calendar.description)}</p>
+    <div class="season-scroll">
+      <div class="season-calendar">
+        <div class="season-months"><div></div><div>${calendarMonths}</div></div>
+        ${calendarRows}
+      </div>
+    </div>
+    <div class="season-legend">
+      ${(calendar.legend || []).map(item => `<span style="--legend-color:var(--${escapeHtml(item.color)})">${escapeHtml(item.label)}</span>`).join("")}
+    </div>
+    <p class="season-source">${escapeHtml(calendar.note)}${calendarSources ? ` 来源：${calendarSources}。` : ""}</p>
+  </section>` : ""}
+
+${hasChinaConsumption ? `
+  <section class="demand-section" aria-labelledby="china-demand-title">
+    <h2 id="china-demand-title">中国国内消费结构与趋势</h2>
+    <p class="demand-subtitle">采用中国官方供需平衡表；没有对应国内口径的品种不展示本模块。</p>
+    <div class="demand-grid">
+      <div>
+        <div id="demand-total" class="demand-total"></div>
+        <div id="demand-bar" class="demand-bar" role="img"></div>
+        <ul id="demand-legend" class="demand-legend"></ul>
+      </div>
+      <svg id="demand-trend" class="demand-trend" viewBox="0 0 760 180" role="img"></svg>
+    </div>
+    <p id="demand-note" class="demand-note"></p>
+  </section>` : ""}
+
+${industryNote ? `
+  <aside class="industry-note" aria-labelledby="industry-note-title">
+    <h2 id="industry-note-title">${escapeHtml(industryNote.title || "产业链关系")}</h2>
+    <p>${escapeHtml(industryNote.text)}</p>
+  </aside>` : ""}
+
   <div class="pie-grid">
-    ${metricKeys.map(metric => `
+${metricKeys.map(metric => `
     <section class="pie-panel" aria-labelledby="title-${metric}">
       <h2 id="title-${metric}">${metricLabels[metric]}分布</h2>
       <div class="pie-body">
@@ -284,6 +501,24 @@ const html = `<!doctype html>
   const TOP_COUNT = ${topCount};
   const DEFAULT_PRODUCT = ${safeJson(defaultProduct)};
   const DEFAULT_YEAR = ${safeJson(defaultYear)};
+  const MAP_FEATURES = ${safeJson(mapFeatures)};
+  const COUNTRY_CODES = ${safeJson(config.countryCodes || {})};
+  const MAP_POINTS = ${safeJson(config.mapPoints || {})};
+  const EU_COUNTRY_CODES = ${safeJson([
+    "AUT", "BEL", "BGR", "HRV", "CYP", "CZE", "DNK", "EST", "FIN",
+    "FRA", "DEU", "GRC", "HUN", "IRL", "ITA", "LVA", "LTU", "LUX",
+    "MLT", "NLD", "POL", "PRT", "ROU", "SVK", "SVN", "ESP", "SWE",
+  ])};
+  const CHINA_CONSUMPTION = ${safeJson(chinaConsumption)};
+  const CHINA_CONSUMPTION_NOTES = ${safeJson(config.chinaConsumptionNotes || {})};
+  const CHINA_CONSUMPTION_SOURCE = ${safeJson(config.chinaConsumptionSource || {})};
+  const DEMAND_COMPONENTS = [
+    { key: "crush", label: "压榨", color: "var(--s1)" },
+    { key: "feed", label: "饲用及损耗", color: "var(--s3)" },
+    { key: "food", label: "食用", color: "var(--s2)" },
+    { key: "industrial", label: "工业用", color: "var(--s5)" },
+    { key: "seedOther", label: "种子及其他", color: "var(--s4)" }
+  ];
   const COLORS = [
     "var(--s1)", "var(--s2)", "var(--s3)", "var(--s4)", "var(--s5)", "var(--s6)",
     "color-mix(in oklab, var(--s3) 72%, var(--fg))",
@@ -306,6 +541,13 @@ const html = `<!doctype html>
   const trendSvg = root.querySelector("#trend");
   const selectedValue = root.querySelector("#selected-value");
   const tooltip = root.querySelector("#tooltip");
+  const worldMap = root.querySelector("#world-map");
+  const mapLegend = root.querySelector("#map-legend");
+  const demandTotal = root.querySelector("#demand-total");
+  const demandBar = root.querySelector("#demand-bar");
+  const demandLegend = root.querySelector("#demand-legend");
+  const demandTrend = root.querySelector("#demand-trend");
+  const demandNote = root.querySelector("#demand-note");
 
   const format = value => Number(value || 0).toLocaleString("zh-CN", {
     minimumFractionDigits: 1,
@@ -440,6 +682,64 @@ const html = `<!doctype html>
     svg.append(totalText, unitText);
   }
 
+  function drawMap() {
+    if (!worldMap || !mapLegend) return;
+    const items = topCountries("production");
+    const byCode = new Map(items.map(item => [COUNTRY_CODES[item[0]], item]));
+    const euItem = items.find(item => item[0] === "欧盟");
+    const featureByCode = new Map(
+      MAP_FEATURES.filter(feature => feature.marker).map(feature => [feature.id, feature])
+    );
+    worldMap.replaceChildren();
+    mapLegend.replaceChildren();
+
+    const title = svgNode("title");
+    title.textContent = yearSelect.value + productSelect.value + "主产国所在位置";
+    worldMap.appendChild(title);
+
+    for (const feature of MAP_FEATURES) {
+      const item = byCode.get(feature.id) ||
+        (euItem && EU_COUNTRY_CODES.includes(feature.id) ? euItem : null);
+      const node = svgNode("path", { d: feature.path, class: "map-country" });
+      if (item) {
+        const [country, value] = item;
+        node.classList.add("is-producer");
+        node.style.fill = countryColor(country);
+        const nodeTitle = svgNode("title");
+        nodeTitle.textContent = country + " " + format(value) + UNIT;
+        node.appendChild(nodeTitle);
+        node.setAttribute("aria-label", nodeTitle.textContent);
+      }
+      worldMap.appendChild(node);
+    }
+
+    for (const [country, value] of items) {
+      const feature = featureByCode.get(COUNTRY_CODES[country]);
+      const point = MAP_POINTS[country];
+      const x = feature?.labelX ?? (point ? (point[0] + 180) / 360 * ${mapWidth} : null);
+      const y = feature?.labelY ?? (point ? (${mapNorth} - point[1]) / ${mapNorth - mapSouth} * ${mapHeight} : null);
+      if (x !== null && y !== null) {
+        const marker = svgNode("circle", {
+          cx: x, cy: y, r: 5.5, class: "map-marker", fill: countryColor(country),
+          "aria-label": country + " " + format(value) + UNIT,
+        });
+        const markerTitle = svgNode("title");
+        markerTitle.textContent = country + " " + format(value) + UNIT;
+        marker.appendChild(markerTitle);
+        worldMap.appendChild(marker);
+      }
+
+      const legendItem = document.createElement("li");
+      const swatch = document.createElement("span");
+      swatch.className = "swatch";
+      swatch.style.background = countryColor(country);
+      const label = document.createElement("span");
+      label.textContent = country + " " + format(value);
+      legendItem.append(swatch, label);
+      mapLegend.appendChild(legendItem);
+    }
+  }
+
   function niceCeiling(value) {
     if (value <= 0) return 1;
     const power = 10 ** Math.floor(Math.log10(value));
@@ -454,6 +754,120 @@ const html = `<!doctype html>
       scaled <= 6 ? 6 :
       scaled <= 8 ? 8 : 10;
     return step * power;
+  }
+
+  function drawChinaDemand() {
+    if (!demandTotal || !demandBar || !demandLegend || !demandTrend) return;
+    const product = productSelect.value;
+    const year = yearSelect.value;
+    const records = CHINA_CONSUMPTION[product] || {};
+    const selected = records[year] || {};
+    const total = Number(selected.total || 0);
+    const components = DEMAND_COMPONENTS
+      .map(component => ({ ...component, value: Number(selected[component.key] || 0) }))
+      .filter(component =>
+        component.key !== "crush" || product === "大豆" || product === "菜籽"
+      )
+      .filter(component => component.value > 0);
+
+    demandTotal.textContent = year + " 中国" + product + "总消费 " + format(total) + " " + UNIT;
+    demandBar.setAttribute(
+      "aria-label",
+      year + "中国" + product + "消费结构：" +
+        components.map(component => component.label + format(component.value) + UNIT).join("，")
+    );
+    demandBar.replaceChildren();
+    demandLegend.replaceChildren();
+
+    for (const component of components) {
+      const ratio = total > 0 ? component.value / total : 0;
+      const segment = document.createElement("span");
+      segment.className = "demand-segment";
+      segment.style.width = (ratio * 100).toFixed(2) + "%";
+      segment.style.background = component.color;
+      segment.title = component.label + " " + format(component.value) + " " + UNIT +
+        "（" + (ratio * 100).toFixed(1) + "%）";
+      if (ratio >= 0.12) segment.textContent = component.label;
+      demandBar.appendChild(segment);
+
+      const legendItem = document.createElement("li");
+      const swatch = document.createElement("i");
+      swatch.style.background = component.color;
+      const label = document.createElement("span");
+      label.textContent = component.label + " " + format(component.value) +
+        " · " + (ratio * 100).toFixed(0) + "%";
+      legendItem.append(swatch, label);
+      demandLegend.appendChild(legendItem);
+    }
+
+    const series = YEARS.map(marketYear => Number(records[marketYear]?.total || 0));
+    const width = 760;
+    const height = 180;
+    const margin = { left: 54, right: 20, top: 16, bottom: 30 };
+    const plotWidth = width - margin.left - margin.right;
+    const plotHeight = height - margin.top - margin.bottom;
+    const ceiling = niceCeiling(Math.max(1, ...series));
+    const x = index => margin.left + index / Math.max(1, YEARS.length - 1) * plotWidth;
+    const y = value => margin.top + plotHeight - value / ceiling * plotHeight;
+    demandTrend.replaceChildren();
+    demandTrend.setAttribute("aria-label", "中国" + product + "总消费多年走势，单位" + UNIT);
+    const title = svgNode("title");
+    title.textContent = demandTrend.getAttribute("aria-label");
+    demandTrend.appendChild(title);
+
+    for (let tick = 0; tick <= 3; tick += 1) {
+      const value = ceiling / 3 * tick;
+      const yy = y(value);
+      demandTrend.appendChild(svgNode("line", {
+        x1: margin.left, x2: width - margin.right,
+        y1: yy, y2: yy, class: "grid-line"
+      }));
+      const tickLabel = svgNode("text", {
+        x: margin.left - 7, y: yy + 4, class: "axis-label", "text-anchor": "end"
+      });
+      tickLabel.textContent = format(value);
+      demandTrend.appendChild(tickLabel);
+    }
+
+    const points = series
+      .map((value, index) => value > 0 ? [x(index), y(value)] : null)
+      .filter(Boolean);
+    if (points.length) {
+      demandTrend.appendChild(svgNode("path", {
+        d: linePath(points), fill: "none", stroke: "var(--s1)",
+        "stroke-width": 2.4, "vector-effect": "non-scaling-stroke"
+      }));
+    }
+    const selectedIndex = YEARS.indexOf(year);
+    if (selectedIndex >= 0) {
+      demandTrend.appendChild(svgNode("line", {
+        x1: x(selectedIndex), x2: x(selectedIndex),
+        y1: margin.top, y2: height - margin.bottom, class: "year-line"
+      }));
+    }
+    for (const index of [0, Math.floor((YEARS.length - 1) / 2), YEARS.length - 1]) {
+      const label = svgNode("text", {
+        x: x(index), y: height - 8, class: "axis-label", "text-anchor": "middle"
+      });
+      label.textContent = YEARS[index];
+      demandTrend.appendChild(label);
+    }
+
+    if (demandNote) {
+      demandNote.replaceChildren();
+      demandNote.append((CHINA_CONSUMPTION_NOTES[product] || "") + " 来源：");
+      if (CHINA_CONSUMPTION_SOURCE.url) {
+        const sourceLink = document.createElement("a");
+        sourceLink.href = CHINA_CONSUMPTION_SOURCE.url;
+        sourceLink.target = "_blank";
+        sourceLink.rel = "noreferrer";
+        sourceLink.textContent = CHINA_CONSUMPTION_SOURCE.label || CHINA_CONSUMPTION_SOURCE.url;
+        demandNote.append(sourceLink);
+      } else {
+        demandNote.append(CHINA_CONSUMPTION_SOURCE.label || "中国国内公开数据");
+      }
+      demandNote.append("；单位：" + UNIT + "。");
+    }
   }
 
   function linePath(points) {
@@ -579,6 +993,7 @@ const html = `<!doctype html>
       const index = indexFromEvent(event);
       yearSelect.value = YEARS[index];
       drawPies();
+      drawMap();
       setGuide(index);
     });
     trendSvg.appendChild(hit);
@@ -589,6 +1004,8 @@ const html = `<!doctype html>
   }
 
   function updateAll() {
+    drawMap();
+    drawChinaDemand();
     drawPies();
     drawTrend();
   }
@@ -605,6 +1022,21 @@ const html = `<!doctype html>
   yearSelect.addEventListener("change", updateAll);
   countrySelect.addEventListener("change", drawTrend);
   metricSelect.addEventListener("change", drawTrend);
+
+  const notifyParentHeight = () => {
+    window.parent.postMessage({
+      type: "commodity-chart-height",
+      height: Math.ceil(root.getBoundingClientRect().height) + 2
+    }, window.location.origin);
+  };
+  new ResizeObserver(notifyParentHeight).observe(root);
+  window.addEventListener("message", event => {
+    if (event.source === window.parent && event.data?.type === "commodity-chart-measure") {
+      notifyParentHeight();
+    }
+  });
+  window.addEventListener("load", notifyParentHeight);
+  requestAnimationFrame(notifyParentHeight);
 })();
 </script>
 </body>

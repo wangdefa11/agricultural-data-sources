@@ -2,10 +2,13 @@
 slug: soybean
 name: 大豆
 codes: A · B · CBOT S
+hero_image: images/hero.jpg
+hero_alt: 收获期大豆植株与成熟豆荚主图
+hero_credit: Mlabar · CC0
+hero_source: https://commons.wikimedia.org/wiki/File:Soybean_field,_Abbeville_County,_South_Carolina,_USA.jpg
 site_name: 农产品研究 Wiki
 map_nav_label: 品种关系
 breadcrumb_root_label: 品种关系
-updated_prefix: 数据框架更新于
 relations_link_label: 查看完整品种关系图 →
 ---
 
@@ -122,6 +125,33 @@ relations_link_label: 查看完整品种关系图 →
 **CBOT 大豆期货 + 产地升贴水 + 海运费 + 汇率 + 税费及港杂成本 → 进口大豆到岸及完税成本**
 
 实际计算还要匹配采购月份、船期、产地、品质和当期税费政策。CBOT 反映全球基准价格，升贴水反映产地现货与出口竞争，汇率和海运费决定价格传入国内时的增减幅度。
+
+### 大豆压榨物料平衡
+
+大豆压榨同时产出豆粕、豆油和豆皮等副产品。USDA 的换算口径为每蒲式耳大豆 60 磅；其 2023 年 8 月示例中，每蒲式耳产豆油 11.92 磅，对应毛油出率 19.86%。USDA 长期预测采用的豆粕产出约为每蒲式耳 46.9—47.2 磅，折合豆粕出率约 78.2%—78.7%。
+
+### 大豆压榨参考出率
+
+| 产出 | 参考出率 | 每吨大豆对应产出 |
+|---|---:|---:|
+| 豆粕 | 78.2%—78.7% | 782—787 千克 |
+| 毛豆油 | 19.0%—20.0% | 190—200 千克 |
+| 其他 | 差额 | 豆皮、水分变化及加工损耗 |
+
+### 压榨收率口径说明
+
+上述区间是研究参数，不是每家油厂的固定收率。大豆蛋白和含油率、含水率、是否脱皮、豆粕蛋白规格以及压榨工艺都会改变最终产出；豆粕与豆油收率应使用同一工厂、同一批次数据进行利润复盘，不能把不同年份的两个点值机械相加。
+
+### 压榨价值与毛利公式
+
+| 计算项 | 公式 |
+|---|---|
+| 压榨产出价值 | 豆粕价格 × 豆粕出率 + 豆油价格 × 豆油出率 + 其他副产品价值 |
+| 压榨毛利 | 压榨产出价值 − 大豆到厂成本 − 加工费用 |
+
+### 压榨参数来源 {source}
+
+[USDA ERS：Price Spreads from Farm to Consumer Documentation](https://www.ers.usda.gov/data-products/price-spreads-from-farm-to-consumer/documentation)、[USDA Agricultural Projections to 2032](https://ers.usda.gov/sites/default/files/_laserfiche/outlooks/105853/OCE-2023-01.pdf)、[USDA Oil Crops Yearbook](https://www.ers.usda.gov/data-products/oil-crops-yearbook)。
 
 ### 压榨利润怎么理解
 

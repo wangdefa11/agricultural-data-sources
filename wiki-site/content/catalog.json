@@ -97,6 +97,27 @@
       "code": "CS",
       "ready": true,
       "summary": "玉米深加工产品，定价围绕原料成本、加工利润与下游需求。"
+    },
+    "sugar": {
+      "slug": "sugar",
+      "name": "白糖",
+      "code": "SR",
+      "ready": true,
+      "summary": "国内甘蔗糖和甜菜糖连接国际原糖、进口成本、加工与食品消费。"
+    },
+    "red-date": {
+      "slug": "red-date",
+      "name": "红枣",
+      "code": "CJ",
+      "ready": true,
+      "summary": "以新疆灰枣为核心的国内生产型品种，品质、加工和交割筛选决定有效供应。"
+    },
+    "apple": {
+      "slug": "apple",
+      "name": "苹果",
+      "code": "AP",
+      "ready": true,
+      "summary": "鲜果生产与冷库库存共同定价，果径、硬度、糖度和质量容许度决定可交割量。"
     }
   },
   "map": {

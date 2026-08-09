@@ -139,7 +139,6 @@ export type CommodityPageText = {
   siteName: string;
   mapNavLabel: string;
   breadcrumbRootLabel: string;
-  updatedPrefix: string;
   relations: {
     index: string;
     title: string;
@@ -155,7 +154,10 @@ export type CommodityPage = {
   slug: string;
   name: string;
   codes: string;
-  updatedAt: string;
+  heroImage?: string;
+  heroAlt?: string;
+  heroCredit?: string;
+  heroSource?: string;
   summary: string;
   pageText: CommodityPageText;
   sections: WikiSection[];

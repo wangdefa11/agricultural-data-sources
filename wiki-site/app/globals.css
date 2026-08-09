@@ -86,29 +86,62 @@ a { color: inherit; text-decoration: none; }
   margin: 20px 0 0;
 }
 
-/*
- * 品种关系图的四列：原料 | 箭头 | 加工品 | 其他关系。
- * 想改变各列宽度，修改 grid-template-columns。
- */
+/* 参考产业链图片的自由画布：红色节点、虚线分组和弯折连接。 */
 .relationship-map {
-  align-items: center;
-  background: var(--surface);
+  --chain-primary: var(--blue);
+  --chain-accent: #8eb5d8;
+  background: #fff;
   border: 1px solid var(--line);
-  display: grid;
-  gap: 24px;
-  grid-template-columns: 180px 86px 190px 1fr;
   margin-top: 50px;
-  min-height: 480px;
-  padding: 44px;
+  padding: 26px 30px 30px;
 }
-.graph-column { display: grid; gap: 14px; }
-.graph-label {
-  color: var(--muted);
-  font-size: 11px;
-  letter-spacing: .1em;
-  margin: 0 0 4px;
-  text-transform: uppercase;
+.chain-titlebar {
+  align-items: baseline;
+  border-bottom: 3px solid var(--chain-primary);
+  color: #14181c;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4px 13px;
 }
+.chain-titlebar h2 { font-size: 26px; margin: 0; }
+.chain-titlebar span { color: #7a7f84; font-size: 11px; }
+.chain-scroll { overflow-x: auto; overscroll-behavior-x: contain; }
+.chain-canvas {
+  aspect-ratio: 1.86;
+  color: #1f2327;
+  min-width: 1120px;
+  position: relative;
+  width: 100%;
+}
+.chain-market-tab {
+  background: var(--chain-primary);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  left: 3%;
+  padding: 10px 25px;
+  position: absolute;
+  top: 5%;
+}
+.chain-group {
+  border: 2px dashed var(--chain-accent);
+  border-radius: 22px;
+  position: absolute;
+  z-index: 0;
+}
+.chain-group b {
+  background: #fff;
+  border: 2px solid var(--chain-accent);
+  color: #4b4d50;
+  font-size: 15px;
+  font-weight: 500;
+  left: 20px;
+  padding: 9px 13px;
+  position: absolute;
+  top: 14px;
+}
+.oils-group { height: 38%; left: 62%; top: 11%; width: 22%; }
+.feed-group { height: 34%; left: 62%; top: 51%; width: 22%; }
 .commodity-node {
   align-items: center;
   background: var(--surface);
@@ -121,10 +154,8 @@ a { color: inherit; text-decoration: none; }
   transition: border-color 140ms ease, background 140ms ease;
 }
 .commodity-node:hover { background: var(--blue-soft); border-color: var(--blue); }
-.commodity-node.is-ready { background: var(--blue); border-color: var(--blue); color: white; }
 .commodity-node span { font-size: 15px; font-weight: 600; }
 .commodity-node small { color: var(--muted); font-size: 10px; }
-.commodity-node.is-ready small { color: rgba(255,255,255,.75); }
 .commodity-node em {
   bottom: -7px;
   color: var(--muted);
@@ -135,24 +166,77 @@ a { color: inherit; text-decoration: none; }
   background: var(--surface);
   padding: 0 4px;
 }
-.main-node { min-height: 90px; }
-.graph-connector { color: var(--muted); text-align: center; }
-.graph-connector span { display: block; font-size: 11px; }
-.graph-connector i { color: var(--blue); display: block; font-size: 32px; font-style: normal; }
-.graph-relations {
-  border-left: 1px solid var(--line);
-  display: grid;
-  gap: 22px;
-  padding-left: 30px;
-}
-.graph-relations > div {
+.chain-node,
+.process-node {
   align-items: center;
-  display: grid;
-  gap: 10px;
-  grid-template-columns: 80px repeat(2, minmax(100px, 1fr));
+  background: var(--chain-primary);
+  border: 0;
+  border-radius: 7px;
+  color: #fff;
+  display: flex;
+  height: 54px;
+  justify-content: center;
+  min-height: 0;
+  padding: 7px 10px;
+  position: absolute;
+  width: 96px;
+  z-index: 3;
 }
-.graph-relations > div > span { color: var(--muted); font-size: 11px; }
-.graph-relations .commodity-node { min-height: 56px; }
+.chain-node:hover { background: #174f84; border-color: transparent; }
+.chain-node span { font-size: 17px; }
+.chain-node small { color: #d7e8f8; font-size: 9px; margin-left: 7px; }
+.process-node {
+  background: #fff;
+  border: 2px solid var(--chain-accent);
+  color: #444;
+  font-size: 16px;
+}
+.node-soybean-one { left: 41%; top: 41%; }
+.node-soybean-two { left: 52%; top: 41%; }
+.node-peanut { left: 54%; top: 24%; }
+.node-palm { left: 74%; top: 24%; }
+.node-soy-oil { left: 64%; top: 37%; }
+.node-rapeseed-oil { left: 74%; top: 37%; }
+.node-rapeseed { left: 84%; top: 42%; }
+.node-soymeal { left: 64%; top: 58%; }
+.node-rapeseed-meal { left: 74%; top: 58%; }
+.node-feed { left: 64%; top: 72%; }
+.node-corn-feed { left: 74%; top: 72%; }
+.node-corn-starch { left: 85%; top: 72%; width: 116px; }
+.node-hog { left: 58%; top: 89%; }
+.node-egg { left: 72%; top: 89%; }
+.node-sugar { left: 8%; top: 29%; }
+.node-red-date { left: 8%; top: 40%; }
+.node-apple { left: 8%; top: 51%; }
+.chain-route {
+  border-color: #34383b;
+  position: absolute;
+  z-index: 1;
+}
+.route-bean-pair { border-top: 2px dashed var(--chain-accent); left: 49%; top: 45%; width: 3%; }
+.route-bean-oil { border-left: 2px solid; border-top: 2px solid; border-top-left-radius: 15px; height: 8%; left: 60.4%; top: 40.5%; width: 3.6%; }
+.route-bean-meal { border-bottom: 2px solid; border-left: 2px solid; border-bottom-left-radius: 15px; height: 18%; left: 60.4%; top: 45%; width: 3.6%; }
+.route-rapeseed-oil { border-right: 2px solid; border-top: 2px solid; border-top-right-radius: 15px; height: 9%; left: 82%; top: 40.5%; width: 2.2%; }
+.route-rapeseed-meal { border-bottom: 2px solid; border-right: 2px solid; border-bottom-right-radius: 15px; height: 18%; left: 82%; top: 45%; width: 2.2%; }
+.route-peanut { border-top: 2px solid var(--chain-accent); left: 61.5%; top: 28%; width: 2.5%; }
+.route-palm { border-top: 2px dashed var(--chain-accent); left: 81.5%; top: 28%; width: 5%; }
+.route-corn-feed { border-left: 2px solid; border-top: 2px solid; border-top-left-radius: 12px; height: 4%; left: 71.5%; top: 75.5%; width: 2.5%; }
+.route-corn-starch { border-top: 2px solid; left: 81.5%; top: 76%; width: 3.5%; }
+.route-hog { border-left: 2px dashed; border-top: 2px dashed; height: 12%; left: 62%; top: 80%; width: 6%; transform: rotate(8deg); }
+.route-egg { border-right: 2px dashed; border-top: 2px dashed; height: 12%; left: 68%; top: 80%; width: 7%; transform: rotate(-8deg); }
+.route-label {
+  color: #526f89;
+  font-size: 10px;
+  position: absolute;
+  z-index: 2;
+}
+.label-crush { left: 58.5%; top: 38%; }
+.label-oil-sub { left: 85%; top: 24%; }
+.label-protein { left: 55.5%; top: 55%; }
+.label-feed { left: 70%; top: 68%; }
+.label-farming { left: 66%; top: 85%; }
+.label-deep { left: 82%; top: 69%; }
+.label-food { left: 39.5%; top: 37%; }
 .map-legend {
   color: var(--muted);
   display: flex;
@@ -196,6 +280,36 @@ a { color: inherit; text-decoration: none; }
 }
 .wiki-title .breadcrumb { margin-bottom: 12px; }
 .wiki-title h1 { font-size: clamp(38px, 4vw, 48px); }
+.wiki-hero {
+  align-items: stretch;
+  display: grid;
+  gap: 28px;
+  grid-template-columns: minmax(0, 3fr) minmax(280px, 2fr);
+}
+.wiki-hero-copy { min-width: 0; }
+.wiki-hero-media {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-width: 0;
+}
+.wiki-hero-image {
+  border: 1px solid var(--line);
+  display: block;
+  height: 100%;
+  max-height: 280px;
+  min-height: 210px;
+  object-fit: cover;
+  width: 100%;
+}
+.wiki-hero-media figcaption {
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.4;
+  margin-top: 6px;
+  text-align: right;
+}
+.wiki-hero-media figcaption a { color: inherit; }
 .title-line {
   align-items: baseline;
   border-bottom: 1px solid var(--line);
@@ -423,9 +537,8 @@ a { color: inherit; text-decoration: none; }
 
 /* ========== 平板：压缩关系图 ========== */
 @media (max-width: 980px) {
-  .relationship-map { grid-template-columns: 150px 60px 170px 1fr; padding: 28px; }
-  .graph-relations > div { grid-template-columns: 70px 1fr; }
-  .graph-relations > div .commodity-node:last-child { grid-column: 2; }
+  .relationship-map { padding: 24px; }
+  .chain-canvas { min-width: 1040px; }
 }
 
 /* ========== 手机：全部改为单列 ========== */
@@ -434,12 +547,16 @@ a { color: inherit; text-decoration: none; }
   .plain-header nav a { margin-left: 16px; }
   .plain-header nav a:nth-child(n+3) { display: none; }
   .map-page { padding: 42px 18px 70px; }
-  .relationship-map { align-items: stretch; grid-template-columns: 1fr; padding: 22px; }
-  .graph-connector { transform: rotate(90deg); }
-  .graph-relations { border-left: 0; border-top: 1px solid var(--line); padding-left: 0; padding-top: 22px; }
+  .relationship-map { padding: 18px 0 20px; }
+  .chain-titlebar { margin: 0 18px; }
+  .chain-titlebar { align-items: start; flex-direction: column; gap: 6px; }
+  .chain-titlebar h2 { font-size: 22px; }
+  .chain-scroll { padding: 0 18px; }
   .wiki-layout { padding: 12px 0 36px; }
   .wiki-content { border-left: 0; border-right: 0; padding: 20px 18px 28px; }
   .wiki-title { padding: 0; }
+  .wiki-hero { display: flex; flex-direction: column; gap: 18px; }
+  .wiki-hero-image { height: auto; min-height: 0; aspect-ratio: 3 / 2; }
   .title-line { align-items: start; flex-direction: column; gap: 16px; }
   .section-title,
   .content-blocks,

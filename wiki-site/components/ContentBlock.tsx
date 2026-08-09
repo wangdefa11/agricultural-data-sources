@@ -15,6 +15,7 @@ import type {
   ChartBlock,
   ContentBlock as ContentBlockData,
 } from "../content/types";
+import { EmbeddedChart } from "./EmbeddedChart";
 import { InlineMarkdown } from "./InlineMarkdown";
 
 function DataChart({ block }: { block: ChartBlock }) {
@@ -134,13 +135,7 @@ export function ContentBlock({ block }: { block: ContentBlockData }) {
             {block.linkLabel}
           </a>
         </div>
-        <iframe
-          src={block.src}
-          title={block.title}
-          loading="lazy"
-          scrolling="no"
-          style={{ height: block.height ?? 720 }}
-        />
+        <EmbeddedChart block={block} />
       </div>
     );
   }
